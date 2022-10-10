@@ -51,10 +51,14 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 4. Verify my code of HTML and CSS.
 5. Code the function of search bar and filter.
 6. Verify my code.
-5. Upload to GitHub.
+7. Upload to GitHub.
 
 ## Challenges Faced
 1. Customized the SCSS of Bootstrap
 
 ## Overcoming Challeges
 1. Downloaded the SCSS of Bootstrap from its website. Searched for the SCSS variables that I would customized and change the value in the SCSS.
+
+## Assets Used (Bibliography)
+- Images and Articles: <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>
+- Icons: <a href="https://fontawesome.com/">Fontawesome</a>

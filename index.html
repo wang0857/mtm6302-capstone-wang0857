@@ -53,43 +53,63 @@
                     <li>DISSCUSSION BOARD</li>
                     <li>EDUCATION</li>
                 </ul>
+
+                <div class="sm-device-footer"> <!-- Hide in Large Screens --> 
+                    <!-- Privacy and Right Info -->
+                    <div>
+                        <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
+                        <p>
+                            <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
+                            Privacy Policy and Important Notices</a>
+                        </p>
+                        <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
+                    </div>
+        
+                    <!-- Social Media -->
+                    <div>
+                        <span><i class="fa-solid fa-square-rss"></i></span>
+                        <span><i class="fa-brands fa-square-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-square-twitter"></i></span>
+                        <span><i class="fa-brands fa-discord"></i></span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- =========================== Sidebar and Main Content =========================== -->
-    
-    <main class="grid-container">
+    <div class="grid-container">
         <!-- =========================== Sidebar Navigation =========================== -->
         <div class="side-bar">        
             <!-- Collapse Button -->
-            <button type="button">
+            <button type="button" class="collapse-btn">
                 <i class="fa-solid fa-angle-left"></i>
             </button>
 
             <!-- Nav Options -->
-            <ul>
-                <li>
-                    <a>
+            <ul class="side-list">
+                <li class="active">
+                    <a href="#">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="#">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="#">
                         <i class="fa-solid fa-file-arrow-up"></i>
                         <span>Submit Your Photos</span>
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <i class="fa-regular fa-grid-2"></i>
+                    <a href="#">
+                        <i class="fa-solid fa-border-all"></i>
                         <span>Categories</span>
                     </a>
                 </li>
@@ -120,7 +140,7 @@
         </div>
 
         <!-- =========================== Main Content =========================== -->
-        <div class="main-container">
+        <main class="main-container">
             <!-- Breadcrumb -->
             <div aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -130,19 +150,61 @@
             </div>
 
             <!-- Today's Picture -->
-            <!-- "TODO: Coding this part" -->
-        </div>
-    </main>
+            <div class="content-container">
+                <!-- Control Buttons-Previous -->
+                <div class="control-btn prev"><i class="fa-solid fa-arrow-left"></i></div>
+                    
 
+                <!-- Picture -->
+                <div class="picture-container">
+                    <div class="img-crop">
+                        <img src="./image/fairy-pillar-762x575.png" alt="fairy-pillar">
+                    </div>
+                    <p>Image Credit & Copyright: NASA, ESA, The Hubble Heritage Team (STScI/AURA)</p>
+                </div>
 
+                <!-- Article -->
+                <article>
+                    <h2>The Fairy of Eagle Nebula</h2>
+                    <p class="pic-description">
+                        The dust sculptures of the Eagle Nebula are evaporating. As powerful starlight whittles away these cool cosmic mountains, the statuesque pillars that remain might be imagined as mythical beasts. Featured here is one of several striking dust pillars of the Eagle Nebula that might be described as a gigantic alien fairy. This fairy, however, is ten light years tall and spews radiation much hotter than common fire. The greater Eagle Nebula, M16, is actually a giant evaporating shell of gas and dust inside of which is a growing cavity filled with a spectacular stellar nursery currently forming an open cluster of stars. This great pillar, which is about 7,000 light years away, will likely evaporate away in about 100,000 years. The featured image is in scientifically re-assigned colors and was taken by the Earth-orbiting Hubble Space Telescope.
+                    </p>
+                    <hr>
+                    <p>
+                        Authors & editors: Robert Nemiroff (MTU) & Jerry Bonnell (UMCP)
+                    </p>
+                    <button type="button">
+                        <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                        <span>Share this Picture</span>
+                    </button>
+                </article>
 
+                <!-- Control Buttons-Next -->
+                <div class="control-btn next btn-disable"><i class="fa-solid fa-arrow-right"></i></i></div>
+            </div>
+        </main>
 
-    
+        <!-- =========================== Footer =========================== -->
+        <footer>
+            <!-- Privacy and Right Info -->
+            <div>
+                <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
+                <p>
+                    <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
+                    Privacy Policy and Important Notices</a>
+                </p>
+                <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
+            </div>
 
-
-
-
-
-
+            <!-- Social Media -->
+            <div>
+                <span><i class="fa-solid fa-square-rss"></i></span>
+                <span><i class="fa-brands fa-square-facebook"></i></span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+                <span><i class="fa-brands fa-square-twitter"></i></span>
+                <span><i class="fa-brands fa-discord"></i></span>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
