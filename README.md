@@ -32,3 +32,29 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 6. Design an advanced filter on the Search for Pictures page. 
 7. Add action buttons to each page to guide users on what they can do after seeing the picture on the APOD page.
 8. Add a sharing button to the picture page. Therefore, users can share the photo on their social media immediately.
+
+## Current Status
+- [ ] Code the Website in Bootstrap
+- [ ] Create All HTML Pages
+- [ ] Create my CSS file
+- [ ] Customized the style with the SCSS of Bootstrap
+- [ ] Create my javascript file to code the function of search bar and filter
+- [ ] Commit Final to GitHub
+- [ ] Check pages on multiple browsers
+
+## How I developed the web application
+I developed the web application with a modern framework, Bootstrap, HTML, CSS, SCSS, and Javascript. Here are the steps:
+
+1. Review all my mockups and list down the structures, materials, images, and components.
+2. Code the HTML of all pages with Bootstrap and customized the style with its SCSS.
+3. Add my customized CSS, style.css, to change the style of some elements and the layout.
+4. Verify my code of HTML and CSS.
+5. Code the function of search bar and filter.
+6. Verify my code.
+5. Upload to GitHub.
+
+## Challenges Faced
+1. Customized the SCSS of Bootstrap
+
+## Overcoming Challeges
+1. Downloaded the SCSS of Bootstrap from its website. Searched for the SCSS variables that I would customized and change the value in the SCSS.

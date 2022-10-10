@@ -1,0 +1,152 @@
+/* =========================================================================== */
+/* Reset CSS */
+/* =========================================================================== */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* =========================================================================== */
+/* Overall Setting */
+/* =========================================================================== */
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* font */
+/* "TODO: import font" */
+
+
+
+/* =========================================================================== */
+/* Desktop Version */
+/* =========================================================================== */
+
+@media screen and (min-width: 992px) {
+    /* =========================================================================== */
+    /* Top Nav Bar */
+    /* =========================================================================== */    
+    .top-nav {
+        display: flex;
+        align-items: center;
+        padding: 1em .5em;
+        border-bottom: 1px solid #ffffff30;
+        background: #000000;
+    }  
+    
+    /* Logo */
+    .logo {
+        margin-left: .5em;
+    }
+
+    /* Search and Menu Buttons */
+    .search-btn, .menu-btn {
+        background: none;
+        color: #ffffff;
+        margin: .5em;
+    }
+
+    /* Search Bar */
+    input.search-bar {
+        padding-left: 1em;
+        background-color: transparent;
+        color: #ffffff;
+        border-radius: 50em;
+        border: none;
+    }
+
+    /* "TODO: 這個沒有成功，之後要再把它修好" */
+    input.search-bar:focus {
+        border: none;
+    }
+
+    /* Sidebar */
+    div.offcanvas-body ul {
+        color: #000000;
+        margin-top: 10.875em;
+        margin-left: 4.375em;
+    }
+
+    div.offcanvas-body ul li {
+        margin: 1.25em 0em;
+    }
+
+
+
+    /* =========================================================================== */
+    /* Sidebar and Main Content */
+    /* =========================================================================== */
+    /* Set the full height */
+    html, body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 16.375em auto;
+        height: 100%;
+    }
+    
+    /* Sidebar Navigation */
+    .side-bar {
+        width: 16.375em;
+        background-color: #1D235E35;
+        padding-left: .5em;
+        grid-row: 1 / 2;
+    }
+
+    /* Main content container */
+    .main-container {
+        padding: 2.85em;
+    }
+}

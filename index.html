@@ -4,9 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone Project</title>
+    <!-- Customized CSS Style -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap Bundle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <title>Astronomy Picture of the Day</title>
 </head>
 <body>
-    <h1>This is a branch of <code>part-1</code>.</h1>
+    <!-- =========================== Top Nav Bar =========================== -->
+    <header>
+        <!-- Top Nav Bar Container -->
+        <nav class="top-nav">
+            <!-- Logo -->
+            <div class="logo">
+                <h1>APOD</h1>
+            </div>
+            
+            <div class="container-fluid d-flex justify-content-end">
+                <!-- Search Bar -->
+                <form class="d-flex border border-1 rounded-5">
+                  <input class="search-bar me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="search-btn border border-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+
+                <!-- Right Menu Toggle Button -->
+                <button class="menu-btn border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    
+        <!-- Right Menu Content -->        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li>HOME</li>
+                    <li>ABOUT APOD</li>
+                    <li>ALBUM</li>
+                    <li>DISSCUSSION BOARD</li>
+                    <li>EDUCATION</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================== Sidebar and Main Content =========================== -->
+    
+    <main class="grid-container">
+        <!-- =========================== Sidebar Navigation =========================== -->
+        <div class="side-bar">        
+            <!-- Collapse Button -->
+            <button type="button">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <!-- Nav Options -->
+            <ul>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-image"></i>
+                        <span>Today's Picture</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search for Pictures</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                        <span>Submit Your Photos</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa-regular fa-grid-2"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Download Apps -->
+            <div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Download the App</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>iOS</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <i class="fa-brands fa-android"></i>
+                            <span>Android</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- =========================== Main Content =========================== -->
+        <div class="main-container">
+            <!-- Breadcrumb -->
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </div>
+
+            <!-- Today's Picture -->
+            <!-- "TODO: Coding this part" -->
+        </div>
+    </main>
+
+
+
+
+    
+
+
+
+
+
+
 </body>
 </html>
