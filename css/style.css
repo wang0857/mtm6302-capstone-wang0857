@@ -165,7 +165,7 @@ body {
 
 
     /* =========================================================================== */
-    /* Sidebar and Main Content */
+    /* Sidebar */
     /* =========================================================================== */
     /* Set the full height */
     html, body {
@@ -223,7 +223,9 @@ body {
     /* Download Apps */
     /* TODO: Style it */
 
-    /* Main Content Container */
+    /* =========================================================================== */
+    /* Index: Main Content */
+    /* =========================================================================== */
     /* TODO: Think a way to make the height fit the window  */
     .main-container {
         padding: 2.85em 2.85em 0em;
@@ -231,6 +233,9 @@ body {
         overflow: auto; /* TODO: Need to Change it to hidden after fixing the height. */
         grid-row: 1 / 2;
     }
+
+    /* Breadcrumb */
+    /* TODO: Style it by adjust scss in Bootstrap */
 
     /* Today's Picture */
     .content-container {
@@ -241,6 +246,7 @@ body {
     }
 
     /* Control Buttons */
+    /* TODO: Style the hover status */
     .control-btn i {
         border: 1px solid #ffffff;
         border-radius: 50em;
@@ -266,7 +272,7 @@ body {
     /* TODO: style <p>Image Credit</p> */
 
     /* Picture's Description */
-    /* TODO: Style it as well as the sharing button */
+    /* TODO: Style it as well as the sharing button and <hr> */
     .pic-description {
         overflow: auto;
         margin-right: 1.18em;
@@ -287,4 +293,14 @@ body {
         gap: 1em;
     }
 
+    /* =========================================================================== */
+    /* Search: Search Panel */
+    /* =========================================================================== */
+
+    /* Search bar */
+    .search-btn-dark {
+        background: none;
+        color: #000000;
+        margin: .5em;
+    }
 }
