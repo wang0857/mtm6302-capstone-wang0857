@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Customized CSS Style -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap Bundle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <title>Submit Your Photos - APOD</title>
+</head>
+<body>
+    <!-- =========================== Top Nav Bar =========================== -->
+    <header>
+        <!-- Top Nav Bar Container -->
+        <nav>
+            <!-- Logo -->
+            <div class="logo">
+                <h1>APOD</h1>
+            </div>
+            
+            <div class="container-fluid d-flex justify-content-end">
+                <!-- Search Bar -->
+                <form class="d-flex border border-1 rounded-5">
+                  <input class="search-bar me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="search-btn border border-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+
+                <!-- Right Menu Toggle Button -->
+                <button class="menu-btn border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    
+        <!-- Right Menu Content -->        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li>HOME</li>
+                    <li>ABOUT APOD</li>
+                    <li>ALBUM</li>
+                    <li>DISSCUSSION BOARD</li>
+                    <li>EDUCATION</li>
+                </ul>
+
+                <!-- Hide Small Footer in Large Screens --> 
+                <div class="sm-device-footer">
+                    <!-- Privacy and Right Info -->
+                    <div>
+                        <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
+                        <p>
+                            <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
+                            Privacy Policy and Important Notices</a>
+                        </p>
+                        <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
+                    </div>
+        
+                    <!-- Social Media -->
+                    <div>
+                        <span><i class="fa-solid fa-square-rss"></i></span>
+                        <span><i class="fa-brands fa-square-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-square-twitter"></i></span>
+                        <span><i class="fa-brands fa-discord"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================== Sidebar and Main Content =========================== -->
+    <div class="grid-container">
+        <!-- =========================== Sidebar Navigation =========================== -->
+        <aside>        
+            <!-- Collapse Button -->
+            <button type="button" class="collapse-btn">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <!-- Nav Options -->
+            <ul class="side-nav">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-image"></i>
+                        <span>Today's Picture</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search for Pictures</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                        <span>Submit Your Photos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Download Apps -->
+            <div class="app-container">
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Download the App</span>
+                </div>
+                
+                <button type="button">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>iOS</span>
+                </button>
+                <button type="button">
+                    <i class="fa-brands fa-android"></i>
+                    <span>Android</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- =========================== Main Content =========================== -->
+        <div class="right-content-container">
+            <main>
+                <!-- Breadcrumb -->
+                <div aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Submit Your Photos</li>
+                    </ol>
+                </div>
+    
+                <!-- Submission -->
+                <form class="submission-container">
+                    <!-- File -->
+                    <div class="file-container">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <p>Drop a file here or click to upload.</p>
+                    </div>
+                        
+                    <div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Your Email</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="photoTitle" class="form-label">Photo's Title</label>
+                            <input type="text" class="form-control" id="photoTitle">
+                        </div>
+                        <div class="mb-3">
+                            <label for="photoDescription" class="form-label">Photo's Description</label>
+                            <textarea class="form-control" id="photoDescription" rows="3"></textarea>
+                          </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="readCheck">
+                          <label class="form-check-label" for="readCheck">
+                            I have read and agreed with the <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web Privacy Policy and Important Notices</a>.
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </main>
+    
+            <!-- =========================== Footer =========================== -->
+            <footer>
+                <!-- Privacy and Right Info -->
+                <div>
+                    <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
+                    <p>
+                        <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
+                        Privacy Policy and Important Notices</a>
+                    </p>
+                    <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
+                </div>
+    
+                <!-- Social Media -->
+                <div>
+                    <span><i class="fa-solid fa-square-rss"></i></span>
+                    <span><i class="fa-brands fa-square-facebook"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-square-twitter"></i></span>
+                    <span><i class="fa-brands fa-discord"></i></span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

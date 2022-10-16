@@ -12,7 +12,7 @@
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    <title>Astronomy Picture of the Day</title>
+    <title>Search for Pictires - APOD</title>
 </head>
 <body>
     <!-- =========================== Top Nav Bar =========================== -->
@@ -46,7 +46,8 @@
                     <li>EDUCATION</li>
                 </ul>
 
-                <div class="sm-device-footer"> <!-- Hide in Large Screens --> 
+                <!-- Hide Small Footer in Large Screens --> 
+                <div class="sm-device-footer"> 
                     <!-- Privacy and Right Info -->
                     <div>
                         <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
@@ -73,21 +74,21 @@
     <!-- =========================== Sidebar and Main Content =========================== -->
     <div class="grid-container">
         <!-- =========================== Sidebar Navigation =========================== -->
-        <div class="side-bar">        
+        <aside>        
             <!-- Collapse Button -->
             <button type="button" class="collapse-btn">
                 <i class="fa-solid fa-angle-left"></i>
             </button>
 
             <!-- Nav Options -->
-            <ul class="side-list">
-                <li class="active">
+            <ul class="side-nav">
+                <li>
                     <a href="#">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
@@ -108,82 +109,77 @@
             </ul>
 
             <!-- Download Apps -->
-            <div>
+            <div class="app-container">
                 <div>
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <span>Download the App</span>
                 </div>
-
-                <ul>
-                    <li>
-                        <button type="button">
-                            <i class="fa-brands fa-apple"></i>
-                            <span>iOS</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa-brands fa-android"></i>
-                            <span>Android</span>
-                        </button>
-                    </li>
-                </ul>
+                
+                <button type="button">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>iOS</span>
+                </button>
+                <button type="button">
+                    <i class="fa-brands fa-android"></i>
+                    <span>Android</span>
+                </button>
             </div>
-        </div>
+        </aside>
 
         <!-- =========================== Main Content =========================== -->
-        <main class="main-container">
-            <!-- Breadcrumb -->
-            <div aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Library</li>
-                </ol>
-            </div>
-
-            <!-- Search and Result Container -->
-            <div class="search-container">
-                <!-- Search bar -->
-                <div>
-                    <h3>What are you searching for?</h3>
-                    <form class="d-flex rounded-5">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="search-btn-dark border border-0" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
+        <div class="right-content-container">
+            <main class="main-container">
+                <!-- Breadcrumb -->
+                <div aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Search for Pictures</li>
+                    </ol>
                 </div>
-
-                <!-- Select bar -->
-                <div>
-                    <h3>Categories</h3>
-                    <form class="d-flex rounded-5">
-                        <select class="form-select rounded-5" aria-label="Default select example">
-                            <option selected>Select the category</option>
-                            <option value="1">Cosmos</option>
-                            <option value="2">Solar System</option>
-                            <option value="3">Space Technology</option>
-                            <option value="4">People</option>
-                            <option value="5">Sky</option>
-                          </select>
-                    </form>
-                </div>
-
-                <!-- Filter Panels -->
-                <div>
-                    <h3>
-                        <span>All Filters</span>
-                        <i class="fa-solid fa-sliders"></i>
-                    </h3>
-
-                    <!-- Time Filter -->
-                    <div class="filter-panels">
-                        <h4>By Time</h4>
-                        <div class="time-panel">
+    
+                <!-- Search and Result Container -->
+                <div class="search-container">
+                    <!-- Search bar -->
+                    <div>
+                        <h3>What are you searching for?</h3>
+                        <form class="d-flex rounded-5">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="search-btn-dark border border-0" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+    
+                    <!-- Select bar -->
+                    <div>
+                        <h3>Categories</h3>
+                        <form class="d-flex rounded-5">
+                            <select class="form-select rounded-5" aria-label="Default select example">
+                                <option selected>Select the category</option>
+                                <option value="1">Cosmos</option>
+                                <option value="2">Solar System</option>
+                                <option value="3">Space Technology</option>
+                                <option value="4">People</option>
+                                <option value="5">Sky</option>
+                              </select>
+                        </form>
+                    </div>
+    
+                    <!-- Filter Panels -->
+                    <div>
+                        <h3>
+                            <span>All Filters</span>
+                            <i class="fa-solid fa-sliders"></i>
+                        </h3>
+    
+                        <!-- Time Filter -->
+                        <div class="filter-panels">
+                            <h4>By Time</h4>
+    
                             <!-- Filter by Year -->
-                            <div class="container">
+                            <div class="container"><!-- Grid Container -->
                                 <h5>Year</h5>
-                                <form class="row">
+                                <div class="row">
                                     <div class="form-check col-4">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">2022</label>
@@ -216,13 +212,13 @@
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">1995</label>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-
+    
                             <!-- Filter by Month -->
-                            <div class="container">
+                            <div class="container"><!-- Grid Container -->
                                 <h5>Month</h5>
-                                <form class="row">
+                                <div class="row">
                                     <div class="form-check col-4">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Jan</label>
@@ -271,19 +267,18 @@
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Dec</label>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Scope Filter -->
-                    <div class="filter-panels">
-                        <h4>By Scope</h4>
-                        <div class="scope-panel">
+    
+                        <!-- Scope Filter -->
+                        <div class="filter-panels">
+                            <h4>By Scope</h4>
+    
                             <!-- Filter by Scope -->
-                            <div class="container">
+                            <div class="container"><!-- Grid Container --> 
                                 <h5>Cosmos</h5>
-                                <form class="row">
+                                <div class="row">
                                     <div class="form-check col-4">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Stars</label>
@@ -300,57 +295,63 @@
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Miscellaneous</label>
                                     </div>
-                                </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div>
+                            <button type="button">Reset</button>
+                            <button type="button">Show Results</button>
+                        </div>
+                    </div>
+    
+                    <!-- Result Panels -->
+                    <div>
+                        <h3>Results</h3>
+                        <div>
+                            <div class="filter-panels">
+                                <h3>Accretion Disk Binary System</h3>
+                                <p>December 19, 1999</p>
+                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
+                            </div>
+                            <div class="filter-panels">
+                                <h3>Accretion Disk Binary System</h3>
+                                <p>December 19, 1999</p>
+                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
+                            </div>
+                            <div class="filter-panels">
+                                <h3>Accretion Disk Binary System</h3>
+                                <p>December 19, 1999</p>
+                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Result Panels -->
+            </main>
+    
+            <!-- =========================== Footer =========================== -->
+            <footer>
+                <!-- Privacy and Right Info -->
                 <div>
-                    <h3>Results</h3>
-                    <div>
-                        <div class="filter-panels">
-                            <h3>Accretion Disk Binary System</h3>
-                            <p>December 19, 1999</p>
-                            <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                        </div>
-                        <div class="filter-panels">
-                            <h3>Accretion Disk Binary System</h3>
-                            <p>December 19, 1999</p>
-                            <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                        </div>
-                        <div class="filter-panels">
-                            <h3>Accretion Disk Binary System</h3>
-                            <p>December 19, 1999</p>
-                            <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                        </div>
-                    </div>
+                    <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
+                    <p>
+                        <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
+                        Privacy Policy and Important Notices</a>
+                    </p>
+                    <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
                 </div>
-            </div>
-        </main>
-
-        <!-- =========================== Footer =========================== -->
-        <footer>
-            <!-- Privacy and Right Info -->
-            <div>
-                <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
-                <p>
-                    <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
-                    Privacy Policy and Important Notices</a>
-                </p>
-                <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
-            </div>
-
-            <!-- Social Media -->
-            <div>
-                <span><i class="fa-solid fa-square-rss"></i></span>
-                <span><i class="fa-brands fa-square-facebook"></i></span>
-                <span><i class="fa-brands fa-instagram"></i></span>
-                <span><i class="fa-brands fa-square-twitter"></i></span>
-                <span><i class="fa-brands fa-discord"></i></span>
-            </div>
-        </footer>
+    
+                <!-- Social Media -->
+                <div>
+                    <span><i class="fa-solid fa-square-rss"></i></span>
+                    <span><i class="fa-brands fa-square-facebook"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-square-twitter"></i></span>
+                    <span><i class="fa-brands fa-discord"></i></span>
+                </div>
+            </footer>
+        </div> 
     </div>
 </body>
 </html>

@@ -85,9 +85,13 @@
 }
 
 .accordion-item {
+  width: 22.5em;
+  height:fit-content;
+  padding: 0em;
+  overflow: hidden;
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
-  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
+  // border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
 
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
@@ -118,6 +122,7 @@
 }
 
 .accordion-body {
+  width: 18.9em;
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
 }
 

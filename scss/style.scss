@@ -1,0 +1,316 @@
+/* =========================================================================== */
+/* Reset CSS */
+/* =========================================================================== */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* =========================================================================== */
+/* Overall Setting */
+/* =========================================================================== */
+/* Set the full height */
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* font */
+/* "TODO: import font" */
+
+
+/* Scroll Bars */
+/* width */
+::-webkit-scrollbar {
+    width: .5em;
+    background-color: #ffffff95;
+    border-radius: 10em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ffffff95; 
+    border-radius: 10em;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00000050; 
+    border-radius: 10em;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00000030; 
+  }
+
+/* =========================================================================== */
+/* Desktop Version */
+/* =========================================================================== */
+
+@media screen and (min-width: 992px) {
+    /* =========================================================================== */
+    /* Top Nav Bar */
+    /* =========================================================================== */        
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 1em .5em;
+        border-bottom: 1px solid #ffffff30;
+        background: #000000;
+    }  
+    
+    /* Logo */
+    .logo {
+        margin-left: 2.5em;
+        /* TODO: To design a logo and put inside the div.logo */
+    }
+
+    /* Search and Menu Buttons */
+    .search-btn, .menu-btn {
+        background: none;
+        color: #ffffff;
+        margin: .5em;
+    }
+
+    /* Search Bar */
+    input.search-bar {
+        padding-left: 1em;
+        background-color: transparent;
+        color: #ffffff;
+        border-radius: 50em;
+        border: none;
+
+        &:focus {
+            outline: none;
+            color: #ffffff;
+        }
+
+        &[type="search"]::-webkit-search-cancel-button {
+            appearance: none;
+            cursor: pointer;
+            width: .8em;
+            height: .8em;
+            background-repeat: no-repeat;
+            background-image: url("../image/xmark.png");
+            background-position: center;
+        }
+    }
+
+
+    /* Right Menu */
+    div.offcanvas-body {
+        ul {
+            color: #000000;
+            margin-top: 10.875em;
+            margin-left: 4.375em;
+    
+            li {
+                margin: 1.25em 0em;
+            }
+        }
+    }
+
+    /* TODO: Style it for small screens */
+    .sm-device-footer {
+        display: none;
+    }
+
+    /* =========================================================================== */
+    /* Sidebar and Main Content */
+    /* =========================================================================== */
+    /* Sidebar and Main Content Container */
+    .grid-container {
+        height: 100%;
+        overflow: hidden;
+
+        /* Make a grid for Sidebar and right content */
+        display: grid;
+        grid-template-columns: 16.375em auto;
+    }
+    
+    /* Sidebar Navigation */
+    /* TODO: Style it and the hover status */
+    aside {
+        width: 16.375em;
+        background-color: #1D235E35;
+        padding: 0em;
+        grid-row: 1 / 2;
+        position: relative;
+    }
+
+    .side-nav {
+        li {
+            display: flex;
+            cursor: pointer;
+
+            a {
+                padding: 1em 2.8em;
+                text-decoration: none;
+                color: #ffffff;
+            }
+
+            &.active {
+                background-color: #ffffff39;
+            }
+        }
+    }
+
+    /* Collapse Button */
+    .collapse-btn {
+        position: absolute;
+        top: 45%;
+        right: 0em;
+        padding: 1.68em .6em;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #ffffff33;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    /* Download Apps */
+    /* TODO: Style it */
+
+    /* =========================================================================== */
+    /* Index: Main Content - Today's Picture */
+    /* =========================================================================== */
+    .right-content-container {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 10.875em;
+        overflow:auto;
+    }
+
+    main {
+        padding: 2.85em 2.85em 0em;
+        width: 100%;
+    }
+
+    /* Breadcrumb */
+    /* TODO: Style it by adjust scss in Bootstrap */
+
+    /* Today's Picture Container */
+    .content-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 4.18em 39.68vw auto 4.18em;
+        gap: 2.81em;
+    }
+
+    /* Control Buttons */
+    /* TODO: Style the hover status */
+    .control-btn {
+        cursor: pointer;
+
+        i {
+            border: 1px solid #ffffff;
+            border-radius: 50em;
+            padding: 1rem;
+            font-size: 1.875em;
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    .btn-disable {
+        opacity: .5;
+    }
+
+    /* Image */
+    .img-crop {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    /* TODO: style <p>Image Credit</p> */
+
+    /* Article */
+    /* TODO: Style it as well as the sharing button and <hr> */
+    .pic-description {
+        overflow: auto;
+        margin-right: 1.18em;
+        height: 18.56em;
+    }
+
+    /* =========================================================================== */
+    /* Footer */
+    /* =========================================================================== */
+    /* TODO: Style it */
+    footer {
+        padding: 2.56em 5.6em;
+        background-color: #ffffff40;
+
+        /* Create an inner grid container for the footer elements */
+        display: grid;
+        grid-template-columns: auto 14.375em;
+        gap: 1em;
+    }
+
+    /* =========================================================================== */
+    /* Search Page: Search Panel */
+    /* =========================================================================== */
+
+    /* Search bar */
+    .search-btn-dark {
+        background: none;
+        color: #000000;
+        margin: .5em;
+    }
+}
