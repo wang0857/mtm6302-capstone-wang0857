@@ -55,6 +55,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* =========================================================================== */
 /* Overall Setting */
 /* =========================================================================== */
@@ -70,6 +74,10 @@ body {
   color: #ffffff;
   display: flex;
   flex-direction: column;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* font */
@@ -102,7 +110,7 @@ body {
 /* =========================================================================== */
 /* Desktop Version */
 /* =========================================================================== */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   /* =========================================================================== */
   /* Top Nav Bar */
   /* =========================================================================== */
@@ -116,7 +124,6 @@ body {
   /* Logo */
   .logo {
     margin-left: 2.5em;
-    /* TODO: To design a logo and put inside the div.logo */
   }
   /* Search and Menu Buttons */
   .search-btn, .menu-btn {
@@ -148,12 +155,18 @@ body {
   }
   /* Right Menu */
   div.offcanvas-body ul {
-    color: #000000;
     margin-top: 10.875em;
     margin-left: 4.375em;
   }
   div.offcanvas-body ul li {
     margin: 1.25em 0em;
+    opacity: 0.5;
+  }
+  div.offcanvas-body ul li a {
+    color: #000000;
+  }
+  div.offcanvas-body ul li.active {
+    opacity: 1;
   }
   /* TODO: Style it for small screens */
   .sm-device-footer {
@@ -185,7 +198,6 @@ body {
   }
   .side-nav li a {
     padding: 1em 2.8em;
-    text-decoration: none;
     color: #ffffff;
   }
   .side-nav li.active {
@@ -204,6 +216,13 @@ body {
   }
   /* Download Apps */
   /* TODO: Style it */
+  .app-container button {
+    background-color: #000000;
+    border-radius: 50em;
+  }
+  .app-container button a {
+    color: #ffffff;
+  }
   /* =========================================================================== */
   /* Index: Main Content - Today's Picture */
   /* =========================================================================== */
@@ -220,10 +239,10 @@ body {
   /* Breadcrumb */
   /* TODO: Style it by adjust scss in Bootstrap */
   /* Today's Picture Container */
-  .content-container {
+  .todays-pic-container {
     position: relative;
     display: grid;
-    grid-template-columns: 4.18em 39.68vw auto 4.18em;
+    grid-template-columns: 4.18em auto 4.18em;
     gap: 2.81em;
   }
   /* Control Buttons */
@@ -242,20 +261,30 @@ body {
   .btn-disable {
     opacity: 0.5;
   }
-  /* Image */
-  .img-crop {
-    overflow: hidden;
+  /* Image Credit */
+  .picture-container {
+    position: relative;
   }
-  .img-crop img {
+  .picture-container p {
+    padding: 1.43em 0em 1.43em 2.56em;
+  }
+  /* Set the style of all subtitles */
+  .picture-container p {
+    position: absolute;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.1882352941);
+    color: #ffffff;
     width: 100%;
   }
-  /* TODO: style <p>Image Credit</p> */
   /* Article */
   /* TODO: Style it as well as the sharing button and <hr> */
-  .pic-description {
-    overflow: auto;
+  article {
+    margin-left: 4.125em;
+  }
+  article p.pic-description {
     margin-right: 1.18em;
-    height: 18.56em;
+    width: 29.625em;
+    overflow: auto;
   }
   /* =========================================================================== */
   /* Footer */
@@ -268,6 +297,17 @@ body {
     display: grid;
     grid-template-columns: auto 14.375em;
     gap: 1em;
+  }
+  .social-media a {
+    text-decoration: none;
+  }
+  /* Set the style of anchors in all paragraphs */
+  .picture-container p a, .social-media a, .declaration a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .picture-container p a:hover, .social-media a:hover, .declaration a:hover {
+    color: #9B55DD;
   }
   /* =========================================================================== */
   /* Search Page: Search Panel */

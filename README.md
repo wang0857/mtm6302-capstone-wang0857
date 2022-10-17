@@ -34,30 +34,36 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 8. Add a sharing button to the picture page. Therefore, users can share the photo on their social media immediately.
 
 ## Current Status
-- [ ] Code the Website in Bootstrap
-- [ ] Create All HTML Pages
-- [ ] Create my CSS file
-- [ ] Customized the style with the SCSS of Bootstrap
-- [ ] Create my javascript file to code the function of search bar and filter
+- [V] Design a logo for APOD
+- [V] Resize images for different resolutions to use on various devices
+- [V] Create all HTML pages and developed pages with Bootstrap framework and from scratch
+- [V] Create my SCSS and CSS files
+- [ ] Customize the style of Bootstrap Components with the SCSS of Bootstrap
+- [ ] Verify my HTML and CSS code
+- [ ] Create my Javascript file to code the function of filters
 - [ ] Commit Final to GitHub
 - [ ] Check pages on multiple browsers
 
 ## How I developed the web application
 I developed the web application with a modern framework, Bootstrap, HTML, CSS, SCSS, and Javascript. Here are the steps:
 
-1. Review all my mockups and list down the structures, materials, images, and components.
-2. Code the HTML of all pages with Bootstrap and customized the style with its SCSS.
-3. Add my customized CSS, style.css, to change the style of some elements and the layout.
-4. Verify my code of HTML and CSS.
-5. Code the function of search bar and filter.
-6. Verify my code.
-7. Upload to GitHub.
+1. Reviewed all my mockups and list down the structures, materials, images, and components.
+2. Design a Logo for APOD.
+3. Resized images for different resolutions.
+4. Designed a new logo for APOD
+5. Coded the HTML of all pages with Bootstrap and from scratch
+6. Customized the style with the SCSS of Bootstrap Components.
+7. Created my customized SCSS file and translated it into style.css through the extension, Live Sass Compiler. Change the style of some elements and the layout.
+8. Verified my code of HTML and CSS.
+9. Coded the function of search bar and filter.
+10. Verified my code.
+11. Uploaded to GitHub.
 
 ## Challenges Faced
-1. Customized the SCSS of Bootstrap
+1. Customized the SCSS of Bootstrap Components
 
 ## Overcoming Challeges
-1. Downloaded the SCSS of Bootstrap from its website. Searched for the SCSS variables that I would customized and change the value in the SCSS.
+1. Downloaded the SCSS files of Bootstrap from its website. Searched for the variables and classes that I would customized and changed the value in the SCSS.
 
 ## Assets Used (Bibliography)
 - Images and Articles: <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>

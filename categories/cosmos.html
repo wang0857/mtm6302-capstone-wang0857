@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
     <!-- Customized CSS Style -->
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -12,7 +14,7 @@
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    <title>Astronomy Picture of the Day - APOD</title>
+    <title>Categories - Cosmos - APOD</title>
 </head>
 <body>
     <!-- =========================== Top Nav Bar =========================== -->
@@ -21,7 +23,14 @@
         <nav>
             <!-- Logo -->
             <div class="logo">
-                <h1>APOD</h1>
+                <a href="../index.html">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="../image/logo-152x58.png">
+                        <source media="(min-width:768px)" srcset="../image/logo-101x39.png">
+                        <source media="(max-width:767px)" srcset="../image/logo-89x34.png">
+                        <img src="../image/logo-152x58.png" alt="APOD Logo">
+                    </picture>
+                </a>
             </div>
             
             <div class="container-fluid d-flex justify-content-end">
@@ -47,11 +56,11 @@
             </div>
             <div class="offcanvas-body">
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT APOD</li>
-                    <li>ALBUM</li>
-                    <li>DISSCUSSION BOARD</li>
-                    <li>EDUCATION</li>
+                    <li class="active"><a href="../index.html">HOME</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/lib/about_apod.html">ABOUT APOD</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/calendar/allyears.html">ALBUM</a></li>
+                    <li><a href="http://asterisk.apod.com/discuss_apod.php?date=221015">DISSCUSSION BOARD</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/lib/edlinks.html">EDUCATION</a></li>
                 </ul>
 
                 <!-- Hide Small Footer in Large Screens --> 
@@ -67,12 +76,22 @@
                     </div>
         
                     <!-- Social Media -->
-                    <div>
-                        <span><i class="fa-solid fa-square-rss"></i></span>
-                        <span><i class="fa-brands fa-square-facebook"></i></span>
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                        <span><i class="fa-brands fa-square-twitter"></i></span>
-                        <span><i class="fa-brands fa-discord"></i></span>
+                    <div class="social-media">
+                        <span>
+                            <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
+                        </span>
+                        <span>
+                            <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -91,25 +110,25 @@
             <!-- Nav Options -->
             <ul class="side-nav">
                 <li>
-                    <a href="#">
+                    <a href="../index.html">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../search.html">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li">
+                    <a href="../submission.html">
                         <i class="fa-solid fa-file-arrow-up"></i>
                         <span>Submit Your Photos</span>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#">
+                    <a href="../categories.html">
                         <i class="fa-solid fa-border-all"></i>
                         <span>Categories</span>
                     </a>
@@ -124,12 +143,16 @@
                 </div>
                 
                 <button type="button">
-                    <i class="fa-brands fa-apple"></i>
-                    <span>iOS</span>
+                    <a href="https://www.apple.com/us/search/apod?src=serp">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>iOS</span>
+                    </a>
                 </button>
                 <button type="button">
-                    <i class="fa-brands fa-android"></i>
-                    <span>Android</span>
+                    <a href="https://play.google.com/store/search?q=apod&c=apps">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>iOS</span>
+                    </a>
                 </button>
             </div>
         </aside>
@@ -140,8 +163,8 @@
                 <!-- Breadcrumb -->
                 <div aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item">Categories</li>
+                      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="../categories.html">Categories</a></li>
                       <li class="breadcrumb-item active" aria-current="page">Cosmos</li>
                     </ol>
                 </div>
@@ -150,59 +173,98 @@
                 <h2>Cosmos</h2>
     
                 <!-- Categories-Cosmos -->
-                <!-- TODO: Resize Images & Adjust the bootstrap scss -->
-                <div class="container">
-                    <div class="accordion row" id="accordionExample">
-                        <div class="accordion-item col-lg-3">
-                            <img src="../image/stars.jpg" alt="Stars">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Stars
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
+                <div class="accordion d-flex flex-wrap justify-content-center align-items-center" id="accordionExample">
+                    <div class="accordion-item">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="../image/stars-360x212.jpg">
+                            <source media="(max-width:1199px)" srcset="../image/stars-284x212.jpg">
+                            <img src="../image/stars-360x212.jpg" alt="Stars">
+                        </picture>
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Stars
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="https://apod.nasa.gov/apod/binary_stars.html">Binary Stars</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/black_holes.html">Black Holes</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/globular_clusters.html">Globular Clusters</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/individual_stars.html">Individual Stars</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/neutron_stars.html">Neutron Stars</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/stellar_nurseries.html">Nurseries</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/open_clusters.html">Open Clusters</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/sun.html">Sun</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/white_dwarfs.html">White Dwarfs</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="accordion-item col-lg-3">
-                            <img src="../image/galaxies.jpg" alt="Galaxies">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Galaxies
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
+                    </div>
+                    <div class="accordion-item">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="../image/galaxies-360x212.jpg">
+                            <source media="(max-width:1199px)" srcset="../image/galaxies-284x212.jpg">
+                            <img src="../image/galaxies-360x212.jpg" alt="Galaxies">
+                        </picture>
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Galaxies
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="https://apod.nasa.gov/apod/clusters_of_galaxies.html">Clusters of Galaxies</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/colliding_galaxies.html">Colliding Galaxies</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/elliptical_galaxies.html">Elliptical Galaxies</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/local_group.html">Local Group</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/milky_way.html">Milky Way</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/spiral_galaxies.html">Spiral Galaxies</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="accordion-item col-lg-3">
-                            <img src="../image/nebulae.jpg" alt="Nebulae">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Nebulae
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
+                    </div>
+                    <div class="accordion-item">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="../image/nebulae-360x212.jpg">
+                            <source media="(max-width:1199px)" srcset="../image/nebulae-284x212.jpg">
+                            <img src="../image/nebulae-360x212.jpg" alt="Nebulae">
+                        </picture>
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Nebulae
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="https://apod.nasa.gov/apod/dark_nebulae.html">Dark Nebulae</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/emission_nebulae.html">Emission Nebulae</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/planetary_nebulae.html">Planetary Nebulae</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/reflection_nebulae.html">Reflection Nebulae</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/supernova_remnants.html">Supernova Remnants</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="accordion-item col-lg-3">
-                            <img src="../image/miscellaneous.jpg" alt="Miscellaneous">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Miscellaneous
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
+                    </div>
+                    <div class="accordion-item">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="../image/miscellaneous-360x212.jpg">
+                            <source media="(max-width:1199px)" srcset="../image/miscellaneous-284x212.jpg">
+                            <img src="../image/miscellaneous-360x212.jpg" alt="Miscellaneous">
+                        </picture>
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Miscellaneous
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="https://apod.nasa.gov/apod/quasars.html">Quasars/Active Galactic Nuclei</a></li>
+                                    <li><a href="https://apod.nasa.gov/apod/dark_matter.html">Dark Matter</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -212,7 +274,7 @@
             <!-- =========================== Footer =========================== -->
             <footer>
                 <!-- Privacy and Right Info -->
-                <div>
+                <div class="declaration">
                     <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
                     <p>
                         <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
@@ -222,12 +284,22 @@
                 </div>
     
                 <!-- Social Media -->
-                <div>
-                    <span><i class="fa-solid fa-square-rss"></i></span>
-                    <span><i class="fa-brands fa-square-facebook"></i></span>
-                    <span><i class="fa-brands fa-instagram"></i></span>
-                    <span><i class="fa-brands fa-square-twitter"></i></span>
-                    <span><i class="fa-brands fa-discord"></i></span>
+                <div class="social-media">
+                    <span>
+                        <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
+                    </span>
+                    <span>
+                        <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
+                    </span>
                 </div>
             </footer>
         </div>

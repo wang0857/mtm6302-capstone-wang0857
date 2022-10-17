@@ -85,7 +85,7 @@
 }
 
 .accordion-item {
-  width: 22.5em;
+  min-width: 0;
   height:fit-content;
   padding: 0em;
   overflow: hidden;

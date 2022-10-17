@@ -4219,15 +4219,17 @@ textarea.form-control-lg {
   --bs-card-bg: #fff;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
+  padding: 0em;
   position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  height: var(--bs-card-height);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
 .card > hr {
@@ -4261,6 +4263,7 @@ textarea.form-control-lg {
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
+  text-align: center;
 }
 
 .card-subtitle {
@@ -4468,7 +4471,7 @@ textarea.form-control-lg {
 }
 
 .accordion-item {
-  width: 22.5em;
+  min-width: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
     <!-- Customized CSS Style -->
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -18,13 +20,28 @@
     <!-- =========================== Top Nav Bar =========================== -->
     <header>
         <!-- Top Nav Bar Container -->
-        <nav class="top-nav">
+        <nav>
             <!-- Logo -->
             <div class="logo">
-                <h1>APOD</h1>
+                <a href="./index.html">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="./image/logo-152x58.png">
+                        <source media="(min-width:768px)" srcset="./image/logo-101x39.png">
+                        <source media="(max-width:767px)" srcset="./image/logo-89x34.png">
+                        <img src="./image/logo-152x58.png" alt="APOD Logo">
+                    </picture>
+                </a>
             </div>
             
             <div class="container-fluid d-flex justify-content-end">
+                <!-- Search Bar -->
+                <form class="d-flex border border-1 rounded-5">
+                  <input class="search-bar me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="search-btn border border-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+
                 <!-- Right Menu Toggle Button -->
                 <button class="menu-btn border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-bars"></i>
@@ -39,15 +56,15 @@
             </div>
             <div class="offcanvas-body">
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT APOD</li>
-                    <li>ALBUM</li>
-                    <li>DISSCUSSION BOARD</li>
-                    <li>EDUCATION</li>
+                    <li class="active"><a href="./index.html">HOME</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/lib/about_apod.html">ABOUT APOD</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/calendar/allyears.html">ALBUM</a></li>
+                    <li><a href="http://asterisk.apod.com/discuss_apod.php?date=221015">DISSCUSSION BOARD</a></li>
+                    <li><a href="https://apod.nasa.gov/apod/lib/edlinks.html">EDUCATION</a></li>
                 </ul>
 
                 <!-- Hide Small Footer in Large Screens --> 
-                <div class="sm-device-footer"> 
+                <div class="sm-device-footer">
                     <!-- Privacy and Right Info -->
                     <div>
                         <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
@@ -59,12 +76,22 @@
                     </div>
         
                     <!-- Social Media -->
-                    <div>
-                        <span><i class="fa-solid fa-square-rss"></i></span>
-                        <span><i class="fa-brands fa-square-facebook"></i></span>
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                        <span><i class="fa-brands fa-square-twitter"></i></span>
-                        <span><i class="fa-brands fa-discord"></i></span>
+                    <div class="social-media">
+                        <span>
+                            <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
+                        </span>
+                        <span>
+                            <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
+                        </span>
+                        <span>
+                            <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -83,25 +110,25 @@
             <!-- Nav Options -->
             <ul class="side-nav">
                 <li>
-                    <a href="#">
+                    <a href="./index.html">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#">
+                    <a href="./search.html">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./submission.html">
                         <i class="fa-solid fa-file-arrow-up"></i>
                         <span>Submit Your Photos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./categories.html">
                         <i class="fa-solid fa-border-all"></i>
                         <span>Categories</span>
                     </a>
@@ -116,12 +143,16 @@
                 </div>
                 
                 <button type="button">
-                    <i class="fa-brands fa-apple"></i>
-                    <span>iOS</span>
+                    <a href="https://www.apple.com/us/search/apod?src=serp">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>iOS</span>
+                    </a>
                 </button>
                 <button type="button">
-                    <i class="fa-brands fa-android"></i>
-                    <span>Android</span>
+                    <a href="https://play.google.com/store/search?q=apod&c=apps">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>iOS</span>
+                    </a>
                 </button>
             </div>
         </aside>
@@ -132,7 +163,7 @@
                 <!-- Breadcrumb -->
                 <div aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                       <li class="breadcrumb-item active" aria-current="page">Search for Pictures</li>
                     </ol>
                 </div>
@@ -333,7 +364,7 @@
             <!-- =========================== Footer =========================== -->
             <footer>
                 <!-- Privacy and Right Info -->
-                <div>
+                <div class="declaration">
                     <p>NASA Official: Phillip Newman <a href="lib/about_apod.html#srapply">Specific rights apply</a>. A service of: <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> / <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>, <a href="https://science.nasa.gov/learners">NASA Science Activation</a> & <a href="http://www.mtu.edu/">Michigan Tech. U.</a></p>
                     <p>
                         <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
@@ -343,12 +374,22 @@
                 </div>
     
                 <!-- Social Media -->
-                <div>
-                    <span><i class="fa-solid fa-square-rss"></i></span>
-                    <span><i class="fa-brands fa-square-facebook"></i></span>
-                    <span><i class="fa-brands fa-instagram"></i></span>
-                    <span><i class="fa-brands fa-square-twitter"></i></span>
-                    <span><i class="fa-brands fa-discord"></i></span>
+                <div class="social-media">
+                    <span>
+                        <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
+                    </span>
+                    <span>
+                        <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
+                    </span>
+                    <span>
+                        <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
+                    </span>
                 </div>
             </footer>
         </div> 
