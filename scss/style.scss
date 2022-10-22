@@ -58,6 +58,18 @@ a {
 /* =========================================================================== */
 /* Overall Setting */
 /* =========================================================================== */
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+    color: #FFCA3A;
+}
+
+h2, h3, h4, h5, h6, p {
+    font-family: 'Poppins', sans-serif;
+} 
+
 /* Set the full height */
 html, body {
     margin: 0px;
@@ -70,15 +82,12 @@ body {
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 button {
     cursor: pointer;
 }
-
-/* font */
-/* "TODO: import font" */
-
 
 /* Scroll Bars */
 /* width */
@@ -111,6 +120,28 @@ button {
 
 @media screen and (min-width: 1200px) {
     /* =========================================================================== */
+    /* Font Setting for Desktop Version*/
+    /* =========================================================================== */        
+    h1 {
+        font-size: 4em;
+        font-weight: 700;
+        margin-bottom: .5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    h3, h4 {
+        font-weight: 700;
+    }
+
+    p {
+        line-height: 26px;
+    }
+
+    /* =========================================================================== */
     /* Top Nav Bar */
     /* =========================================================================== */        
     nav {
@@ -127,22 +158,44 @@ button {
     }
 
     /* Search and Menu Buttons */
-    .search-btn, .menu-btn {
+    
+    /* Clear the default style of button */
+    %button-clear {
         background: none;
         color: #ffffff;
-        margin: .5em;
+    }
+    
+    .search-btn {
+        @extend %button-clear;
+        margin: 0em .5em;
+        font-size: 1.4em;
+    }
+    
+    .menu-btn {
+        @extend %button-clear;
+        margin: 0em 1.5em;
+        font-size: 2.4em;
     }
 
     /* Search Bar */
-    input.search-bar {
-        padding-left: 1em;
-        background-color: transparent;
-        color: #ffffff;
+    form.search {
         border-radius: 50em;
-        border: none;
+        border: 4px solid #ffffff;
+    }
+
+    .search-bar {
+        padding-left: 1em;
+        background: none;
+        color: #ffffff;
+        height: 1.6em;
+        width: 20em;
 
         &:focus {
             outline: none;
+            color: #ffffff;
+        }
+
+        &::placeholder {
             color: #ffffff;
         }
 
@@ -185,9 +238,8 @@ button {
     }
 
     /* =========================================================================== */
-    /* Sidebar and Main Content */
+    /* Main Grid Container */
     /* =========================================================================== */
-    /* Sidebar and Main Content Container */
     .grid-container {
         height: 100%;
         overflow: hidden;
@@ -197,28 +249,66 @@ button {
         grid-template-columns: 16.375em auto;
     }
     
+    /* =========================================================================== */
+    /* Sidebar */
+    /* =========================================================================== */
+    /* Span heading besides icon */
+    %span-heading {
+        font-weight: 700;
+        margin-left: .5em;
+    }
+
+    /* Icon Size */
+    %icon-size {
+        font-size: 1.25em;
+    }
+    
     /* Sidebar Navigation */
-    /* TODO: Style it and the hover status */
     aside {
         width: 16.375em;
         background-color: #1D235E35;
         padding: 0em;
         grid-row: 1 / 2;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .side-nav {
         li {
             display: flex;
             cursor: pointer;
+            transition: .3s all ease-in;
 
-            a {
-                padding: 1em 2.8em;
-                color: #ffffff;
+            &:nth-child(1) {
+                padding-top: 1.85em;
             }
 
-            &.active {
+            &.active, &:hover {
                 background-color: #ffffff39;
+            }
+
+            a {
+                padding: 1em .75em 1em 2.5em;
+                color: #ffffff70;
+                transition: .3s all ease-in;
+
+                &[href="./categories.html"] {
+                    padding-right: 4.4em;
+                }
+                
+                span {
+                    @extend %span-heading;
+                }
+
+                i {
+                    @extend %icon-size;
+                }
+
+                &.active, &:hover {
+                    color: #ffffff;
+                }
             }
         }
     }
@@ -233,19 +323,63 @@ button {
         color: #ffffff;
         background-color: #ffffff33;
         border-radius: 10px 0px 0px 10px;
+        border: none;
+
+        i {
+            @extend %icon-size;
+        }
     }
 
     /* Download Apps */
-    /* TODO: Style it */
-
     .app-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25em;
+        margin-bottom: 3.56em;
+
         button {
             background-color: #000000;
             border-radius: 50em;
+            border: 3px solid #ffffff;
+            padding: .7em 0em;
+            width: 9.125em;
+            transition: .3s all ease-in;
+
+            &:hover {
+                background-color: #98ECFF;
+            }
+
+            &:active {
+                transform: scale(.8);
+            }
 
             a {
                 color: #ffffff;
+                padding: 1em;
+
+                &:hover {
+                    color: #000000;
+                }
+
+                span {
+                    @extend %span-heading;
+                }
+
+                i {
+                    @extend %icon-size;
+                }
             }
+        }
+    }
+
+    .app-header {
+        span {
+            @extend %span-heading;
+        }
+
+        i {
+            @extend %icon-size;
         }
     }
 
@@ -255,6 +389,8 @@ button {
     .right-content-container {
         height: 100%;
         display: grid;
+
+        /* Fixed Footer's height */
         grid-template-rows: auto 10.875em;
         overflow:auto;
     }
@@ -263,9 +399,6 @@ button {
         padding: 2.85em 2.85em 0em;
         width: 100%;
     }
-
-    /* Breadcrumb */
-    /* TODO: Style it by adjust scss in Bootstrap */
 
     /* Today's Picture Container */
     .todays-pic-container {
@@ -276,7 +409,6 @@ button {
     }
 
     /* Control Buttons */
-    /* TODO: Style the hover status */
     .control-btn {
         cursor: pointer;
 
@@ -287,6 +419,18 @@ button {
             font-size: 1.875em;
             position: absolute;
             top: 50%;
+            transition: .3s all ease-in;
+
+            &:hover {
+                border: 1px solid #98ECFF;
+                color: #98ECFF;
+                box-shadow: 0px 0px 10px #ffffff;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(.8);
+            }
         }
     }
 
@@ -318,16 +462,54 @@ button {
     }
 
     /* Article */
-    /* TODO: Style it as well as the sharing button and <hr> */
     article {
         margin-left: 4.125em;
+        width: 29.625em;
 
-        p {
-            &.pic-description {
-                margin-right: 1.18em;
-                width: 29.625em;
-                overflow: auto;
-            }
+        .pic-description {
+            margin-right: 1.18em;
+            max-height: 18.56em;
+            overflow: auto;
+        }
+
+        hr {
+            border-top: 3px dashed #ffffff;
+            opacity: 1;
+            margin-top: 1.5em;
+        }
+
+        button {
+            @extend %primary-btn;
+        }
+    }
+
+    /* Set the style of primary button */
+    %primary-btn {
+        color: #9B55DD;
+        border: 1px solid #9B55DD;
+        border-radius: 50em;
+        box-shadow: 0px 0px 20px #ffffff48;
+        background-color: transparent;
+        padding: 1em;
+        margin: 1.5em 0em;
+        transition: .3s all ease-in;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #9B55DD;
+            box-shadow: 0px 0px 20px #ffffff48;
+        }
+
+        &:active {
+            transform: scale(.8);
+        }
+
+        span {
+            @extend %span-heading;
+        }
+
+        i {
+            @extend %icon-size;
         }
     }
 
@@ -346,9 +528,16 @@ button {
     }
    
     .social-media {
+        display: flex;
+        gap: .75em;
+
         a {
             @extend %pAnchor;
             text-decoration: none;
+
+            i {
+                font-size: 2em;
+            }
         }
     }
 
@@ -362,9 +551,10 @@ button {
     %pAnchor {
         color: #ffffff;
         text-decoration: underline;
+        transition: .3s all ease-in;
             
         &:hover {
-            color: #9B55DD;
+            color: #98ECFF;
         }
     }
     
@@ -377,5 +567,20 @@ button {
         background: none;
         color: #000000;
         margin: .5em;
+    }
+}
+
+/* =========================================================================== */
+/* Fine-tune Elements for different large screens */
+/* =========================================================================== */
+@media screen and (min-width: 1200px) and (max-width: 1879px) {
+    /* Index - Article */
+    article {
+        width: auto;
+        margin-top: 1.5em;
+        
+        h1 {
+            text-align: center;
+        }
     }
 }
