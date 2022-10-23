@@ -34,11 +34,12 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 8. Add a sharing button to the picture page. Therefore, users can share the photo on their social media immediately.
 
 ## Current Status
-- [V] Design a logo for APOD
-- [V] Resize images for different resolutions to use on various devices
-- [V] Create all HTML pages and developed pages with Bootstrap framework and from scratch
-- [V] Create my SCSS and CSS files
-- [ ] Customize the style of Bootstrap Components with the SCSS of Bootstrap
+- [X] Design a logo for APOD
+- [X] Resize images for different resolutions to use on various devices
+- [X] Create all HTML pages and developed pages with Bootstrap framework and from scratch
+- [X] Create my SCSS and CSS files
+- [X] Customize the style of Bootstrap Components with the SCSS of Bootstrap
+- [ ] Develop the RWD layouts
 - [ ] Verify my HTML and CSS code
 - [ ] Create my Javascript file to code the function of filters
 - [ ] Commit Final to GitHub
@@ -47,17 +48,16 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 ## How I developed the web application
 I developed the web application with a modern framework, Bootstrap, HTML, CSS, SCSS, and Javascript. Here are the steps:
 
-1. Reviewed all my mockups and list down the structures, materials, images, and components.
+1. Reviewed all my mockups and listed down the structures, materials, images, and components.
 2. Design a Logo for APOD.
 3. Resized images for different resolutions.
-4. Designed a new logo for APOD
-5. Coded the HTML of all pages with Bootstrap and from scratch
-6. Customized the style with the SCSS of Bootstrap Components.
-7. Created my customized SCSS file and translated it into style.css through the extension, Live Sass Compiler. Change the style of some elements and the layout.
-8. Verified my code of HTML and CSS.
-9. Coded the function of search bar and filter.
-10. Verified my code.
-11. Uploaded to GitHub.
+4. Coded the HTML of all pages with Bootstrap and from scratch
+5. Customized the style with the SCSS of Bootstrap Components.
+6. Created my customized SCSS file and translated it into style.css through the extension, Live Sass Compiler.
+7. Verified my code of HTML and CSS.
+8. Coded the function of search bar and filter. (TBC)
+9. Verified my code again. (TBC)
+10. Uploaded to GitHub. (TBC)
 
 ## Challenges Faced
 1. Customized the SCSS of Bootstrap Components
