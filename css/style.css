@@ -607,6 +607,31 @@ button {
     font-size: 1.5em;
     margin: 1em 0em;
   }
+  /* =========================================================================== */
+  /* Categories Page */
+  /* =========================================================================== */
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.18em;
+    max-width: 58em;
+    margin: 3.6em auto;
+  }
+  .categories p {
+    font-size: 1.25em;
+    padding: 1em 0em;
+    transition: 0.3s all ease-in;
+  }
+  .categories p:hover {
+    padding: 121.5px 0px;
+    background-color: rgba(0, 0, 0, 0.4588235294);
+  }
+  .categories picture:hover + p {
+    padding: 121.5px 0px;
+    background-color: rgba(0, 0, 0, 0.4588235294);
+  }
 }
 /* =========================================================================== */
 /* Fine-tune Elements for different large screens */
