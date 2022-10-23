@@ -1257,12 +1257,12 @@ $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     1rem !default;
 $accordion-padding-x:                     1.25rem !default;
-$accordion-color:                         $body-color !default; // Sass variable because of $accordion-button-icon
+$accordion-color:                         $black !default; // Sass variable because of $accordion-button-icon
 $accordion-bg:                            $body-bg !default;
 $accordion-border-width:                  $border-width !default;
 $accordion-border-color:                  var(--#{$prefix}border-color) !default;
-$accordion-border-radius:                 $border-radius !default;
-$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
+$accordion-border-radius:                 10px !default; // $border-radius;
+$accordion-inner-border-radius:           10px !default; // subtract($accordion-border-radius, $accordion-border-width);
 
 $accordion-body-padding-y:                $accordion-padding-y !default;
 $accordion-body-padding-x:                $accordion-padding-x !default;
@@ -1273,10 +1273,10 @@ $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-color:           $secondary !default; // shade-color($primary, 10%) ;
 
-$accordion-button-focus-border-color:     $input-focus-border-color !default;
-$accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
+$accordion-button-focus-border-color:     none; // $input-focus-border-color !default;
+$accordion-button-focus-box-shadow:       none; // $btn-focus-box-shadow !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $accordion-button-color !default;

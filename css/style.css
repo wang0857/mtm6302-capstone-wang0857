@@ -606,7 +606,7 @@ button {
   /* =========================================================================== */
   /* Categories Page */
   /* =========================================================================== */
-  .categories {
+  .categories, .sub-categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -615,18 +615,39 @@ button {
     max-width: 58em;
     margin: 3.6em auto;
   }
-  .categories p {
+  .categories p, .sub-categories p {
     font-size: 1.25em;
     padding: 1em 0em;
     transition: 0.3s all ease-in;
   }
-  .categories p:hover {
+  .categories p:hover, .sub-categories p:hover {
     padding: 121.5px 0px;
     background-color: rgba(0, 0, 0, 0.4588235294);
   }
-  .categories picture:hover + p {
+  .categories picture:hover + p, .sub-categories picture:hover + p {
     padding: 121.5px 0px;
     background-color: rgba(0, 0, 0, 0.4588235294);
+  }
+  /* =========================================================================== */
+  /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+  /* =========================================================================== */
+  .sub-categories {
+    align-items: baseline;
+    gap: 1.3em;
+    max-width: 94em;
+  }
+  .accordion-item ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4em 3em;
+  }
+  .accordion-item ul a {
+    color: #000000;
+    line-height: 20px;
+    transition: 0.3s all ease-in;
+  }
+  .accordion-item ul a:hover {
+    color: #9B55DD;
   }
 }
 /* =========================================================================== */
