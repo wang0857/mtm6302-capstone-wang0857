@@ -569,15 +569,14 @@ button {
     /* =========================================================================== */
     .search-container {
         display: grid;
-        grid-template-columns: repeat(6, column);
-        grid-template-rows: repeat(6, column);
-        gap: 3.75em;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 4fr;
+        gap: 3.5em;
     }
     
     /* Search Bar */
     .searching-for {
-        grid-column: 1/4;
-        grid-row: 1/2;
+        grid-column: 1 / 4;
 
         form {
             input {
@@ -615,14 +614,12 @@ button {
 
     /* Category Selections */
     .category-selections {
-        grid-column: 4 / 7;
-        grid-row: 1 / 2;
+        grid-column: 4 / 6;
     }
 
     /* Filter */
     .filter-container {
         grid-column: 1 / 2;
-        grid-row: 2 / 7;
         
         /* Buttons */
         button {
@@ -634,6 +631,7 @@ button {
             &:nth-child(4) {
                 border: 2px solid #ffffff50;
                 transition: .3s all ease-in;
+                margin-right: 1em;
 
                 &:hover {
                     background-color: #98ECFF;
@@ -687,7 +685,6 @@ button {
             margin-bottom: .8em;
         
             .row {
-                max-width: 14.5em;
                 padding-left: .8em;
                 margin-right: .05em;
                 overflow: auto;
@@ -708,8 +705,7 @@ button {
 
     /* Results */
     .result-container {
-        grid-column: 2 / 7;
-        grid-row: 2 / 7;
+        grid-column: 2 / 6;
     }
 
     .results {
@@ -819,7 +815,7 @@ button {
 /* Fine-tune Elements for different large screens */
 /* =========================================================================== */
 @media screen and (min-width: 1200px) and (max-width: 1879px) {
-    /* Index - Article */
+    /* Index */
     article {
         width: auto;
         margin-top: 1.5em;
@@ -827,5 +823,31 @@ button {
         h1 {
             text-align: center;
         }
+    }
+
+    /* Search Page */
+    .search-container {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1em;
+    }
+
+    .searching-for {
+        grid-column: 1 / 5;
+    }
+
+    .category-selections {
+        grid-column: 5 / 7;
+    }
+
+    .filter-container {
+        grid-column: 1 / 3;
+    }
+
+    .result-container {
+        grid-column: 3 / 7;
+    }
+
+    .results .filter-panels {
+        margin-right: 1em;
     }
 }
