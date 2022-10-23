@@ -34,14 +34,6 @@
             </div>
             
             <div class="container-fluid d-flex justify-content-end">
-                <!-- Search Bar -->
-                <form class="d-flex border border-1 rounded-5">
-                  <input class="search-bar me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="search-btn border border-0" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-
                 <!-- Right Menu Toggle Button -->
                 <button class="menu-btn border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-bars"></i>
@@ -77,21 +69,11 @@
         
                     <!-- Social Media -->
                     <div class="social-media">
-                        <span>
-                            <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
-                        </span>
-                        <span>
-                            <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
-                        </span>
-                        <span>
-                            <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
-                        </span>
-                        <span>
-                            <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
-                        </span>
-                        <span>
-                            <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
-                        </span>
+                        <a href="https://apod.nasa.gov/apod.rss"><i class="fa-solid fa-square-rss"></i></a>
+                        <a href="http://www.facebook.com/AstronomyPictureOfTheDay"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://instagram.com/astronomypicturesdaily"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/apod"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://discord.gg/apod"><i class="fa-brands fa-discord"></i></a>
                     </div>
                 </div>
             </div>
@@ -116,7 +98,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="./search.html">
+                    <a class="active" href="./search.html">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
                     </a>
@@ -171,18 +153,18 @@
                 <!-- Search and Result Container -->
                 <div class="search-container">
                     <!-- Search bar -->
-                    <div>
+                    <div class="searching-for">
                         <h2>What are you searching for?</h2>
-                        <form class="d-flex rounded-5">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="search-btn-dark border border-0" type="submit">
+                        <form class="d-flex align-items-center bg-white border border-0 rounded-5 ">
+                            <input class="form-control border border-0" type="search" placeholder="Search" aria-label="Search">
+                            <button class="border border-0" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
                     </div>
     
-                    <!-- Select bar -->
-                    <div>
+                    <!-- Category Selections -->
+                    <div class="category-selections">
                         <h2>Categories</h2>
                         <form class="d-flex rounded-5">
                             <select class="form-select rounded-5" aria-label="Default select example">
@@ -197,51 +179,51 @@
                     </div>
     
                     <!-- Filter Panels -->
-                    <div>
+                    <div class="filter-container">
                         <h2>
-                            <span>All Filters</span>
+                            <span class="me-2">All Filters</span>
                             <i class="fa-solid fa-sliders"></i>
                         </h2>
     
                         <!-- Time Filter -->
                         <div class="filter-panels">
                             <h3>By Time</h3>
-    
+                            <hr>
                             <!-- Filter by Year -->
                             <div class="container"><!-- Grid Container -->
                                 <h4>Year</h4>
                                 <div class="row">
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">2022</label>
+                                        <input class="form-check-input" type="checkbox" value="2022" id="2022">
+                                        <label class="form-check-label" for="2022">2022</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">2021</label>
+                                        <input class="form-check-input" type="checkbox" value="2021" id="2021">
+                                        <label class="form-check-label" for="2021">2021</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">2020</label>
+                                        <input class="form-check-input" type="checkbox" value="2020" id="2020">
+                                        <label class="form-check-label" for="2020">2020</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">1999</label>
+                                        <input class="form-check-input" type="checkbox" value="1999" id="1999">
+                                        <label class="form-check-label" for="1999">1999</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">1998</label>
+                                        <input class="form-check-input" type="checkbox" value="1998" id="1998">
+                                        <label class="form-check-label" for="1998">1998</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">1997</label>
+                                        <input class="form-check-input" type="checkbox" value="1997" id="1997">
+                                        <label class="form-check-label" for="1997">1997</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">1996</label>
+                                        <input class="form-check-input" type="checkbox" value="1996" id="1996">
+                                        <label class="form-check-label" for="1996">1996</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">1995</label>
+                                        <input class="form-check-input" type="checkbox" value="1995" id="1995">
+                                        <label class="form-check-label" for="1995">1995</label>
                                     </div>
                                 </div>
                             </div>
@@ -251,52 +233,52 @@
                                 <h4>Month</h4>
                                 <div class="row">
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Jan</label>
+                                        <input class="form-check-input" type="checkbox" value="January" id="january">
+                                        <label class="form-check-label" for="january">Jan</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Feb</label>
+                                        <input class="form-check-input" type="checkbox" value="February" id="february">
+                                        <label class="form-check-label" for="febuary">Feb</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Mar</label>
+                                        <input class="form-check-input" type="checkbox" value="March" id="march">
+                                        <label class="form-check-label" for="march">Mar</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Apr</label>
+                                        <input class="form-check-input" type="checkbox" value="April" id="april">
+                                        <label class="form-check-label" for="april">Apr</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">May</label>
+                                        <input class="form-check-input" type="checkbox" value="May" id="may">
+                                        <label class="form-check-label" for="may">May</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Jun</label>
+                                        <input class="form-check-input" type="checkbox" value="June" id="june">
+                                        <label class="form-check-label" for="june">Jun</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Jul</label>
+                                        <input class="form-check-input" type="checkbox" value="July" id="july">
+                                        <label class="form-check-label" for="july">Jul</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Aug</label>
+                                        <input class="form-check-input" type="checkbox" value="August" id="august">
+                                        <label class="form-check-label" for="august">Aug</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Sep</label>
+                                        <input class="form-check-input" type="checkbox" value="September" id="september">
+                                        <label class="form-check-label" for="september">Sep</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Oct</label>
+                                        <input class="form-check-input" type="checkbox" value="October" id="october">
+                                        <label class="form-check-label" for="october">Oct</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Nov</label>
+                                        <input class="form-check-input" type="checkbox" value="November" id="november">
+                                        <label class="form-check-label" for="november">Nov</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Dec</label>
+                                        <input class="form-check-input" type="checkbox" value="December" id="december">
+                                        <label class="form-check-label" for="december">Dec</label>
                                     </div>
                                 </div>
                             </div>
@@ -305,24 +287,24 @@
                         <!-- Scope Filter -->
                         <div class="filter-panels">
                             <h3>By Scope</h3>
-    
+                            <hr>
                             <!-- Filter by Scope -->
                             <div class="container"><!-- Grid Container --> 
                                 <h4>Cosmos</h4>
                                 <div class="row">
-                                    <div class="form-check col-4">
+                                    <div class="form-check col-5">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Stars</label>
                                     </div>
-                                    <div class="form-check col-4">
+                                    <div class="form-check col-7">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Galaxies</label>
                                     </div>
-                                    <div class="form-check col-4">
+                                    <div class="form-check col-5">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Nebulae</label>
                                     </div>
-                                    <div class="form-check col-4">
+                                    <div class="form-check col-7">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">Miscellaneous</label>
                                     </div>
@@ -331,16 +313,14 @@
                         </div>
 
                         <!-- Buttons -->
-                        <div>
-                            <button type="button">Reset</button>
-                            <button type="button">Show Results</button>
-                        </div>
+                        <button type="button">Reset</button>
+                        <button type="button">Show Results</button>
                     </div>
     
                     <!-- Result Panels -->
-                    <div>
+                    <div class="result-container">
                         <h2>Results</h2>
-                        <div>
+                        <div class="results">
                             <div class="filter-panels">
                                 <h2>Accretion Disk Binary System</h2>
                                 <p>December 19, 1999</p>
