@@ -236,12 +236,12 @@ button {
   /* Sidebar */
   /* =========================================================================== */
   /* Span heading besides icon */
-  article button span, .app-header span, .app-container button a span, .side-nav li a span {
+  .form-container button span, article button span, .app-header span, .app-container button a span, .side-nav li a span {
     font-weight: 700;
     margin-left: 0.5em;
   }
   /* Icon Size */
-  .searching-for form button i, article button i, .app-header i, .app-container button a i, .collapse-btn i, .side-nav li a i {
+  .searching-for form button i, .form-container button i, article button i, .app-header i, .app-container button a i, .collapse-btn i, .side-nav li a i {
     font-size: 1.25em;
   }
   /* Sidebar Navigation */
@@ -316,7 +316,7 @@ button {
     color: #000000;
   }
   /* Set the syle of all active buttons */
-  .filter-container button:nth-child(5):active, .filter-container button:nth-child(4):active, article button:active, .control-btn i:active, .app-container button:active {
+  .filter-container button:nth-child(5):active, .filter-container button:nth-child(4):active, .form-container button:active, article button:active, .control-btn i:active, .app-container button:active {
     transform: scale(0.8);
   }
   /* =========================================================================== */
@@ -393,7 +393,7 @@ button {
     margin-top: 1.5em;
   }
   /* Set the style of primary button */
-  article button {
+  .form-container button, article button {
     color: #9B55DD;
     border: 1px solid #9B55DD;
     border-radius: 50em;
@@ -403,7 +403,7 @@ button {
     margin: 1.5em 0em;
     transition: 0.3s all ease-in;
   }
-  article button:hover {
+  .form-container button:hover, article button:hover {
     color: #ffffff;
     background-color: #9B55DD;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2823529412);
@@ -431,16 +431,16 @@ button {
     font-size: 2em;
   }
   /* Set the style of anchors in all paragraphs */
-  .picture-container p a, .social-media a, .declaration a {
+  .form-container .form-check label a, .picture-container p a, .social-media a, .declaration a {
     color: #ffffff;
     text-decoration: underline;
     transition: 0.3s all ease-in;
   }
-  .picture-container p a:hover, .social-media a:hover, .declaration a:hover {
+  .form-container .form-check label a:hover, .picture-container p a:hover, .social-media a:hover, .declaration a:hover {
     color: #98ECFF;
   }
   /* =========================================================================== */
-  /* Search Page: Search Panel */
+  /* Search Page */
   /* =========================================================================== */
   .search-container {
     display: grid;
@@ -564,6 +564,48 @@ button {
   .results .filter-panels h2 {
     color: #8C3A75;
     margin-bottom: 0.3em;
+  }
+  /* =========================================================================== */
+  /* Submission Page */
+  /* =========================================================================== */
+  .submission-container {
+    display: grid;
+    grid-template-columns: 37.6em auto;
+    gap: 4.375em;
+    margin-bottom: 5.6em;
+  }
+  .file-container {
+    border: 3px dashed #ffffff;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .file-container i {
+    font-size: 8.6em;
+  }
+  .file-container p {
+    font-size: 1.5em;
+    margin-top: 3.5em;
+  }
+  .form-container input[type=text], .form-container input[type=email], .form-container textarea {
+    border-radius: 10px;
+  }
+  .form-container textarea {
+    max-height: 7em;
+  }
+  .form-container .form-check {
+    margin-top: 1.5em;
+  }
+  .form-container .form-check label {
+    line-height: 26px;
+  }
+  .form-container button {
+    padding: 0.6em 2em;
+    font-size: 1.5em;
+    margin: 1em 0em;
   }
 }
 /* =========================================================================== */
