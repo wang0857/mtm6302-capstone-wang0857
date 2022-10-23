@@ -100,7 +100,16 @@
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
   // border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
-  border-radius: 10px;  
+  border-radius: 10px;
+  transition: .3s all ease-in;
+  
+  &:hover {
+    transform: translateY(-1em);
+  }
+
+  &:active {
+    transform: scale(.8);
+  }
 }
 
 .accordion-body {

@@ -27,12 +27,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   // height: var(--#{$prefix}card-height);
   height: fit-content;
   word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
+  transition: .3s all ease-in;
   // border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
   @include border-radius(var(--#{$prefix}card-border-radius));
   @include box-shadow(var(--#{$prefix}card-box-shadow));
@@ -62,6 +64,14 @@
   > .card-header + .list-group,
   > .list-group + .card-footer {
     border-top: 0;
+  }
+
+  &:hover {
+    transform: translateY(-1em);
+  }
+
+  &:active {
+    transform: scale(.8);
   }
 }
 
