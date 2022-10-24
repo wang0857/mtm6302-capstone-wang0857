@@ -1,7 +1,7 @@
 // Desktop
 @mixin sub-categories-lg {
     .sub-categories {
-        @extend .categories;
+        @include categories;
 
         align-items: baseline;
         gap: 1.3em;

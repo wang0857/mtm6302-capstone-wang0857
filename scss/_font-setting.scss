@@ -1,7 +1,7 @@
-// Desktop
-@mixin font-setting-lg {
+// Tablet
+@mixin font-setting-md {
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 700;
         margin-bottom: .5em;
     }
@@ -18,5 +18,12 @@
 
     p {
         line-height: 26px;
+    }
+}
+
+// Desktop
+@mixin font-setting-lg {
+    h1 {
+        font-size: 4em;
     }
 }

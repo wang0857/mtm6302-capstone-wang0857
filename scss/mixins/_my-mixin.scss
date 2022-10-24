@@ -70,3 +70,14 @@
         @include icon-size;
     }
 }
+
+// Set the style of Categories container
+@mixin categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.18em;
+    max-width: 58em;
+    margin: 3.6em auto;
+}
