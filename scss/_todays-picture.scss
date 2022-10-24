@@ -1,0 +1,88 @@
+// Desktop
+@mixin todays-picture-lg {
+    .todays-pic-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 4.18em auto 4.18em;
+        gap: 2.81em;
+    }
+
+    /* Control Buttons */
+    .control-btn {
+        cursor: pointer;
+
+        i {
+            border: 1px solid #ffffff;
+            border-radius: 50em;
+            padding: 1rem;
+            font-size: 1.875em;
+            position: absolute;
+            top: 50%;
+            transition: .3s all ease-in;
+
+            &:hover {
+                border: 1px solid #98ECFF;
+                color: #98ECFF;
+                box-shadow: 0px 0px 10px #ffffff;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                @include btn-active;
+            }
+        }
+    }
+
+    .btn-disable {
+        opacity: .5;
+    }
+
+    /* Image Credit */
+    .picture-container {
+        position: relative;
+    
+        p {
+            @include subtitle;
+            padding: 1.43em 0em 1.43em 2.56em;
+
+            a {
+                @include pAnchor;
+            }
+        }
+    }
+
+    /* Article */
+    article {
+        margin-left: 4.125em;
+        width: 29.625em;
+
+        /* Fine-tune Elements for different large screens */
+        @include large-screen() {
+            width: 100%;
+            margin-top: 1.5em;
+            margin-right: 0em;
+        }
+
+        h1 {
+            @include large-screen() {
+                text-align: center;
+            }
+        }
+
+        .pic-description {
+            margin-right: 1.18em;
+            max-height: 18.56em;
+            overflow: auto;
+        }
+
+        hr {
+            border-top: 3px dashed #ffffff;
+            opacity: 1;
+            margin-top: 1.5em;
+        }
+
+        button {
+            @include primary-btn;
+        }
+    }
+}

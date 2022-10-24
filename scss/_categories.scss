@@ -1,0 +1,28 @@
+// Desktop
+@mixin categories-lg {
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3.18em;
+        max-width: 58em;
+        margin: 3.6em auto;
+
+        p {
+            font-size: 1.25em;
+            padding: 1em 0em;
+            transition: .3s all ease-in;
+            
+            &:hover {
+                padding: 121.5px 0px;
+                background-color: #00000075;
+            }
+        }
+
+        picture:hover+p {
+            padding: 121.5px 0px;
+            background-color: #00000075;
+        }
+    }
+}

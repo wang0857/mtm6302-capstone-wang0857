@@ -60,10 +60,12 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 10. Uploaded to GitHub. (TBC)
 
 ## Challenges Faced
-1. Customized the SCSS of Bootstrap Components
+1. Customized the SCSS of Bootstrap Components.
+2. Develop RWD layout with my customized SCSS.
 
 ## Overcoming Challeges
 1. Downloaded the SCSS files of Bootstrap from its website. Searched for the variables and classes that I would customized and changed the value in the SCSS.
+2. Used <code>@mixin</code> to specify the different layout for each media query. Afterward, used <code>@include</code> to apply a certain layout to each media query for creating the RWD layout.
 
 ## Assets Used (Bibliography)
 - Images and Articles: <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>

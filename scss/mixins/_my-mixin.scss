@@ -1,0 +1,72 @@
+
+// Clear the default style of button
+@mixin button-clear {
+    background: none;
+    color: #ffffff;
+}
+
+// Span heading besides icon
+@mixin span-heading {
+    font-weight: 700;
+    margin-left: .5em;
+}
+
+// Icon Size
+@mixin icon-size {
+    font-size: 1.25em;
+}
+
+// Set the syle of all active buttons
+@mixin btn-active {
+    transform: scale(.8);
+}
+
+// Set the style of all subtitles
+@mixin subtitle {
+    position: absolute;
+    bottom: 0%;
+    background-color: #00000030;
+    color: #ffffff;
+    width: 100%;
+}
+
+// Set the style of anchors in all paragraphs
+@mixin pAnchor {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: .3s all ease-in;
+        
+    &:hover {
+        color: #98ECFF;
+    }
+}
+
+// Set the style of primary button
+@mixin primary-btn {
+    color: #9B55DD;
+    border: 1px solid #9B55DD;
+    border-radius: 50em;
+    box-shadow: 0px 0px 20px #ffffff48;
+    background-color: transparent;
+    padding: 1em;
+    margin: 1.5em 0em;
+    transition: .3s all ease-in;
+
+    &:hover {
+        color: #ffffff;
+        background-color: #9B55DD;
+        box-shadow: 0px 0px 20px #ffffff48;
+    }
+
+    &:active {
+        @include btn-active;
+    }
+
+    span {
+        @include span-heading;
+    }
+
+    i {
+        @include icon-size;
+    }
+}

@@ -1,0 +1,28 @@
+// Desktop
+@mixin sub-categories-lg {
+    .sub-categories {
+        @extend .categories;
+
+        align-items: baseline;
+        gap: 1.3em;
+        max-width: 94em;
+    }
+
+    .accordion-item {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4em 3em;
+
+            a {
+                color: #000000;
+                line-height: 20px;
+                transition: .3s all ease-in;
+
+                &:hover {
+                    color: #9B55DD;
+                }   
+            }
+        }
+    }
+}
