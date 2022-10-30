@@ -3,14 +3,14 @@
     nav {
         display: flex;
         align-items: center;
-        padding: 1em .5em;
+        padding: 1em 0em;
         border-bottom: 1px solid #ffffff30;
         background: #000000;
     }  
     
     /* Logo */
     .logo {
-        margin-left: 2.5em;
+        margin-left: 2em;
     }
 
     /* Search and Menu Buttons */
@@ -22,7 +22,7 @@
     
     .menu-btn {
         @include button-clear;
-        margin: 0em 1.5em 0em 4.125em;
+        margin: 0em 1em 0em 4.125em;
         font-size: 1.8em;
     }
 

@@ -1,3 +1,10 @@
+// Tablet
+@mixin footer-md {
+    footer {
+        display: none;
+    }
+}
+
 // Desktop
 @mixin footer-lg {
     footer {

@@ -1,8 +1,70 @@
+// Tablet
+@mixin sidebar-md {
+    /* Sidebar Navigation */
+    aside {
+        height: 3.75em;
+        background-color: #1D235E35;
+        padding: 0em;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+    }
+
+    .side-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5em;
+        overflow: hidden;
+
+        li {
+            display: flex;
+            cursor: pointer;
+            transition: .3s all ease-in;
+
+            &.active, &:hover {
+                background-color: #ffffff39;
+                border-bottom-left-radius: 35px;
+                border-bottom-right-radius: 35px;
+            }
+
+            a {
+                padding: .8em 2.5em;
+                color: #ffffff70;
+                transition: .3s all ease-in;
+                
+                span {
+                    display: none;
+                }
+
+                i {
+                    @include icon-size-lg;
+                }
+
+                &.active, &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    /* Collapse Button */
+    .collapse-btn {
+        display: none;
+    }
+
+    /* Download Apps */
+    .app-container {
+        display: none;
+    }
+}
+
 // Desktop
 @mixin sidebar-lg {
     /* Sidebar Navigation */
     aside {
         width: 16.375em;
+        height: 100%;
         background-color: #1D235E35;
         padding: 0em;
         grid-row: 1 / 2;
@@ -13,29 +75,36 @@
     }
 
     .side-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content:baseline;
+        align-items: baseline;
+        gap: 0em;
+
         li {
             display: flex;
+            width: 100%;
             cursor: pointer;
             transition: .3s all ease-in;
 
             &:nth-child(1) {
-                padding-top: 1.85em;
+                padding-top: 2.3em;
             }
 
             &.active, &:hover {
                 background-color: #ffffff39;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
             }
 
             a {
+                width: 100%;
                 padding: 1em .75em 1em 2.5em;
                 color: #ffffff70;
                 transition: .3s all ease-in;
-
-                &[href="./categories.html"] {
-                    padding-right: 4.4em;
-                }
                 
                 span {
+                    display: inline;
                     @include span-heading;
                 }
 
@@ -52,6 +121,7 @@
 
     /* Collapse Button */
     .collapse-btn {
+        display: inline;
         position: absolute;
         top: 45%;
         right: 0em;

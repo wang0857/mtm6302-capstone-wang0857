@@ -161,7 +161,7 @@
                 <!-- Today's Picture -->
                 <div class="todays-pic-container">
                     <!-- Control Buttons-Previous -->
-                    <div class="control-btn prev"><i class="fa-solid fa-arrow-left"></i></div>
+                    <div class="control-btn"><i class="fa-solid fa-arrow-left prev"></i></div>
 
                     <!-- Use Flexbox to wrap the picture and article -->
                     <div class="d-flex flex-wrap justify-content-center align-items-center">
@@ -173,7 +173,11 @@
                                 <source media="(max-width:767px)" srcset="./image/fairy-pillar-375x303.jpg">
                                 <img src="./image/fairy-pillar-762x575.jpg" alt="Fairy Pillar">
                             </picture>
-                            <p>Image Credit & Copyright: <a href="https://www.nasa.gov/">NASA</a>, <a href="https://www.esa.int/">ESA</a>, <a href="http://heritage.stsci.edu/commonpages/infoindex/ourproject/moreproject.html">The Hubble Heritage Team</a>&nbsp;(<a href="http://www.stsci.edu/resources/">STScI</a>/<a href="https://www.aura-astronomy.org/">AURA</a>)</p>
+                            <div class="img-credit">
+                                <p>Image Credit & Copyright: <a href="https://www.nasa.gov/">NASA</a>, <a href="https://www.esa.int/">ESA</a>, <a href="http://heritage.stsci.edu/commonpages/infoindex/ourproject/moreproject.html">The Hubble Heritage Team</a>&nbsp;(<a href="http://www.stsci.edu/resources/">STScI</a>/<a href="https://www.aura-astronomy.org/">AURA</a>)</p>
+                                <button type="button"><i class="fa-sharp fa-solid fa-share-nodes"></i></button>
+                            </div>
+                            
                         </div>
         
                         <!-- Article -->
@@ -194,7 +198,7 @@
                     </div>
     
                     <!-- Control Buttons-Next -->
-                    <div class="control-btn next btn-disable"><i class="fa-solid fa-arrow-right"></i></i></div>
+                    <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></i></div>
                 </div>
             </main>
     
