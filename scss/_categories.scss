@@ -1,3 +1,32 @@
+// Tablet
+@mixin categories-md {
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5em;
+        max-width: 37em;
+        margin: 2.8em auto;
+
+        p {
+            @include subtitle;
+            font-size: 1.25em;
+            padding: 1em 0em;
+            transition: .3s all ease-in;
+            
+            &:hover {
+                padding: 121.5px 0px;
+                background-color: #00000075;
+            }
+        }
+
+        picture:hover+p {
+            padding: 121.5px 0px;
+            background-color: #00000075;
+        }
+    }
+}
+
 // Desktop
 @mixin categories-lg {
     .categories {
@@ -10,6 +39,7 @@
         margin: 3.6em auto;
 
         p {
+            @include subtitle;
             font-size: 1.25em;
             padding: 1em 0em;
             transition: .3s all ease-in;

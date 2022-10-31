@@ -638,18 +638,22 @@ button {
     font-size: 1.25em;
   }
   /* =========================================================================== */
-  /* TODO: Categories Page */
+  /* Categories Page */
   /* =========================================================================== */
   .categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3.18em;
-    max-width: 58em;
-    margin: 3.6em auto;
+    justify-content: space-between;
+    gap: 2.5em;
+    max-width: 37em;
+    margin: 2.8em auto;
   }
   .categories p {
+    position: absolute;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.1882352941);
+    color: #ffffff;
+    width: 100%;
     font-size: 1.25em;
     padding: 1em 0em;
     transition: 0.3s all ease-in;
@@ -1401,6 +1405,11 @@ button {
     margin: 3.6em auto;
   }
   .categories p {
+    position: absolute;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.1882352941);
+    color: #ffffff;
+    width: 100%;
     font-size: 1.25em;
     padding: 1em 0em;
     transition: 0.3s all ease-in;
