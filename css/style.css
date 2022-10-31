@@ -560,7 +560,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.8em;
-    margin-bottom: 5.6em;
+    margin-bottom: 0.5em;
   }
   .file-container {
     display: flex;
@@ -592,6 +592,9 @@ button {
   .form-container textarea {
     max-height: 7.5em;
   }
+  .form-container textarea:focus {
+    border-radius: 10px;
+  }
   .form-container .form-check {
     margin-top: 1.5em;
   }
@@ -617,7 +620,7 @@ button {
     transition: 0.3s all ease-in;
     padding: 0.8em 2.25em;
     font-size: 1em;
-    margin: 1em 0em;
+    margin: 0.6em 0em;
   }
   .form-container button:hover {
     color: #ffffff;
@@ -1369,7 +1372,7 @@ button {
     transition: 0.3s all ease-in;
     padding: 0.6em 2em;
     font-size: 1.5em;
-    margin: 1em 0em;
+    margin: 0em;
   }
   .form-container button:hover {
     color: #ffffff;
