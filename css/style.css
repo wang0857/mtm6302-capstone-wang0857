@@ -435,7 +435,7 @@ button {
     display: none;
   }
   /* =========================================================================== */
-  /* TODO: Search Page */
+  /* Search Page */
   /* =========================================================================== */
   .search-container {
     display: grid;
@@ -481,6 +481,9 @@ button {
     padding: 1.8em 0em;
     border-radius: 1.25em;
     max-height: 3.1em;
+  }
+  .category-filter h3 {
+    cursor: pointer;
   }
   .category-filter div {
     height: 2em;
@@ -544,24 +547,22 @@ button {
   }
   .results .filter-panels {
     padding: 1em;
-    margin-right: 2.6em;
+    margin-right: 1em;
   }
   .results .filter-panels h2 {
     color: #8C3A75;
     margin-bottom: 0.3em;
   }
   /* =========================================================================== */
-  /* TODO: Submission Page */
+  /* Submission Page */
   /* =========================================================================== */
   .submission-container {
     display: grid;
-    grid-template-columns: 37.6em auto;
-    gap: 4.375em;
+    grid-template-columns: 1fr;
+    gap: 2.8em;
     margin-bottom: 5.6em;
   }
   .file-container {
-    border: 3px dashed #ffffff;
-    border-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -569,17 +570,27 @@ button {
     cursor: pointer;
   }
   .file-container i {
-    font-size: 8.6em;
+    font-size: 2.75em;
+    padding: 0.46em 0.5em;
+    border-radius: 50em;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .file-container i:nth-child(1) {
+    display: none;
   }
   .file-container p {
     font-size: 1.5em;
-    margin-top: 3.5em;
+    margin-top: 0.9em;
+  }
+  .file-container p::after {
+    content: "Click to upload";
   }
   .form-container input[type=text], .form-container input[type=email], .form-container textarea {
     border-radius: 10px;
   }
   .form-container textarea {
-    max-height: 7em;
+    max-height: 7.5em;
   }
   .form-container .form-check {
     margin-top: 1.5em;
@@ -604,8 +615,8 @@ button {
     padding: 1em;
     margin: 1.5em 0em;
     transition: 0.3s all ease-in;
-    padding: 0.6em 2em;
-    font-size: 1.5em;
+    padding: 0.8em 2.25em;
+    font-size: 1em;
     margin: 1em 0em;
   }
   .form-container button:hover {
@@ -1307,10 +1318,23 @@ button {
   }
   .file-container i {
     font-size: 8.6em;
+    padding: 0em;
+    border-radius: 0em;
+    background-color: transparent;
+    color: #ffffff;
+  }
+  .file-container i:nth-child(1) {
+    display: block;
+  }
+  .file-container i:nth-child(2) {
+    display: none;
   }
   .file-container p {
     font-size: 1.5em;
     margin-top: 3.5em;
+  }
+  .file-container p::after {
+    content: "Drop a file here or click to upload.";
   }
 }
 @media screen and (min-width: 1200px) {

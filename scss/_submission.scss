@@ -1,3 +1,71 @@
+// Tablet
+@mixin submission-md {
+    .submission-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.8em;
+        margin-bottom: 5.6em;
+    }
+
+    .file-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+            font-size: 2.75em;
+            padding: .46em .5em;
+            border-radius: 50em;
+            background-color: #ffffff;
+            color: #000000;
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: .9em;
+
+            &::after{
+                content: "Click to upload";
+            }
+        }
+    }
+
+    .form-container {
+        input[type="text"], input[type="email"], textarea {
+            border-radius: 10px;
+        }
+
+        textarea {
+            max-height: 7.5em;
+        }
+
+        .form-check {
+            margin-top: 1.5em;
+
+            label {
+                line-height: 26px;
+
+                a {
+                    @include pAnchor;
+                }
+            }
+        }
+
+        button {
+            @include primary-btn;
+            padding: .8em 2.25em;
+            font-size: 1em;
+            margin: 1em 0em;
+        }
+    }
+}
+
 // Desktop
 @mixin submission-lg {
     .submission-container {
@@ -18,11 +86,27 @@
 
         i {
             font-size: 8.6em;
+            padding: 0em;
+            border-radius: 0em;
+            background-color: transparent;
+            color: #ffffff;
+
+            &:nth-child(1) {
+                display: block;
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
         }
 
         p {
             font-size: 1.5em;
             margin-top: 3.5em;
+
+            &::after{
+                content: "Drop a file here or click to upload.";
+            }
         }
     }
 
