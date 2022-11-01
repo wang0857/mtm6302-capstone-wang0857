@@ -125,7 +125,7 @@ button {
   /* Font Setting for Desktop Version*/
   /* =========================================================================== */
   h1 {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 700;
     margin-bottom: 0.5em;
   }
@@ -330,7 +330,7 @@ button {
     overflow: auto;
   }
   main {
-    padding: 1.75em 2.5em 4.6em;
+    padding: 1.75em 2.5em 0em;
     width: 100%;
   }
   /* =========================================================================== */
@@ -414,6 +414,7 @@ button {
   }
   article h1 {
     text-align: center;
+    font-size: 3em;
   }
   article .pic-description {
     margin-right: 4px;
@@ -667,7 +668,7 @@ button {
     background-color: rgba(0, 0, 0, 0.4588235294);
   }
   /* =========================================================================== */
-  /* TODO: Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+  /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
   /* =========================================================================== */
   .sub-categories {
     display: flex;
@@ -678,13 +679,17 @@ button {
     max-width: 58em;
     margin: 3.6em auto;
     align-items: baseline;
-    gap: 1.3em;
-    max-width: 94em;
+    justify-content: space-between;
+    gap: 2.5em;
+    max-width: 38em;
   }
   .accordion-item ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.4em 3em;
+    gap: 1.6em 1.8em;
+  }
+  .accordion-item ul li {
+    text-align: center;
   }
   .accordion-item ul a {
     color: #000000;
@@ -693,6 +698,16 @@ button {
   }
   .accordion-item ul a:hover {
     color: #9B55DD;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .card {
+    max-width: 17.75em;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .card {
+    max-width: 22.5em;
   }
 }
 /* =========================================================================== */
@@ -1433,6 +1448,7 @@ button {
     max-width: 58em;
     margin: 3.6em auto;
     align-items: baseline;
+    justify-content: center;
     gap: 1.3em;
     max-width: 94em;
   }
@@ -1442,6 +1458,10 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.4em 3em;
+    max-width: 20em;
+  }
+  .accordion-item ul li {
+    text-align: center;
   }
   .accordion-item ul a {
     color: #000000;

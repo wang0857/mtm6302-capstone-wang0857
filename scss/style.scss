@@ -14,8 +14,22 @@
 @import "./submission";
 @import "./categories";
 @import "./sub-categories";
+
+// Set RWD Screens
+@mixin medium-screen() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+  
 @mixin large-screen() {
     @media screen and (min-width: 1200px) and (max-width: 1879px) {
+        @content;
+    }
+}
+
+@mixin xlarge-screen() {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }
@@ -139,9 +153,9 @@ button {
     @include categories-md;
 
     /* =========================================================================== */
-    /* TODO: Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+    /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
     /* =========================================================================== */
-    @include sub-categories-lg;
+    @include sub-categories-md;
 }
 
 /* =========================================================================== */

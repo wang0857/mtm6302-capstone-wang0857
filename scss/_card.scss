@@ -26,12 +26,12 @@
   padding: 0em;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   overflow: hidden;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   // height: var(--#{$prefix}card-height);
   height: fit-content;
-  word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
   transition: .3s all ease-in;

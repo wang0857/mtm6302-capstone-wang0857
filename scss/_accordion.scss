@@ -113,7 +113,16 @@
 }
 
 .accordion-body {
-  width: 18.9em;
+  margin: 0em;
+
+  @include medium-screen() {
+    max-width: 17.75em;
+  }
+
+  @include xlarge-screen() {
+    max-width: 22.5em;
+  }
+
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
 }
 

@@ -1,9 +1,54 @@
+// Tablet
+@mixin sub-categories-md {
+    .sub-categories {
+        @include categories;
+
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 2.5em;
+        max-width: 38em;
+    }
+
+    .accordion-item {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6em 1.8em;
+
+            li {
+                text-align: center;
+            }
+
+            a {
+                color: #000000;
+                line-height: 20px;
+                transition: .3s all ease-in;
+
+                &:hover {
+                    color: #9B55DD;
+                }   
+            }
+        }
+    }
+
+    .card {
+        @include medium-screen() {
+            max-width: 17.75em;
+        }
+        
+        @include xlarge-screen() {
+            max-width: 22.5em;
+        }
+    }
+}
+
 // Desktop
 @mixin sub-categories-lg {
     .sub-categories {
         @include categories;
 
         align-items: baseline;
+        justify-content: center;
         gap: 1.3em;
         max-width: 94em;
     }
@@ -13,6 +58,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.4em 3em;
+            max-width: 20em;
+            
+            li {
+                text-align: center;
+            }
 
             a {
                 color: #000000;
