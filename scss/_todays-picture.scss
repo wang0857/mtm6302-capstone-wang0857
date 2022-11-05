@@ -1,10 +1,14 @@
-// Tablet
-@mixin todays-picture-md {
+// Mobile
+@mixin todays-picture-sm {
+    .breadcrumb {
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
     .todays-pic-container {
         position: relative;
         display: grid;
-        grid-template-columns: 2em auto 2em;
-        gap: .5em;
+        grid-template-columns: 1fr;
     }
 
     /* Control Buttons */
@@ -12,20 +16,23 @@
         cursor: pointer;
 
         i {
+            opacity: .5;
             border: 1px solid #ffffff;
+            background-color: #000000;
             border-radius: 50em;
-            padding: .6rem;
+            padding: .5rem;
             font-size: 1.2em;
             position: absolute;
-            top: 50%;
+            top: 25%;
             transition: .3s all ease-in;
 
             &.prev {
-                left: -1em;
+                left: .3em;
+                z-index: 1;
             }
 
             &.next {
-                right: -1em;
+                right: .3em;
             }
 
             &:hover {
@@ -53,11 +60,15 @@
     /* Image Credit */
     .img-credit {
         @include subtitle;
-        padding: 1.43em 2.5em;
+        padding: .3em 1.5em;
         display: grid;
         grid-template-columns: auto 1.68em;
-        gap: 2em;
+        gap: .7em;
         align-items: center;
+
+        p {
+            line-height: 26px;
+        }
 
         a {
             @include pAnchor;
@@ -70,30 +81,31 @@
         }
 
         i {
-            font-size: 1.68em;
+            font-size: 1em;
         }
     }
 
     /* Article */
     article {
-        margin-top: .9em;
+        margin-top: .6em;
+        padding: 0em 1.5em;
         width: 100%;
 
         h1 {
             text-align: center;
-            font-size: 3em;
+            font-size: 1.75em;
         }
 
         .pic-description {
             margin-right: 4px;
-            max-height: 8.125em;
+            max-height: 11.3em;
             overflow: auto;
         }
 
         hr {
             border-top: 2px dashed #ffffff;
             opacity: 1;
-            margin-top: .95em;
+            margin: .38em 0em;
         }
 
         button {
@@ -102,27 +114,82 @@
     }
 }
 
+// Tablet
+@mixin todays-picture-md {
+    .breadcrumb {
+        margin-left: 0em;
+        margin-bottom: 1.75em;
+    }
+
+    .todays-pic-container {
+        grid-template-columns: 2em auto 2em;
+        gap: .5em;
+    }
+
+    /* Control Buttons */
+    .control-btn {
+        i {
+            opacity: 1;
+            background-color: transparent;
+            padding: .6rem;
+            top: 50%;
+
+            &.prev {
+                left: -1em;
+                z-index: 0;
+            }
+
+            &.next {
+                right: -1em;
+            }
+        }
+    }
+
+    /* Image Credit */
+    .img-credit {
+        padding: 1.43em 2.5em;
+        gap: 2em;
+
+        i {
+            font-size: 1.68em;
+        }
+    }
+
+    /* Article */
+    article {
+        margin-top: .9em;
+        padding: 0em;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        .pic-description {
+            max-height: 8.125em;
+        }
+
+        hr {
+            margin: .95em 0em;
+        }
+    }
+}
+
 // Desktop
 @mixin todays-picture-lg {
+    .breadcrumb {
+        margin-bottom: 2.85em;
+    }
+
     .todays-pic-container {
-        position: relative;
-        display: grid;
         grid-template-columns: 4.18em auto 4.18em;
         gap: 2.81em;
     }
 
     /* Control Buttons */
     .control-btn {
-        cursor: pointer;
-
         i {
-            border: 1px solid #ffffff;
-            border-radius: 50em;
             padding: 1rem;
             font-size: 1.875em;
-            position: absolute;
-            top: 50%;
-            transition: .3s all ease-in;
             
             &.prev {
                 left: 0%;
@@ -131,38 +198,13 @@
             &.next {
                 right: 0%;
             }
-
-            &:hover {
-                border: 1px solid #98ECFF;
-                color: #98ECFF;
-                box-shadow: 0px 0px 10px #ffffff;
-                transform: scale(1.1);
-            }
-
-            &:active {
-                @include btn-active;
-            }
         }
-    }
-
-    .btn-disable {
-        opacity: .5;
-    }
-
-    /* Picture Container */
-    .picture-container {
-        position: relative;
     }
 
     /* Image Credit */
     .img-credit {
-        @include subtitle;
         padding: 1.43em 0em 1.43em 2.56em;
         display: block;
-
-        a {
-            @include pAnchor;
-        }
 
         button {
             display: none;
@@ -174,32 +216,18 @@
         margin-left: 4.125em;
         width: 29.625em;
 
-        /* Fine-tune Elements for different large screens */
-        @include large-screen() {
-            width: 100%;
-            margin-top: 1.5em;
-            margin-right: 0em;
-            margin-bottom: 7.3em;
-        }
-
         h1 {
             text-align: left;
-
-            @include large-screen() {
-                text-align: center;
-            }
         }
 
         .pic-description {
             margin-top: 0em;
             margin-right: 1.18em;
             max-height: 18.56em;
-            overflow: auto;
         }
 
         hr {
             border-top: 3px dashed #ffffff;
-            opacity: 1;
             margin-top: 1.5em;
         }
 

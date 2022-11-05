@@ -1,5 +1,5 @@
-// Tablet
-@mixin sidebar-md {
+// Mobile
+@mixin sidebar-sm {
     /* Sidebar Navigation */
     aside {
         height: 3.75em;
@@ -14,7 +14,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2.5em;
         overflow: hidden;
 
         li {
@@ -29,7 +28,7 @@
             }
 
             a {
-                padding: .8em 2.5em;
+                padding: .8em 1.5em;
                 color: #ffffff70;
                 transition: .3s all ease-in;
                 
@@ -56,6 +55,18 @@
     /* Download Apps */
     .app-container {
         display: none;
+    }
+}
+
+// Tablet
+@mixin sidebar-md {
+    /* Sidebar Navigation */
+    .side-nav {
+        li {
+            a {
+                padding: .8em 2.5em;
+            }
+        }
     }
 }
 

@@ -1,29 +1,33 @@
-// Tablet
-@mixin main-content-container-md {
+// Mobile
+@mixin main-content-container-sm {
     .right-content-container {
         height: 100%;
         overflow:auto;
     }
 
     main {
-        padding: 1.75em 2.5em 0em;
+        padding: 1.3em 0em .6em;
         width: 100%;
+    }
+}
+
+// Tablet
+@mixin main-content-container-md {
+    main {
+        padding: 1.75em 2.5em 0em;
     }
 }
 
 // Desktop
 @mixin main-content-container-lg {
     .right-content-container {
-        height: 100%;
         display: grid;
 
         /* Fixed Footer's height */
         grid-template-rows: auto 10.875em;
-        overflow:auto;
     }
 
     main {
         padding: 2.85em 2.85em 0em;
-        width: 100%;
     }
 }

@@ -1,5 +1,5 @@
-// Tablet
-@mixin top-nav-bar-md {
+// Mobile
+@mixin top-nav-bar-sm {
     nav {
         display: flex;
         align-items: center;
@@ -10,53 +10,29 @@
     
     /* Logo */
     .logo {
-        margin-left: 2em;
+        margin-left: 1.5em;
     }
 
     /* Search and Menu Buttons */
     .search-btn {
         @include button-clear;
-        margin: 0em .5em;
-        font-size: .8em;
+        margin: 0em;
+        font-size: 1.3em;
     }
     
     .menu-btn {
         @include button-clear;
-        margin: 0em 1em 0em 4.125em;
-        font-size: 1.8em;
+        margin: 0em .625em 0em .5em;
+        font-size: 1.3em;
     }
 
     /* Search Bar */
     form.search {
-        border-radius: 50em;
-        border: 2px solid #ffffff;
+        border: none;
     }
 
     .search-bar {
-        padding-left: .8em;
-        background: none;
-        color: #ffffff;
-        height: 1.6em;
-        width: 17.3em;
-
-        &:focus {
-            outline: none;
-            color: #ffffff;
-        }
-
-        &::placeholder {
-            color: #ffffff;
-        }
-
-        &[type="search"]::-webkit-search-cancel-button {
-            appearance: none;
-            cursor: pointer;
-            width: .6em;
-            height: .6em;
-            background-repeat: no-repeat;
-            background-image: url("../image/xmark.png");
-            background-position: center;
-        }
+        display: none;
     }
 
 
@@ -133,46 +109,39 @@
     }
 }
 
-// Desktop
-@mixin top-nav-bar-lg {
-    nav {
-        display: flex;
-        align-items: center;
-        padding: 1em .5em;
-        border-bottom: 1px solid #ffffff30;
-        background: #000000;
-    }  
-    
+// Tablet
+@mixin top-nav-bar-md {    
     /* Logo */
     .logo {
-        margin-left: 2.5em;
+        margin-left: 2em;
     }
 
     /* Search and Menu Buttons */
     .search-btn {
         @include button-clear;
         margin: 0em .5em;
-        font-size: 1.4em;
+        font-size: .8em;
     }
     
     .menu-btn {
         @include button-clear;
-        margin: 0em 1.5em;
-        font-size: 2.4em;
+        margin: 0em 1em 0em 4.125em;
+        font-size: 1.8em;
     }
 
     /* Search Bar */
     form.search {
         border-radius: 50em;
-        border: 4px solid #ffffff;
+        border: 2px solid #ffffff;
     }
 
     .search-bar {
-        padding-left: 1em;
+        display: block;
+        padding-left: .8em;
         background: none;
         color: #ffffff;
         height: 1.6em;
-        width: 20em;
+        width: 17.3em;
 
         &:focus {
             outline: none;
@@ -186,11 +155,48 @@
         &[type="search"]::-webkit-search-cancel-button {
             appearance: none;
             cursor: pointer;
-            width: .8em;
-            height: .8em;
+            width: .6em;
+            height: .6em;
             background-repeat: no-repeat;
             background-image: url("../image/xmark.png");
             background-position: center;
+        }
+    }
+}
+
+// Desktop
+@mixin top-nav-bar-lg {
+    nav {
+        padding: 1em .5em;
+    }  
+    
+    /* Logo */
+    .logo {
+        margin-left: 2.5em;
+    }
+
+    /* Search and Menu Buttons */
+    .search-btn {
+        font-size: 1.4em;
+    }
+    
+    .menu-btn {
+        margin: 0em 1.5em;
+        font-size: 2.4em;
+    }
+
+    /* Search Bar */
+    form.search {
+        border: 4px solid #ffffff;
+    }
+
+    .search-bar {
+        padding-left: 1em;
+        width: 20em;
+
+        &[type="search"]::-webkit-search-cancel-button {
+            width: .8em;
+            height: .8em;
         }
     }
 

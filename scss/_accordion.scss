@@ -1,3 +1,16 @@
+// Set RWD Screens
+@mixin medium-screen() {
+  @media screen and (min-width: 768px) {
+      @content;
+  }
+}
+
+@mixin xlarge-screen() {
+  @media screen and (min-width: 1200px) {
+      @content;
+  }
+}
+
 //
 // Base styles
 //

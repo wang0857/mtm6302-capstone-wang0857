@@ -118,6 +118,620 @@ button {
 }
 
 /* =========================================================================== */
+/* Mobile Version */
+/* =========================================================================== */
+/* =========================================================================== */
+/* Font Setting for Desktop Version*/
+/* =========================================================================== */
+h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+
+h3, h4 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.8em;
+  line-height: 16px;
+}
+
+/* =========================================================================== */
+/* Top Nav Bar */
+/* =========================================================================== */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1em 0em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1882352941);
+  background: #000000;
+}
+
+/* Logo */
+.logo {
+  margin-left: 1.5em;
+}
+
+/* Search and Menu Buttons */
+.search-btn {
+  background: none;
+  color: #ffffff;
+  margin: 0em;
+  font-size: 1.3em;
+}
+
+.menu-btn {
+  background: none;
+  color: #ffffff;
+  margin: 0em 0.625em 0em 0.5em;
+  font-size: 1.3em;
+}
+
+/* Search Bar */
+form.search {
+  border: none;
+}
+
+.search-bar {
+  display: none;
+}
+
+/* Right Menu */
+div.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+div.offcanvas-body ul {
+  margin-top: 10.875em;
+}
+div.offcanvas-body ul li {
+  text-align: center;
+  font-weight: 700;
+  margin: 1.25em 0em;
+  opacity: 0.5;
+}
+div.offcanvas-body ul li a {
+  color: #000000;
+  transition: 0.3s all ease-in;
+}
+div.offcanvas-body ul li a:hover {
+  color: #9B55DD;
+}
+div.offcanvas-body ul li.active {
+  opacity: 1;
+}
+
+/* Footer for medium and small devices */
+.sm-device-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.3137254902);
+}
+.sm-device-footer p {
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+.sm-device-footer p a {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.3137254902);
+  transition: 0.3s all ease-in;
+}
+.sm-device-footer p a:hover {
+  color: #9B55DD;
+}
+.sm-device-footer .social-media {
+  margin-bottom: 3em;
+}
+.sm-device-footer .social-media a {
+  color: rgba(0, 0, 0, 0.3137254902);
+  transition: 0.3s all ease-in;
+}
+.sm-device-footer .social-media a:hover {
+  color: #9B55DD;
+}
+.sm-device-footer .social-media a i {
+  font-size: 2.18em;
+}
+
+/* =========================================================================== */
+/* Main Grid Container */
+/* =========================================================================== */
+.grid-container {
+  height: 100%;
+  overflow: hidden;
+  /* Make a grid for Sidebar and right content */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3.75em;
+}
+
+/* =========================================================================== */
+/* Sidebar */
+/* =========================================================================== */
+/* Sidebar Navigation */
+aside {
+  height: 3.75em;
+  background-color: rgba(29, 35, 94, 0.2078431373);
+  padding: 0em;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+}
+
+.side-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.side-nav li {
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+}
+.side-nav li.active, .side-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.2235294118);
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.side-nav li a {
+  padding: 0.8em 1.5em;
+  color: rgba(255, 255, 255, 0.4392156863);
+  transition: 0.3s all ease-in;
+}
+.side-nav li a span {
+  display: none;
+}
+.side-nav li a i {
+  font-size: 2.2em;
+}
+.side-nav li a.active, .side-nav li a:hover {
+  color: #ffffff;
+}
+
+/* Collapse Button */
+.collapse-btn {
+  display: none;
+}
+
+/* Download Apps */
+.app-container {
+  display: none;
+}
+
+/* =========================================================================== */
+/* Main Content Container */
+/* =========================================================================== */
+.right-content-container {
+  height: 100%;
+  overflow: auto;
+}
+
+main {
+  padding: 1.3em 0em 0.6em;
+  width: 100%;
+}
+
+/* =========================================================================== */
+/* Index page */
+/* =========================================================================== */
+.breadcrumb {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.todays-pic-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Control Buttons */
+.control-btn {
+  cursor: pointer;
+}
+.control-btn i {
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+  background-color: #000000;
+  border-radius: 50em;
+  padding: 0.5rem;
+  font-size: 1.2em;
+  position: absolute;
+  top: 25%;
+  transition: 0.3s all ease-in;
+}
+.control-btn i.prev {
+  left: 0.3em;
+  z-index: 1;
+}
+.control-btn i.next {
+  right: 0.3em;
+}
+.control-btn i:hover {
+  border: 1px solid #98ECFF;
+  color: #98ECFF;
+  box-shadow: 0px 0px 10px #ffffff;
+  transform: scale(1.1);
+}
+.control-btn i:active {
+  transform: scale(0.8);
+}
+
+.btn-disable {
+  opacity: 0.5;
+}
+
+/* Picture Container */
+.picture-container {
+  position: relative;
+}
+
+/* Image Credit */
+.img-credit {
+  position: absolute;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+  color: #ffffff;
+  width: 100%;
+  padding: 0.3em 1.5em;
+  display: grid;
+  grid-template-columns: auto 1.68em;
+  gap: 0.7em;
+  align-items: center;
+}
+.img-credit p {
+  line-height: 26px;
+}
+.img-credit a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: 0.3s all ease-in;
+}
+.img-credit a:hover {
+  color: #98ECFF;
+}
+.img-credit button {
+  background: none;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.img-credit i {
+  font-size: 1em;
+}
+
+/* Article */
+article {
+  margin-top: 0.6em;
+  padding: 0em 1.5em;
+  width: 100%;
+}
+article h1 {
+  text-align: center;
+  font-size: 1.75em;
+}
+article .pic-description {
+  margin-right: 4px;
+  max-height: 11.3em;
+  overflow: auto;
+}
+article hr {
+  border-top: 2px dashed #ffffff;
+  opacity: 1;
+  margin: 0.38em 0em;
+}
+article button {
+  display: none;
+}
+
+/* =========================================================================== */
+/* Footer */
+/* =========================================================================== */
+footer {
+  display: none;
+}
+
+/* =========================================================================== */
+/* TODO: Search Page */
+/* =========================================================================== */
+.search-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  gap: 1.8em;
+}
+
+/* Search Bar */
+.searching-for form input {
+  padding-left: 1em;
+  background: none;
+  height: 1.6em;
+}
+.searching-for form input:focus {
+  outline: none;
+}
+.searching-for form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  width: 0.8em;
+  height: 0.8em;
+  background-repeat: no-repeat;
+  background-image: url("../image/xmark-dark.png");
+  background-position: center;
+}
+.searching-for form button {
+  background: none;
+  color: #000000;
+  margin: 0.5em;
+}
+.searching-for form button i {
+  font-size: 1.25em;
+  margin-right: 0.5em;
+}
+
+/* Categories and Filters */
+.category-filter {
+  display: flex;
+  background-color: #ffffff;
+  color: #000000;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.8em 0em;
+  border-radius: 1.25em;
+  max-height: 3.1em;
+}
+.category-filter h3 {
+  cursor: pointer;
+}
+.category-filter div {
+  height: 2em;
+  width: 2px;
+  border-radius: 1.8em;
+  background-color: #707070;
+}
+.category-filter span {
+  margin-right: 1em;
+}
+.category-filter i {
+  font-size: 1.25em;
+}
+
+/* Category Selections */
+.category-selections {
+  display: none;
+}
+
+/* Filter */
+.filter-container {
+  display: none;
+}
+
+.filter-panels {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.8em 0em;
+  color: #000000;
+  margin-bottom: 1em;
+}
+.filter-panels h3 {
+  padding: 0em 0.8em;
+}
+.filter-panels hr {
+  border: 0.25px solid #D8D8D8;
+  margin: 6.5px 0px;
+}
+.filter-panels h4 {
+  font-weight: 400;
+  margin-bottom: 0.2em;
+}
+.filter-panels .container {
+  margin-bottom: 0.8em;
+}
+.filter-panels .container .row {
+  padding-left: 0.8em;
+  margin-right: 0.05em;
+  overflow: auto;
+  max-height: 2.75em;
+  /* Adjust the background color of track */
+}
+.filter-panels .container .row::-webkit-scrollbar {
+  background-color: #E6E6E6;
+}
+.filter-panels .container .row label {
+  padding-top: 0.4em;
+  font-size: 14px;
+}
+
+/* Results */
+.results {
+  overflow: auto;
+  max-height: 28em;
+}
+.results .filter-panels {
+  padding: 1em;
+  margin-right: 1em;
+}
+.results .filter-panels h2 {
+  color: #8C3A75;
+  margin-bottom: 0.3em;
+}
+
+/* =========================================================================== */
+/* TODO: Submission Page */
+/* =========================================================================== */
+.submission-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.8em;
+  margin-bottom: 0.5em;
+}
+
+.file-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.file-container i {
+  font-size: 2.75em;
+  padding: 0.46em 0.5em;
+  border-radius: 50em;
+  background-color: #ffffff;
+  color: #000000;
+}
+.file-container i:nth-child(1) {
+  display: none;
+}
+.file-container p {
+  font-size: 1.5em;
+  margin-top: 0.9em;
+}
+.file-container p::after {
+  content: "Click to upload";
+}
+
+.form-container input[type=text], .form-container input[type=email], .form-container textarea {
+  border-radius: 10px;
+}
+.form-container textarea {
+  max-height: 7.5em;
+}
+.form-container textarea:focus {
+  border-radius: 10px;
+}
+.form-container .form-check {
+  margin-top: 1.5em;
+}
+.form-container .form-check label {
+  line-height: 26px;
+}
+.form-container .form-check label a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: 0.3s all ease-in;
+}
+.form-container .form-check label a:hover {
+  color: #98ECFF;
+}
+.form-container button {
+  color: #9B55DD;
+  border: 1px solid #9B55DD;
+  border-radius: 50em;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2823529412);
+  background-color: transparent;
+  padding: 1em;
+  margin: 1.5em 0em;
+  transition: 0.3s all ease-in;
+  padding: 0.8em 2.25em;
+  font-size: 1em;
+  margin: 0.6em 0em;
+}
+.form-container button:hover {
+  color: #ffffff;
+  background-color: #9B55DD;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2823529412);
+}
+.form-container button:active {
+  transform: scale(0.8);
+}
+.form-container button span {
+  font-weight: 700;
+  margin-left: 0.5em;
+}
+.form-container button i {
+  font-size: 1.25em;
+}
+
+/* =========================================================================== */
+/* TODO: Categories Page */
+/* =========================================================================== */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5em;
+  max-width: 37em;
+  margin: 2.8em auto;
+}
+.categories p {
+  position: absolute;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+  color: #ffffff;
+  width: 100%;
+  font-size: 1.25em;
+  padding: 1em 0em;
+  transition: 0.3s all ease-in;
+}
+.categories p:hover {
+  padding: 121.5px 0px;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+}
+.categories picture:hover + p {
+  padding: 121.5px 0px;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+}
+
+/* =========================================================================== */
+/* TODO: Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+/* =========================================================================== */
+.sub-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.18em;
+  max-width: 58em;
+  margin: 3.6em auto;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2.5em;
+  max-width: 38em;
+}
+
+.accordion-item ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6em 1.8em;
+}
+.accordion-item ul li {
+  text-align: center;
+}
+.accordion-item ul a {
+  color: #000000;
+  line-height: 20px;
+  transition: 0.3s all ease-in;
+}
+.accordion-item ul a:hover {
+  color: #9B55DD;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 17.75em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 22.5em;
+  }
+}
+
+/* =========================================================================== */
 /* Tablet Version */
 /* =========================================================================== */
 @media screen and (min-width: 768px) {
@@ -126,30 +740,18 @@ button {
   /* =========================================================================== */
   h1 {
     font-size: 4em;
-    font-weight: 700;
-    margin-bottom: 0.5em;
   }
   h2 {
     font-size: 1.5em;
-    font-weight: 700;
     margin-bottom: 0.8em;
   }
-  h3, h4 {
-    font-weight: 700;
-  }
   p {
+    font-size: 1em;
     line-height: 26px;
   }
   /* =========================================================================== */
   /* Top Nav Bar */
   /* =========================================================================== */
-  nav {
-    display: flex;
-    align-items: center;
-    padding: 1em 0em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1882352941);
-    background: #000000;
-  }
   /* Logo */
   .logo {
     margin-left: 2em;
@@ -173,6 +775,7 @@ button {
     border: 2px solid #ffffff;
   }
   .search-bar {
+    display: block;
     padding-left: 0.8em;
     background: none;
     color: #ffffff;
@@ -202,207 +805,48 @@ button {
     background-image: url("../image/xmark.png");
     background-position: center;
   }
-  /* Right Menu */
-  div.offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  div.offcanvas-body ul {
-    margin-top: 10.875em;
-  }
-  div.offcanvas-body ul li {
-    text-align: center;
-    font-weight: 700;
-    margin: 1.25em 0em;
-    opacity: 0.5;
-  }
-  div.offcanvas-body ul li a {
-    color: #000000;
-    transition: 0.3s all ease-in;
-  }
-  div.offcanvas-body ul li a:hover {
-    color: #9B55DD;
-  }
-  div.offcanvas-body ul li.active {
-    opacity: 1;
-  }
-  /* Footer for medium and small devices */
-  .sm-device-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.3137254902);
-  }
-  .sm-device-footer p {
-    text-align: center;
-    margin-bottom: 0.8em;
-  }
-  .sm-device-footer p a {
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.3137254902);
-    transition: 0.3s all ease-in;
-  }
-  .sm-device-footer p a:hover {
-    color: #9B55DD;
-  }
-  .sm-device-footer .social-media {
-    margin-bottom: 3em;
-  }
-  .sm-device-footer .social-media a {
-    color: rgba(0, 0, 0, 0.3137254902);
-    transition: 0.3s all ease-in;
-  }
-  .sm-device-footer .social-media a:hover {
-    color: #9B55DD;
-  }
-  .sm-device-footer .social-media a i {
-    font-size: 2.18em;
-  }
-  /* =========================================================================== */
-  /* Main Grid Container */
-  /* =========================================================================== */
-  .grid-container {
-    height: 100%;
-    overflow: hidden;
-    /* Make a grid for Sidebar and right content */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 3.75em;
-  }
   /* =========================================================================== */
   /* Sidebar */
   /* =========================================================================== */
   /* Sidebar Navigation */
-  aside {
-    height: 3.75em;
-    background-color: rgba(29, 35, 94, 0.2078431373);
-    padding: 0em;
-    grid-row: 2/3;
-    display: flex;
-    justify-content: center;
-  }
-  .side-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5em;
-    overflow: hidden;
-  }
-  .side-nav li {
-    display: flex;
-    cursor: pointer;
-    transition: 0.3s all ease-in;
-  }
-  .side-nav li.active, .side-nav li:hover {
-    background-color: rgba(255, 255, 255, 0.2235294118);
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-  }
   .side-nav li a {
     padding: 0.8em 2.5em;
-    color: rgba(255, 255, 255, 0.4392156863);
-    transition: 0.3s all ease-in;
-  }
-  .side-nav li a span {
-    display: none;
-  }
-  .side-nav li a i {
-    font-size: 2.2em;
-  }
-  .side-nav li a.active, .side-nav li a:hover {
-    color: #ffffff;
-  }
-  /* Collapse Button */
-  .collapse-btn {
-    display: none;
-  }
-  /* Download Apps */
-  .app-container {
-    display: none;
   }
   /* =========================================================================== */
   /* Main Content Container */
   /* =========================================================================== */
-  .right-content-container {
-    height: 100%;
-    overflow: auto;
-  }
   main {
     padding: 1.75em 2.5em 0em;
-    width: 100%;
   }
   /* =========================================================================== */
   /* Index page */
   /* =========================================================================== */
+  .breadcrumb {
+    margin-left: 0em;
+    margin-bottom: 1.75em;
+  }
   .todays-pic-container {
-    position: relative;
-    display: grid;
     grid-template-columns: 2em auto 2em;
     gap: 0.5em;
   }
   /* Control Buttons */
-  .control-btn {
-    cursor: pointer;
-  }
   .control-btn i {
-    border: 1px solid #ffffff;
-    border-radius: 50em;
+    opacity: 1;
+    background-color: transparent;
     padding: 0.6rem;
-    font-size: 1.2em;
-    position: absolute;
     top: 50%;
-    transition: 0.3s all ease-in;
   }
   .control-btn i.prev {
     left: -1em;
+    z-index: 0;
   }
   .control-btn i.next {
     right: -1em;
   }
-  .control-btn i:hover {
-    border: 1px solid #98ECFF;
-    color: #98ECFF;
-    box-shadow: 0px 0px 10px #ffffff;
-    transform: scale(1.1);
-  }
-  .control-btn i:active {
-    transform: scale(0.8);
-  }
-  .btn-disable {
-    opacity: 0.5;
-  }
-  /* Picture Container */
-  .picture-container {
-    position: relative;
-  }
   /* Image Credit */
   .img-credit {
-    position: absolute;
-    bottom: 0%;
-    background-color: rgba(0, 0, 0, 0.1882352941);
-    color: #ffffff;
-    width: 100%;
     padding: 1.43em 2.5em;
-    display: grid;
-    grid-template-columns: auto 1.68em;
     gap: 2em;
-    align-items: center;
-  }
-  .img-credit a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: 0.3s all ease-in;
-  }
-  .img-credit a:hover {
-    color: #98ECFF;
-  }
-  .img-credit button {
-    background: none;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
   }
   .img-credit i {
     font-size: 1.68em;
@@ -410,30 +854,16 @@ button {
   /* Article */
   article {
     margin-top: 0.9em;
-    width: 100%;
+    padding: 0em;
   }
   article h1 {
-    text-align: center;
     font-size: 3em;
   }
   article .pic-description {
-    margin-right: 4px;
     max-height: 8.125em;
-    overflow: auto;
   }
   article hr {
-    border-top: 2px dashed #ffffff;
-    opacity: 1;
-    margin-top: 0.95em;
-  }
-  article button {
-    display: none;
-  }
-  /* =========================================================================== */
-  /* Footer */
-  /* =========================================================================== */
-  footer {
-    display: none;
+    margin: 0.95em 0em;
   }
   /* =========================================================================== */
   /* Search Page */
@@ -715,20 +1145,10 @@ button {
 /* =========================================================================== */
 @media screen and (min-width: 1200px) {
   /* =========================================================================== */
-  /* Font Setting for Desktop Version*/
-  /* =========================================================================== */
-  h1 {
-    font-size: 4em;
-  }
-  /* =========================================================================== */
   /* Top Nav Bar */
   /* =========================================================================== */
   nav {
-    display: flex;
-    align-items: center;
     padding: 1em 0.5em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1882352941);
-    background: #000000;
   }
   /* Logo */
   .logo {
@@ -736,51 +1156,23 @@ button {
   }
   /* Search and Menu Buttons */
   .search-btn {
-    background: none;
-    color: #ffffff;
-    margin: 0em 0.5em;
     font-size: 1.4em;
   }
   .menu-btn {
-    background: none;
-    color: #ffffff;
     margin: 0em 1.5em;
     font-size: 2.4em;
   }
   /* Search Bar */
   form.search {
-    border-radius: 50em;
     border: 4px solid #ffffff;
   }
   .search-bar {
     padding-left: 1em;
-    background: none;
-    color: #ffffff;
-    height: 1.6em;
     width: 20em;
   }
-  .search-bar:focus {
-    outline: none;
-    color: #ffffff;
-  }
-  .search-bar::-moz-placeholder {
-    color: #ffffff;
-  }
-  .search-bar:-ms-input-placeholder {
-    color: #ffffff;
-  }
-  .search-bar::placeholder {
-    color: #ffffff;
-  }
   .search-bar[type=search]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-            appearance: none;
-    cursor: pointer;
     width: 0.8em;
     height: 0.8em;
-    background-repeat: no-repeat;
-    background-image: url("../image/xmark.png");
-    background-position: center;
   }
   /* Right Menu */
   div.offcanvas-body ul {
@@ -810,10 +1202,7 @@ button {
   /* Main Grid Container */
   /* =========================================================================== */
   .grid-container {
-    height: 100%;
-    overflow: hidden;
-    /* Make a grid for Sidebar and right content */
-    display: grid;
+    /* Adjust layout for desktop screens */
     grid-template-columns: 16.375em auto;
     grid-template-rows: 1fr;
   }
@@ -933,37 +1322,27 @@ button {
   /* Main Content Container */
   /* =========================================================================== */
   .right-content-container {
-    height: 100%;
     display: grid;
     /* Fixed Footer's height */
     grid-template-rows: auto 10.875em;
-    overflow: auto;
   }
   main {
     padding: 2.85em 2.85em 0em;
-    width: 100%;
   }
   /* =========================================================================== */
   /* Index page */
   /* =========================================================================== */
+  .breadcrumb {
+    margin-bottom: 2.85em;
+  }
   .todays-pic-container {
-    position: relative;
-    display: grid;
     grid-template-columns: 4.18em auto 4.18em;
     gap: 2.81em;
   }
   /* Control Buttons */
-  .control-btn {
-    cursor: pointer;
-  }
   .control-btn i {
-    border: 1px solid #ffffff;
-    border-radius: 50em;
     padding: 1rem;
     font-size: 1.875em;
-    position: absolute;
-    top: 50%;
-    transition: 0.3s all ease-in;
   }
   .control-btn i.prev {
     left: 0%;
@@ -971,39 +1350,10 @@ button {
   .control-btn i.next {
     right: 0%;
   }
-  .control-btn i:hover {
-    border: 1px solid #98ECFF;
-    color: #98ECFF;
-    box-shadow: 0px 0px 10px #ffffff;
-    transform: scale(1.1);
-  }
-  .control-btn i:active {
-    transform: scale(0.8);
-  }
-  .btn-disable {
-    opacity: 0.5;
-  }
-  /* Picture Container */
-  .picture-container {
-    position: relative;
-  }
   /* Image Credit */
   .img-credit {
-    position: absolute;
-    bottom: 0%;
-    background-color: rgba(0, 0, 0, 0.1882352941);
-    color: #ffffff;
-    width: 100%;
     padding: 1.43em 0em 1.43em 2.56em;
     display: block;
-  }
-  .img-credit a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: 0.3s all ease-in;
-  }
-  .img-credit a:hover {
-    color: #98ECFF;
   }
   .img-credit button {
     display: none;
@@ -1012,62 +1362,19 @@ button {
   article {
     margin-left: 4.125em;
     width: 29.625em;
-    /* Fine-tune Elements for different large screens */
   }
-  /* =========================================================================== */
-  /* Footer */
-  /* =========================================================================== */
-  /* =========================================================================== */
-  /* Search Page */
-  /* =========================================================================== */
-  /* Search Bar */
-  /* Category Selections */
-  /* Filter */
-  /* Results */
-  /* =========================================================================== */
-  /* Submission Page */
-  /* =========================================================================== */
-  /* =========================================================================== */
-  /* Categories Page */
-  /* =========================================================================== */
-  /* =========================================================================== */
-  /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
-  /* =========================================================================== */
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  article {
-    width: 100%;
-    margin-top: 1.5em;
-    margin-right: 0em;
-    margin-bottom: 7.3em;
-  }
-}
-@media screen and (min-width: 1200px) {
   article h1 {
     text-align: left;
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  article h1 {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 1200px) {
   article .pic-description {
     margin-top: 0em;
     margin-right: 1.18em;
     max-height: 18.56em;
-    overflow: auto;
   }
-}
-@media screen and (min-width: 1200px) {
   article hr {
     border-top: 3px dashed #ffffff;
-    opacity: 1;
     margin-top: 1.5em;
   }
-}
-@media screen and (min-width: 1200px) {
   article button {
     color: #9B55DD;
     border: 1px solid #9B55DD;
@@ -1093,8 +1400,9 @@ button {
   article button i {
     font-size: 1.25em;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* =========================================================================== */
+  /* Footer */
+  /* =========================================================================== */
   footer {
     padding: 2.56em 5.6em;
     background-color: rgba(255, 255, 255, 0.2509803922);
@@ -1103,8 +1411,6 @@ button {
     grid-template-columns: auto 14.375em;
     gap: 1em;
   }
-}
-@media screen and (min-width: 1200px) {
   .social-media {
     display: flex;
     gap: 0.75em;
@@ -1121,8 +1427,6 @@ button {
   .social-media a i {
     font-size: 2em;
   }
-}
-@media screen and (min-width: 1200px) {
   .declaration a {
     color: #ffffff;
     text-decoration: underline;
@@ -1131,34 +1435,19 @@ button {
   .declaration a:hover {
     color: #98ECFF;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* =========================================================================== */
+  /* Search Page */
+  /* =========================================================================== */
   .search-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 4fr;
     gap: 3.5em;
-    /* Fine-tune Elements for different large screens */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .search-container {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1em;
-  }
-}
-@media screen and (min-width: 1200px) {
+  /* Search Bar */
   .searching-for {
     grid-column: 1/4;
-    /* Fine-tune Elements for different large screens */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .searching-for {
-    grid-column: 1/5;
-  }
-}
-@media screen and (min-width: 1200px) {
   .searching-for form input {
     padding-left: 1em;
     background: none;
@@ -1186,38 +1475,20 @@ button {
     font-size: 1.25em;
     margin-right: 0.5em;
   }
-}
-@media screen and (min-width: 1200px) {
   .category-filter {
     display: none;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* Category Selections */
   .category-selections {
     display: block;
     grid-column: 4/6;
-    /* Fine-tune Elements for different large screens */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .category-selections {
-    grid-column: 5/7;
-  }
-}
-@media screen and (min-width: 1200px) {
+  /* Filter */
   .filter-container {
     display: block;
     grid-column: 1/2;
-    /* Fine-tune Elements for different large screens */
     /* Buttons */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .filter-container {
-    grid-column: 1/3;
-  }
-}
-@media screen and (min-width: 1200px) {
   .filter-container button {
     background: none;
     color: #ffffff;
@@ -1249,8 +1520,6 @@ button {
   .filter-container button:nth-child(5):active {
     transform: scale(0.8);
   }
-}
-@media screen and (min-width: 1200px) {
   .filter-panels {
     background-color: #ffffff;
     border-radius: 10px;
@@ -1286,19 +1555,10 @@ button {
     padding-top: 0.4em;
     font-size: 14px;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* Results */
   .result-container {
     grid-column: 2/6;
-    /* Fine-tune Elements for different large screens */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .result-container {
-    grid-column: 3/7;
-  }
-}
-@media screen and (min-width: 1200px) {
   .results {
     overflow: auto;
     max-height: 28em;
@@ -1306,29 +1566,20 @@ button {
   .results .filter-panels {
     padding: 1em;
     margin-right: 2.6em;
-    /* Fine-tune Elements for different large screens */
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) and (max-width: 1879px) {
-  .results .filter-panels {
-    margin-right: 1em;
-  }
-}
-@media screen and (min-width: 1200px) {
   .results .filter-panels h2 {
     color: #8C3A75;
     margin-bottom: 0.3em;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* =========================================================================== */
+  /* Submission Page */
+  /* =========================================================================== */
   .submission-container {
     display: grid;
     grid-template-columns: 37.6em auto;
     gap: 4.375em;
     margin-bottom: 5.6em;
   }
-}
-@media screen and (min-width: 1200px) {
   .file-container {
     border: 3px dashed #ffffff;
     border-radius: 50px;
@@ -1358,8 +1609,6 @@ button {
   .file-container p::after {
     content: "Drop a file here or click to upload.";
   }
-}
-@media screen and (min-width: 1200px) {
   .form-container input[type=text], .form-container input[type=email], .form-container textarea {
     border-radius: 10px;
   }
@@ -1408,8 +1657,9 @@ button {
   .form-container button i {
     font-size: 1.25em;
   }
-}
-@media screen and (min-width: 1200px) {
+  /* =========================================================================== */
+  /* Categories Page */
+  /* =========================================================================== */
   .categories {
     display: flex;
     flex-wrap: wrap;
@@ -1437,8 +1687,9 @@ button {
     padding: 121.5px 0px;
     background-color: rgba(0, 0, 0, 0.4588235294);
   }
-}
-@media screen and (min-width: 1200px) {
+  /* =========================================================================== */
+  /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+  /* =========================================================================== */
   .sub-categories {
     display: flex;
     flex-wrap: wrap;
@@ -1452,8 +1703,6 @@ button {
     gap: 1.3em;
     max-width: 94em;
   }
-}
-@media screen and (min-width: 1200px) {
   .accordion-item ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1470,5 +1719,40 @@ button {
   }
   .accordion-item ul a:hover {
     color: #9B55DD;
+  }
+}
+/* =========================================================================== */
+/* Fine-tune Elements for different large screens */
+/* =========================================================================== */
+@media screen and (min-width: 1200px) and (max-width: 1879px) {
+  /* Article */
+  article {
+    width: 100%;
+    margin-top: 1.5em;
+    margin-right: 0em;
+    margin-bottom: 7.3em;
+  }
+  article h1 {
+    text-align: center;
+  }
+  /* Search */
+  .search-container {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+  }
+  .searching-for {
+    grid-column: 1/5;
+  }
+  .category-selections {
+    grid-column: 5/7;
+  }
+  .filter-container {
+    grid-column: 1/3;
+  }
+  .result-container {
+    grid-column: 3/7;
+  }
+  .results .filter-panels {
+    margin-right: 1em;
   }
 }/*# sourceMappingURL=style.css.map */

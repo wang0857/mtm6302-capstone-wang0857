@@ -1,5 +1,5 @@
-// Tablet
-@mixin main-grid-container-md {
+// Mobile and Tablet
+@mixin main-grid-container-sm {
     .grid-container {
         height: 100%;
         overflow: hidden;
@@ -14,11 +14,7 @@
 // Desktop
 @mixin main-grid-container-lg {
     .grid-container {
-        height: 100%;
-        overflow: hidden;
-
-        /* Make a grid for Sidebar and right content */
-        display: grid;
+        /* Adjust layout for desktop screens */
         grid-template-columns: 16.375em auto;
         grid-template-rows: 1fr;
     }
