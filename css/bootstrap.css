@@ -4512,12 +4512,8 @@ textarea.form-control-lg {
 
 .accordion-body {
   margin: 0em;
+  max-width: 17.75em;
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
-}
-@media screen and (min-width: 768px) {
-  .accordion-body {
-    max-width: 17.75em;
-  }
 }
 @media screen and (min-width: 1200px) {
   .accordion-body {

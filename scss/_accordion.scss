@@ -1,10 +1,4 @@
 // Set RWD Screens
-@mixin medium-screen() {
-  @media screen and (min-width: 768px) {
-      @content;
-  }
-}
-
 @mixin xlarge-screen() {
   @media screen and (min-width: 1200px) {
       @content;
@@ -127,10 +121,7 @@
 
 .accordion-body {
   margin: 0em;
-
-  @include medium-screen() {
-    max-width: 17.75em;
-  }
+  max-width: 17.75em;
 
   @include xlarge-screen() {
     max-width: 22.5em;

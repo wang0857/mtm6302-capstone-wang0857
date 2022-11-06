@@ -673,7 +673,7 @@ footer {
 /* Categories Page */
 /* =========================================================================== */
 .categories {
-  padding: 0em 1.5em;
+  padding-left: 1.5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -702,7 +702,7 @@ footer {
 }
 
 /* =========================================================================== */
-/* TODO: Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
+/* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
 /* =========================================================================== */
 .sub-categories {
   display: flex;
@@ -712,10 +712,10 @@ footer {
   gap: 3.18em;
   max-width: 58em;
   margin: 3.6em auto;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 2.5em;
-  max-width: 38em;
+  gap: 1.25em;
+  margin: 1.25em 0.68em 0em 0em;
+  overflow: auto;
+  max-height: 33.875em;
 }
 
 .accordion-item ul {
@@ -735,10 +735,8 @@ footer {
   color: #9B55DD;
 }
 
-@media screen and (min-width: 768px) {
-  .card {
-    max-width: 17.75em;
-  }
+.card {
+  max-width: 17.75em;
 }
 @media screen and (min-width: 1200px) {
   .card {
@@ -968,7 +966,7 @@ footer {
   /* Categories Page */
   /* =========================================================================== */
   .categories {
-    padding: 0em;
+    padding-left: 0em;
     justify-content: space-between;
     gap: 2.5em;
     max-width: 37em;
@@ -982,43 +980,14 @@ footer {
   /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
   /* =========================================================================== */
   .sub-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3.18em;
-    max-width: 58em;
-    margin: 3.6em auto;
-    align-items: baseline;
-    justify-content: space-between;
     gap: 2.5em;
+    justify-content: space-between;
     max-width: 38em;
-  }
-  .accordion-item ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.6em 1.8em;
-  }
-  .accordion-item ul li {
-    text-align: center;
-  }
-  .accordion-item ul a {
-    color: #000000;
-    line-height: 20px;
-    transition: 0.3s all ease-in;
-  }
-  .accordion-item ul a:hover {
-    color: #9B55DD;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .card {
-    max-width: 17.75em;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .card {
-    max-width: 22.5em;
+    margin: 2.1em auto 0em;
+    overflow: visible;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
   }
 }
 /* =========================================================================== */
@@ -1500,21 +1469,8 @@ footer {
     max-width: 94em;
   }
   .accordion-item ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1.4em 3em;
     max-width: 20em;
-  }
-  .accordion-item ul li {
-    text-align: center;
-  }
-  .accordion-item ul a {
-    color: #000000;
-    line-height: 20px;
-    transition: 0.3s all ease-in;
-  }
-  .accordion-item ul a:hover {
-    color: #9B55DD;
   }
 }
 /* =========================================================================== */

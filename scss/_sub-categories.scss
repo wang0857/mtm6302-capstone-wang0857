@@ -1,12 +1,11 @@
-// Tablet
-@mixin sub-categories-md {
+// Mobile
+@mixin sub-categories-sm {
     .sub-categories {
         @include categories;
-
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 2.5em;
-        max-width: 38em;
+        gap: 1.25em;
+        margin: 1.25em .68em 0em 0em;
+        overflow: auto;
+        max-height: 33.875em;
     }
 
     .accordion-item {
@@ -32,9 +31,7 @@
     }
 
     .card {
-        @include medium-screen() {
-            max-width: 17.75em;
-        }
+        max-width: 17.75em;
         
         @include xlarge-screen() {
             max-width: 22.5em;
@@ -42,11 +39,22 @@
     }
 }
 
+// Tablet
+@mixin sub-categories-md {
+    .sub-categories {
+        gap: 2.5em;
+        justify-content: space-between;
+        max-width: 38em;
+        margin: 2.1em auto 0em;
+        overflow: visible;
+        max-height: fit-content;
+    }
+}
+
 // Desktop
 @mixin sub-categories-lg {
     .sub-categories {
         @include categories;
-
         align-items: baseline;
         justify-content: center;
         gap: 1.3em;
@@ -55,24 +63,8 @@
 
     .accordion-item {
         ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 1.4em 3em;
             max-width: 20em;
-            
-            li {
-                text-align: center;
-            }
-
-            a {
-                color: #000000;
-                line-height: 20px;
-                transition: .3s all ease-in;
-
-                &:hover {
-                    color: #9B55DD;
-                }   
-            }
         }
     }
 }
