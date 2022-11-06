@@ -1,10 +1,10 @@
-// Tablet
-@mixin submission-md {
+// TODO: Mobile
+@mixin submission-sm {
     .submission-container {
+        padding: 0em 1.5em;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 2.8em;
-        margin-bottom: .5em;
+        gap: .9em;
     }
 
     .file-container {
@@ -15,8 +15,8 @@
         cursor: pointer;
 
         i {
-            font-size: 2.75em;
-            padding: .46em .5em;
+            font-size: 2.5em;
+            padding: .36em .4em;
             border-radius: 50em;
             background-color: #ffffff;
             color: #000000;
@@ -27,8 +27,8 @@
         }
 
         p {
-            font-size: 1.5em;
-            margin-top: .9em;
+            font-size: 1em;
+            margin-top: 1em;
 
             &::after{
                 content: "Click to upload";
@@ -37,12 +37,17 @@
     }
 
     .form-container {
+        label {
+            font-size: .8em;
+        }
+
         input[type="text"], input[type="email"], textarea {
             border-radius: 10px;
+            margin-bottom: -.5em;
         }
 
         textarea {
-            max-height: 7.5em;
+            height: 6.9em;
 
             &:focus {
                 border-radius: 10px;
@@ -50,10 +55,10 @@
         }
 
         .form-check {
-            margin-top: 1.5em;
+            margin-top: .9em;
 
             label {
-                line-height: 26px;
+                line-height: 14px;
 
                 a {
                     @include pAnchor;
@@ -63,8 +68,52 @@
 
         button {
             @include primary-btn;
-            padding: .8em 2.25em;
+            padding: .75em 2em;
             font-size: 1em;
+            margin: 0em 6.5em;
+        }
+    }
+}
+
+// Tablet
+@mixin submission-md {
+    .submission-container {
+        padding: 0em;
+        gap: 2.8em;
+        margin-bottom: .5em;
+    }
+
+    .file-container {
+        i {
+            font-size: 2.75em;
+            padding: .46em .5em;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: .9em;
+        }
+    }
+
+    .form-container {
+        label {
+            font-size: 1em;
+        }
+
+        textarea {
+            height: 7.5em;
+        }
+
+        .form-check {
+            margin-top: 1.5em;
+
+            label {
+                line-height: 26px;
+            }
+        }
+
+        button {
+            padding: .8em 2.25em;
             margin: .6em 0em;
         }
     }
@@ -120,7 +169,7 @@
         }
 
         textarea {
-            max-height: 7em;
+            height: 7em;
         }
 
         .form-check {

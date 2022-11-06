@@ -579,13 +579,13 @@ footer {
 }
 
 /* =========================================================================== */
-/* TODO: Submission Page */
+/* Submission Page */
 /* =========================================================================== */
 .submission-container {
+  padding: 0em 1.5em;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.8em;
-  margin-bottom: 0.5em;
+  gap: 0.9em;
 }
 
 .file-container {
@@ -596,8 +596,8 @@ footer {
   cursor: pointer;
 }
 .file-container i {
-  font-size: 2.75em;
-  padding: 0.46em 0.5em;
+  font-size: 2.5em;
+  padding: 0.36em 0.4em;
   border-radius: 50em;
   background-color: #ffffff;
   color: #000000;
@@ -606,27 +606,31 @@ footer {
   display: none;
 }
 .file-container p {
-  font-size: 1.5em;
-  margin-top: 0.9em;
+  font-size: 1em;
+  margin-top: 1em;
 }
 .file-container p::after {
   content: "Click to upload";
 }
 
+.form-container label {
+  font-size: 0.8em;
+}
 .form-container input[type=text], .form-container input[type=email], .form-container textarea {
   border-radius: 10px;
+  margin-bottom: -0.5em;
 }
 .form-container textarea {
-  max-height: 7.5em;
+  height: 6.9em;
 }
 .form-container textarea:focus {
   border-radius: 10px;
 }
 .form-container .form-check {
-  margin-top: 1.5em;
+  margin-top: 0.9em;
 }
 .form-container .form-check label {
-  line-height: 26px;
+  line-height: 14px;
 }
 .form-container .form-check label a {
   color: #ffffff;
@@ -645,9 +649,9 @@ footer {
   padding: 1em;
   margin: 1.5em 0em;
   transition: 0.3s all ease-in;
-  padding: 0.8em 2.25em;
+  padding: 0.75em 2em;
   font-size: 1em;
-  margin: 0.6em 0em;
+  margin: 0em 6.5em;
 }
 .form-container button:hover {
   color: #ffffff;
@@ -930,43 +934,23 @@ footer {
   /* Submission Page */
   /* =========================================================================== */
   .submission-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    padding: 0em;
     gap: 2.8em;
     margin-bottom: 0.5em;
-  }
-  .file-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
   }
   .file-container i {
     font-size: 2.75em;
     padding: 0.46em 0.5em;
-    border-radius: 50em;
-    background-color: #ffffff;
-    color: #000000;
-  }
-  .file-container i:nth-child(1) {
-    display: none;
   }
   .file-container p {
     font-size: 1.5em;
     margin-top: 0.9em;
   }
-  .file-container p::after {
-    content: "Click to upload";
-  }
-  .form-container input[type=text], .form-container input[type=email], .form-container textarea {
-    border-radius: 10px;
+  .form-container label {
+    font-size: 1em;
   }
   .form-container textarea {
-    max-height: 7.5em;
-  }
-  .form-container textarea:focus {
-    border-radius: 10px;
+    height: 7.5em;
   }
   .form-container .form-check {
     margin-top: 1.5em;
@@ -974,41 +958,9 @@ footer {
   .form-container .form-check label {
     line-height: 26px;
   }
-  .form-container .form-check label a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: 0.3s all ease-in;
-  }
-  .form-container .form-check label a:hover {
-    color: #98ECFF;
-  }
   .form-container button {
-    color: #9B55DD;
-    border: 1px solid #9B55DD;
-    border-radius: 50em;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2823529412);
-    background-color: transparent;
-    padding: 1em;
-    margin: 1.5em 0em;
-    transition: 0.3s all ease-in;
     padding: 0.8em 2.25em;
-    font-size: 1em;
     margin: 0.6em 0em;
-  }
-  .form-container button:hover {
-    color: #ffffff;
-    background-color: #9B55DD;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2823529412);
-  }
-  .form-container button:active {
-    transform: scale(0.8);
-  }
-  .form-container button span {
-    font-weight: 700;
-    margin-left: 0.5em;
-  }
-  .form-container button i {
-    font-size: 1.25em;
   }
   /* =========================================================================== */
   /* Categories Page */
@@ -1490,7 +1442,7 @@ footer {
     border-radius: 10px;
   }
   .form-container textarea {
-    max-height: 7em;
+    height: 7em;
   }
   .form-container .form-check {
     margin-top: 1.5em;
