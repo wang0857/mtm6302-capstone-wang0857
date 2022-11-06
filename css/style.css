@@ -121,7 +121,7 @@ button {
 /* Mobile Version */
 /* =========================================================================== */
 /* =========================================================================== */
-/* Font Setting for Desktop Version*/
+/* Font Setting */
 /* =========================================================================== */
 h1 {
   font-size: 1.5em;
@@ -495,7 +495,6 @@ footer {
   padding: 0.5em 0em;
   border-radius: 1.4em;
   max-height: 2.4em;
-  /* Divider */
 }
 .category-filter h3 {
   font-size: 0.8em;
@@ -550,9 +549,9 @@ footer {
   margin-right: 0.05em;
   overflow: auto;
   max-height: 2.75em;
-  /* Adjust the background color of track */
 }
 .filter-panels .container .row::-webkit-scrollbar {
+  /* Adjust the background color of track */
   background-color: #E6E6E6;
 }
 .filter-panels .container .row label {
@@ -588,6 +587,7 @@ footer {
   gap: 0.9em;
 }
 
+/* File */
 .file-container {
   display: flex;
   flex-direction: column;
@@ -613,6 +613,7 @@ footer {
   content: "Click to upload";
 }
 
+/* Form */
 .form-container label {
   font-size: 0.8em;
 }
@@ -718,6 +719,7 @@ footer {
   max-height: 33.875em;
 }
 
+/* Accordion */
 .accordion-item ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -735,6 +737,7 @@ footer {
   color: #9B55DD;
 }
 
+/* Cards */
 .card {
   max-width: 17.75em;
 }
@@ -749,7 +752,7 @@ footer {
 /* =========================================================================== */
 @media screen and (min-width: 768px) {
   /* =========================================================================== */
-  /* Font Setting for Desktop Version*/
+  /* Font Setting */
   /* =========================================================================== */
   h1 {
     font-size: 4em;
@@ -907,7 +910,6 @@ footer {
     padding: 1.5em 0em;
     border-radius: 1.25em;
     max-height: 3.1em;
-    /* Divider */
   }
   .category-filter h3 {
     font-size: 1em;
@@ -938,6 +940,7 @@ footer {
     gap: 2.8em;
     margin-bottom: 0.5em;
   }
+  /* File */
   .file-container i {
     font-size: 2.75em;
     padding: 0.46em 0.5em;
@@ -946,6 +949,7 @@ footer {
     font-size: 1.5em;
     margin-top: 0.9em;
   }
+  /* Form */
   .form-container label {
     font-size: 1em;
   }
@@ -1074,7 +1078,7 @@ footer {
   .side-nav {
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: flex-start;
     align-items: baseline;
     gap: 0em;
   }
@@ -1133,33 +1137,38 @@ footer {
     gap: 1.25em;
     margin-bottom: 3.56em;
   }
-  .app-container button {
+  .app-container .download-btn {
+    display: flex;
     background-color: #000000;
     border-radius: 50em;
     border: 3px solid #ffffff;
-    padding: 0.7em 0em;
     width: 9.125em;
+    overflow: hidden;
     transition: 0.3s all ease-in;
   }
-  .app-container button:hover {
+  .app-container .download-btn:hover {
     background-color: #98ECFF;
   }
-  .app-container button:active {
+  .app-container .download-btn:active {
     transform: scale(0.8);
   }
-  .app-container button a {
+  .app-container .download-btn a {
     color: #ffffff;
+    width: 100%;
     padding: 1em;
   }
-  .app-container button a:hover {
+  .app-container .download-btn a:hover {
     color: #000000;
   }
-  .app-container button a span {
+  .app-container .download-btn a span {
     font-weight: 700;
     margin-left: 0.5em;
   }
-  .app-container button a i {
+  .app-container .download-btn a i {
     font-size: 1.25em;
+  }
+  .app-container .download-btn:nth-child(2) a span {
+    margin-left: 1.6em;
   }
   .app-header span {
     font-weight: 700;
@@ -1312,8 +1321,8 @@ footer {
   .filter-container {
     display: block;
     grid-column: 1/2;
-    /* Buttons */
   }
+  /* Buttons */
   .filter-container button {
     background: none;
     color: #ffffff;
@@ -1365,6 +1374,7 @@ footer {
     gap: 4.375em;
     margin-bottom: 5.6em;
   }
+  /* File */
   .file-container {
     border: 3px dashed #ffffff;
     border-radius: 50px;
@@ -1394,6 +1404,7 @@ footer {
   .file-container p::after {
     content: "Drop a file here or click to upload.";
   }
+  /* Form */
   .form-container input[type=text], .form-container input[type=email], .form-container textarea {
     border-radius: 10px;
   }
@@ -1468,6 +1479,7 @@ footer {
     gap: 1.3em;
     max-width: 94em;
   }
+  /* Accordion */
   .accordion-item ul {
     gap: 1.4em 3em;
     max-width: 20em;

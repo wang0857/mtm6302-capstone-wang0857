@@ -55,7 +55,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul>
+                <ul id="offcanvasRightLabel">
                     <li class="active"><a href="../index.html">HOME</a></li>
                     <li><a href="https://apod.nasa.gov/apod/lib/about_apod.html">ABOUT APOD</a></li>
                     <li><a href="https://apod.nasa.gov/apod/calendar/allyears.html">ALBUM</a></li>
@@ -127,23 +127,23 @@
 
             <!-- Download Apps -->
             <div class="app-container">
-                <div>
+                <div class="app-header">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <span>Download the App</span>
                 </div>
                 
-                <button type="button">
+                <div class="download-btn">
                     <a href="https://www.apple.com/us/search/apod?src=serp">
                         <i class="fa-brands fa-apple"></i>
                         <span>iOS</span>
                     </a>
-                </button>
-                <button type="button">
+                </div>
+                <div class="download-btn">
                     <a href="https://play.google.com/store/search?q=apod&c=apps">
                         <i class="fa-brands fa-android"></i>
                         <span>Android</span>
                     </a>
-                </button>
+                </div>
             </div>
         </aside>
 
@@ -151,13 +151,11 @@
         <div class="right-content-container">
             <main>
                 <!-- Breadcrumb -->
-                <div aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                      <li class="breadcrumb-item"><a href="../categories.html">Categories</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Cosmos</li>
-                    </ol>
-                </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../categories.html">Categories</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cosmos</li>
+                </ol>
 
                 <!-- Heading -->
                 <h1 class="text-center">Cosmos</h1>

@@ -88,7 +88,7 @@
     .side-nav {
         display: flex;
         flex-direction: column;
-        justify-content:baseline;
+        justify-content: flex-start;
         align-items: baseline;
         gap: 0em;
 
@@ -156,12 +156,13 @@
         gap: 1.25em;
         margin-bottom: 3.56em;
 
-        button {
+        .download-btn {
+            display: flex;
             background-color: #000000;
             border-radius: 50em;
             border: 3px solid #ffffff;
-            padding: .7em 0em;
             width: 9.125em;
+            overflow: hidden;
             transition: .3s all ease-in;
 
             &:hover {
@@ -174,6 +175,7 @@
 
             a {
                 color: #ffffff;
+                width: 100%;
                 padding: 1em;
 
                 &:hover {
@@ -186,6 +188,14 @@
 
                 i {
                     @include icon-size;
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+                    span {
+                        margin-left: 1.6em;
+                    }
                 }
             }
         }

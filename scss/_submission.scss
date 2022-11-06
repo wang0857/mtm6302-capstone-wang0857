@@ -7,6 +7,7 @@
         gap: .9em;
     }
 
+    /* File */
     .file-container {
         display: flex;
         flex-direction: column;
@@ -36,6 +37,7 @@
         }
     }
 
+    /* Form */
     .form-container {
         label {
             font-size: .8em;
@@ -83,6 +85,7 @@
         margin-bottom: .5em;
     }
 
+    /* File */
     .file-container {
         i {
             font-size: 2.75em;
@@ -95,6 +98,7 @@
         }
     }
 
+    /* Form */
     .form-container {
         label {
             font-size: 1em;
@@ -128,6 +132,7 @@
         margin-bottom: 5.6em;
     }
 
+    /* File */
     .file-container {
         border: 3px dashed #ffffff;
         border-radius: 50px;
@@ -163,6 +168,7 @@
         }
     }
 
+    /* Form */
     .form-container {
         input[type="text"], input[type="email"], textarea {
             border-radius: 10px;

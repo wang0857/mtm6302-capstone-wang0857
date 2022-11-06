@@ -39,10 +39,11 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 - [X] Create all HTML pages and developed pages with Bootstrap framework and from scratch
 - [X] Create my SCSS and CSS files
 - [X] Customize the style of Bootstrap Components with the SCSS of Bootstrap
-- [ ] Develop the RWD layouts
-- [ ] Verify my HTML and CSS code
+- [X] Develop the RWD layouts
+- [X] Verify my HTML and CSS code
+- [X] Commit final prototype to part-3 on GitHub
 - [ ] Create my Javascript file to code the function of filters
-- [ ] Commit Final to GitHub
+- [ ] Commit final web application to part-4 on GitHub
 - [ ] Check pages on multiple browsers
 
 ## How I developed the web application

@@ -55,7 +55,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul>
+                <ul id="offcanvasRightLabel">
                     <li class="active"><a href="./index.html">HOME</a></li>
                     <li><a href="https://apod.nasa.gov/apod/lib/about_apod.html">ABOUT APOD</a></li>
                     <li><a href="https://apod.nasa.gov/apod/calendar/allyears.html">ALBUM</a></li>
@@ -132,18 +132,18 @@
                     <span>Download the App</span>
                 </div>
                 
-                <button type="button">
+                <div class="download-btn">
                     <a href="https://www.apple.com/us/search/apod?src=serp">
                         <i class="fa-brands fa-apple"></i>
                         <span>iOS</span>
                     </a>
-                </button>
-                <button type="button">
+                </div>
+                <div class="download-btn">
                     <a href="https://play.google.com/store/search?q=apod&c=apps">
                         <i class="fa-brands fa-android"></i>
                         <span>Android</span>
                     </a>
-                </button>
+                </div>
             </div>
         </aside>
 
@@ -151,12 +151,10 @@
         <div class="right-content-container">
             <main>
                 <!-- Breadcrumb -->
-                <div aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Today's Picture</li>
-                    </ol>
-                </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Today's Picture</li>
+                </ol>
     
                 <!-- Today's Picture -->
                 <div class="todays-pic-container">
@@ -199,7 +197,7 @@
                     </div>
     
                     <!-- Control Buttons-Next -->
-                    <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></i></div>
+                    <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></div>
                 </div>
             </main>
     

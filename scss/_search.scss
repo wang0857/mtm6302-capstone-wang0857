@@ -61,7 +61,6 @@
             cursor: pointer;
         }
 
-        /* Divider */
         div {
             height: 1.4em;
             width: 1px;
@@ -119,8 +118,8 @@
                 overflow: auto;
                 max-height: 2.75em;
 
-                /* Adjust the background color of track */
                 &::-webkit-scrollbar {
+                    /* Adjust the background color of track */
                     background-color: #E6E6E6;
                 }
 
@@ -194,7 +193,6 @@
             font-size: 1em;
         }
 
-        /* Divider */
         div {
             height: 2em;
             width: 2px;
@@ -253,8 +251,10 @@
     .filter-container {
         display: block;
         grid-column: 1 / 2;
-        
-        /* Buttons */
+    }
+
+    /* Buttons */
+    .filter-container {      
         button {
             @include button-clear;
             border-radius: 50em;
