@@ -83,6 +83,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        /* Transition for expanding the sidebar */
+        transition: all .1s ease-in;
     }
 
     .side-nav {
@@ -148,6 +151,22 @@
         }
     }
 
+    /* Collapse sidebar */
+    .collapse {
+        display: none;
+    }
+
+    .collapsed-sidebar {
+        width: 6.25em;
+        transition: all .1s ease-in;
+    }
+
+    /* Flip the arrow after collapsed*/
+    .flip {
+        transform: rotate(180deg);
+        transition: all .2s ease-in;
+    }
+
     /* Download Apps */
     .app-container {
         display: flex;
@@ -210,4 +229,10 @@
             @include icon-size;
         }
     }
+}
+
+/* Change the width of download buttons after collapsed */
+.width-auto {
+    max-width: 3.25em;
+    transition: all .2s ease-in;
 }

@@ -1,3 +1,10 @@
+/* Change the width of download buttons after collapsed */
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@400;500;600;700&display=swap");
+.width-auto {
+  max-width: 3.25em;
+  transition: all 0.2s ease-in;
+}
+
 /* =========================================================================== */
 /* Reset CSS */
 /* =========================================================================== */
@@ -5,7 +12,6 @@
 v2.0 | 20110126
 License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@400;500;600;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1057,7 +1063,7 @@ footer {
   /* =========================================================================== */
   .grid-container {
     /* Adjust layout for desktop screens */
-    grid-template-columns: 16.375em auto;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr;
   }
   /* =========================================================================== */
@@ -1074,6 +1080,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* Transition for expanding the sidebar */
+    transition: all 0.1s ease-in;
   }
   .side-nav {
     display: flex;
@@ -1128,6 +1136,19 @@ footer {
   }
   .collapse-btn i {
     font-size: 1.25em;
+  }
+  /* Collapse sidebar */
+  .collapse {
+    display: none;
+  }
+  .collapsed-sidebar {
+    width: 6.25em;
+    transition: all 0.1s ease-in;
+  }
+  /* Flip the arrow after collapsed*/
+  .flip {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in;
   }
   /* Download Apps */
   .app-container {

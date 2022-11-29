@@ -15,7 +15,7 @@
 @mixin main-grid-container-lg {
     .grid-container {
         /* Adjust layout for desktop screens */
-        grid-template-columns: 16.375em auto;
+        grid-template-columns: auto auto;
         grid-template-rows: 1fr;
     }
 }
