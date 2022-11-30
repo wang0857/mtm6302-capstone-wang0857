@@ -55,6 +55,12 @@
     /* Picture Container */
     .picture-container {
         position: relative;
+        margin-bottom: 2.85em;
+
+        /* APOD Image */
+        img {
+            width: 375px;
+        }
     }
 
     /* Image Credit */
@@ -145,6 +151,13 @@
         }
     }
 
+    /* APOD Image */
+    .picture-container {
+        img {
+            width: 607px;
+        }
+    }
+
     /* Image Credit */
     .img-credit {
         padding: 1.43em 2.5em;
@@ -198,6 +211,13 @@
             &.next {
                 right: 0%;
             }
+        }
+    }
+
+    /* APOD Image */
+    .picture-container {
+        img {
+            width: 762px;
         }
     }
 

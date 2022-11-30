@@ -382,6 +382,11 @@ main {
 /* Picture Container */
 .picture-container {
   position: relative;
+  margin-bottom: 2.85em;
+  /* APOD Image */
+}
+.picture-container img {
+  width: 375px;
 }
 
 /* Image Credit */
@@ -865,6 +870,10 @@ footer {
   .control-btn i.next {
     right: -1em;
   }
+  /* APOD Image */
+  .picture-container img {
+    width: 607px;
+  }
   /* Image Credit */
   .img-credit {
     padding: 1.43em 2.5em;
@@ -1229,6 +1238,10 @@ footer {
   }
   .control-btn i.next {
     right: 0%;
+  }
+  /* APOD Image */
+  .picture-container img {
+    width: 762px;
   }
   /* Image Credit */
   .img-credit {
