@@ -41,9 +41,9 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 - [X] Customize the style of Bootstrap Components with the SCSS of Bootstrap
 - [X] Develop the RWD layouts
 - [X] Verify my HTML and CSS code
-- [X] Commit final prototype to part-3 on GitHub
-- [ ] Create my Javascript file to code the function of filters
-- [ ] Commit final web application to part-4 on GitHub
+- [X] Commit and push final prototype to part-3 on GitHub
+- [ ] Create my Javascript files to code main functions and fetch NASA's API
+- [ ] Commit and push final web application to part-4 on GitHub
 - [ ] Check pages on multiple browsers
 
 ## How I developed the web application
@@ -56,17 +56,26 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 5. Customized the style with the SCSS of Bootstrap Components.
 6. Created my customized SCSS file and translated it into style.css through the extension, Live Sass Compiler.
 7. Verified my code of HTML and CSS.
-8. Coded the function of search bar and filter. (TBC)
-9. Verified my code again. (TBC)
-10. Uploaded to GitHub. (TBC)
+8. Fetched NASA's APOD API to show daily astronomy picture with JavaScript.
+9. Coded the function to upload images by dragging file and clicking the buttons.
+10. Coded the function of search bar and filter. (TBC)
+11. Verified my code again. (TBC)
+12. Uploaded to GitHub. (TBC)
 
 ## Challenges Faced
 1. Customized the SCSS of Bootstrap Components.
-2. Develop RWD layout with my customized SCSS.
+2. Developed RWD layout with my customized SCSS.
+3. Use control buttons of "Previous" and "Next" to show APOD pictures from NASA's API.
+4. Got HTTP Status of 429 "Too many request".
+5. Failed to preview the image after dragging files and clicking buttons.
+6. The search function to search for pictures from NASA APOD API.
 
 ## Overcoming Challeges
 1. Downloaded the SCSS files of Bootstrap from its website. Searched for the variables and classes that I would customized and changed the value in the SCSS.
 2. Used <code>@mixin</code> to specify the different layout for each media query. Afterward, used <code>@include</code> to apply a certain layout to each media query for creating the RWD layout.
+3. Declared a variable for date and retrieved the day with <code>getDate()</code>. The type of day was number, so I could set the control buttons to increase or decrease the number. After calculating the number, I re-assigned the value to the date variable and concatenated the variable to the URL of NASA's APOD API. Then, I could get the exact URL for each APOD picture by clicking control buttons.
+4. Separated the function of fetching NASA's API to deferent JS files to avoid multiply requesting NASA's APOD API.
+5. Browsed the event types of EventListner and searched for the solution on websites. Referred and customized the codes from websites and used <code>console.log</code> to check the properties of targeted elements and troubleshoot the problems.
 
 ## Assets Used (Bibliography)
 - Images and Articles: <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>

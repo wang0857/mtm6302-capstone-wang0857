@@ -383,9 +383,10 @@ main {
 .picture-container {
   position: relative;
   margin-bottom: 2.85em;
-  /* APOD Image */
 }
-.picture-container img {
+
+/* APOD Image */
+.apod-pic {
   width: 375px;
 }
 
@@ -622,6 +623,11 @@ footer {
 }
 .file-container p::after {
   content: "Click to upload";
+}
+
+/* Uploaded Image */
+.uploaded-img {
+  max-width: 100%;
 }
 
 /* Form */
@@ -871,7 +877,7 @@ footer {
     right: -1em;
   }
   /* APOD Image */
-  .picture-container img {
+  .apod-pic {
     width: 607px;
   }
   /* Image Credit */
@@ -1147,9 +1153,6 @@ footer {
     font-size: 1.25em;
   }
   /* Collapse sidebar */
-  .collapse {
-    display: none;
-  }
   .collapsed-sidebar {
     width: 6.25em;
     transition: all 0.1s ease-in;
@@ -1240,7 +1243,7 @@ footer {
     right: 0%;
   }
   /* APOD Image */
-  .picture-container img {
+  .apod-pic {
     width: 762px;
   }
   /* Image Credit */
@@ -1437,6 +1440,14 @@ footer {
   }
   .file-container p::after {
     content: "Drop a file here or click to upload.";
+  }
+  /* Active file container */
+  .file-container-active {
+    box-shadow: 0px 0px 20px #ffffff;
+  }
+  /* Uploaded Image */
+  .uploaded-img {
+    max-width: 37.6em;
   }
   /* Form */
   .form-container input[type=text], .form-container input[type=email], .form-container textarea {

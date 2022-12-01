@@ -1,33 +1,4 @@
 
-// Collapse the sidebar
-let sidebar = document.querySelector("aside");
-let collapseBtn = document.querySelector(".collapse-btn");
-let btnArrow = document.querySelector(".collapse-btn i");
-let sidebarItems = document.querySelectorAll(".side-nav li a span");
-let appHeader = document.querySelector(".app-header");
-let appBtns = document.querySelectorAll(".download-btn");
-let appItems = document.querySelectorAll(".download-btn span");
-
-collapseBtn.addEventListener("click", () => {
-    // Sidebar width
-    sidebar.classList.toggle("collapsed-sidebar")
-    sidebarItems.forEach((item) => {
-        item.classList.toggle("collapse");
-    });
-
-    // Buttons to download apps
-    appBtns.forEach((btn) => {
-        btn.classList.toggle("width-auto");
-    });
-    appHeader.classList.toggle("collapse");
-    appItems.forEach((item) => {
-        item.classList.toggle("collapse");
-    });
-
-    // Collapse button
-    btnArrow.classList.toggle("flip");
-});
-
 // Fetch NASA's APOD API for Today's Picture
 let today = new Date();
 let day = today.getDate();
@@ -44,7 +15,7 @@ async function getApi(d) {
 
     if (data.copyright == null) {
         picture.innerHTML = `
-        <img src="${data.url}" alt="${data.title}">
+        <img src="${data.url}" alt="${data.title}" class="apod-pic">
         <div class="img-credit">
             <p>Image Credit & Copyright: NASA APOD</p>
             <button type="button"><i class="fa-sharp fa-solid fa-share-nodes"></i></button>
@@ -52,7 +23,7 @@ async function getApi(d) {
         `;
     } else {
         picture.innerHTML = `
-        <img src="${data.url}" alt="${data.title}">
+        <img src="${data.url}" alt="${data.title}" class="apod-pic">
         <div class="img-credit">
             <p>Image Credit & Copyright: ${data.copyright}</p>
             <button type="button"><i class="fa-sharp fa-solid fa-share-nodes"></i></button>
@@ -92,7 +63,7 @@ prev.addEventListener("click", () => {
     }
 });
 
-next.addEventListener("click", () => {
+next.addEventListener("click", (e) => {
     if (day < today.getDate()) {
         day++;
         date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + day;
@@ -104,11 +75,9 @@ next.addEventListener("click", () => {
         };
     } else {
         // Disable the next button after today's date
-        next.disabled = true;
+        e.preventDefault();
+        alert("Tomorrow's picture is coming soon!");
     };
 
     getApi(date);
 });
-
-// TODO: Search Function
-// TODO: Submission (Need to decide whether to build a DB for it)
