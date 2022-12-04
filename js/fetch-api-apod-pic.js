@@ -5,7 +5,7 @@ let day = today.getDate();
 let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + day;
 
 async function getApi(d) {
-    const url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=" + d;
+    const url = "https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&date=" + d;
     const response = await fetch(url);
     const data = await response.json();
 
