@@ -27,5 +27,3 @@ collapseBtn.addEventListener("click", () => {
     // Collapse button
     btnArrow.classList.toggle("flip");
 });
-
-// TODO: Search bar send value to search page
