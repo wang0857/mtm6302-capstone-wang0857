@@ -1,14 +1,16 @@
 
-// TODO: Fetch NASA's APOD API for Searching page
-
 // Prevent page from refreshing
 let searchBtn = document.querySelector(".searching-for form button");
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
 });
 
-// Search Bar Function
-// Search the data with search bar
+let showResultBtn = document.querySelector(".filter-container button:nth-child(5)");
+showResultBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+});
+
+// Search for results with search Bar
 let search = document.querySelector('.searching-for form input[type="search"]');
 let results = document.querySelector(".results");
 
@@ -58,32 +60,261 @@ search.addEventListener("keyup", (e) => {
 });
 
 // TODO: Filter Function
-// Filter the results with the selection of categories
+// Categories filter
 let selection = document.querySelector(".category-selections form select");
 
 selection.addEventListener("change", (e) => {
     let option = e.target.value
     let descriptions = document.querySelectorAll(".results .filter-panels p:nth-child(3)");
 
-    // Delay the search function to avoid duplicated results
-    setTimeout(() => {
-        descriptions.forEach((description) => {
-            let paragraph = description.innerText;
-            console.log(paragraph.toUpperCase().indexOf(option.toUpperCase()));
-            
-            if (paragraph.toUpperCase().indexOf(option.toUpperCase()) == -1) {   
-                description.parentElement.style.display = "none";
-            };
-        });
-    }, 1500);
+    // Display the results after selection
+    descriptions.forEach((description) => {
+        let paragraph = description.innerText;
+        console.log(paragraph.toUpperCase().indexOf(option.toUpperCase()));
+        
+        if (paragraph.toUpperCase().indexOf(option.toUpperCase()) == -1) {   
+            description.parentElement.classList.toggle("collapse");
+        };
+    });
 
-    // When deleting the keyword, reload all results again.
+    // When back to default option, reload all results again.
     if (option == "Select the category") {
         results.innerHTML = "";
         displayApi();
     };
 });
 
-// TODO: Filter the results with year
-// TODO: Filter the results with month
-// TODO: Filter the results with scope
+// Years filter
+let years = document.querySelector(".years");
+
+years.addEventListener("click", (e) => {
+    // Ensure the filter function only triggered when user click checkbox
+    if (e.target.classList.contains("form-check-input")) {
+        if (e.target.checked) {
+            let dateText = document.querySelectorAll(".results .filter-panels p:nth-child(2)");
+                    
+            // Display the filtered results
+            dateText.forEach((date) => {
+                let newDate = new Date(date.innerText);
+                let year = newDate.getFullYear();
+
+                // Show multiple results when checked multiple choices
+                let checkedYears = document.querySelectorAll(".years input:checked");
+                let yearArr = [];
+                
+                checkedYears.forEach((checkedYear) => {
+                    // Store checked values in an Array
+                    yearArr.push(Number(checkedYear.value));
+                    
+                    // If matching all the ckecked choices, show the results
+                    for (let i = 0; i < yearArr.length; i++) {
+                        // Hide all results first
+                        date.parentElement.classList.add("collapse");
+
+                        // Show the filtered results
+                        if (yearArr.includes(year)) {    
+                            date.parentElement.classList.remove("collapse");
+                        };    
+                    };
+                });
+            });
+        } else {
+            // Show all results if there is no checked checkbox
+            let checkedYears = document.querySelectorAll(".years input:checked");
+    
+            if (checkedYears.length == 0 ) {
+                let resultPanels = document.querySelectorAll(".results .filter-panels");
+            
+                resultPanels.forEach((resultPanel) => {
+                    resultPanel.classList.remove("collapse");
+                });
+            } else {
+                // Remove the results for unchecked choices
+                let dateText = document.querySelectorAll(".results .filter-panels p:nth-child(2)");
+                
+                dateText.forEach((date) => {
+                    let newDate = new Date(date.innerText);
+                    let year = newDate.getFullYear();
+                    let yearArr = [];
+                    
+                    checkedYears.forEach((checkedYear) => {
+                        yearArr.push(Number(checkedYear.value));
+                        
+                        // If matching all the ckecked choices, show the results
+                        for (let i = 0; i < yearArr.length; i++) {
+                            // Hide all results first
+                            date.parentElement.classList.add("collapse");
+
+                            // Show the filtered results
+                            if (yearArr.includes(year)) {    
+                                date.parentElement.classList.remove("collapse");
+                            };    
+                        };
+                    });
+                });
+            };
+        };
+    };   
+});
+
+// Months filter
+let months = document.querySelector(".months");
+
+months.addEventListener("click", (e) => {
+    // Ensure the filter function only triggered when user click checkbox
+    if (e.target.classList.contains("form-check-input")) {
+        if (e.target.checked) {
+            let dateText = document.querySelectorAll(".results .filter-panels p:nth-child(2)");
+                    
+            // Display the filtered results
+            dateText.forEach((date) => {
+                let newDate = new Date(date.innerText);
+                let month = newDate.getMonth() + 1;
+
+                // Show multiple results when checked multiple choices
+                let checkedMonths = document.querySelectorAll(".months input:checked");
+                let monthArr = [];
+                console.log(monthArr)
+                
+                checkedMonths.forEach((checkedMonth) => {
+                    // Store checked values in an Array
+                    monthArr.push(Number(checkedMonth.value));
+                    
+                    // If matching all the ckecked choices, show the results
+                    for (let i = 0; i < monthArr.length; i++) {
+                        // Hide all results first
+                        date.parentElement.classList.add("collapse");
+
+                        // Show the filtered results
+                        if (monthArr.includes(month)) {    
+                            date.parentElement.classList.remove("collapse");
+                        };    
+                    };
+                });
+            });
+        } else {
+            // Show all results if there is no checked checkbox
+            let checkedMonths = document.querySelectorAll(".months input:checked");
+    
+            if (checkedMonths.length == 0 ) {
+                let resultPanels = document.querySelectorAll(".results .filter-panels");
+            
+                resultPanels.forEach((resultPanel) => {
+                    resultPanel.classList.remove("collapse");
+                });
+            } else {
+                // Remove the results for unchecked choices
+                let dateText = document.querySelectorAll(".results .filter-panels p:nth-child(2)");
+                
+                dateText.forEach((date) => {
+                    let newDate = new Date(date.innerText);
+                    let month = newDate.getMonth() + 1;
+                    let monthArr = [];
+                    
+                    checkedMonths.forEach((checkedMonth) => {
+                        monthArr.push(Number(checkedMonth.value));
+                        
+                        // If matching all the ckecked choices, show the results
+                        for (let i = 0; i < monthArr.length; i++) {
+                            // Hide all results first
+                            date.parentElement.classList.add("collapse");
+
+                            // Show the filtered results
+                            if (monthArr.includes(month)) {    
+                                date.parentElement.classList.remove("collapse");
+                            };    
+                        };
+                    });
+                });
+            };
+        };
+    };   
+});
+
+// Scope filter
+let scopes = document.querySelector(".scopes");
+
+scopes.addEventListener("click", (e) => {
+    // Ensure the filter function only triggered when user click checkbox
+    if (e.target.classList.contains("form-check-input")) {
+        if (e.target.checked) {
+            let titles = document.querySelectorAll(".results .filter-panels h2");
+
+            // Display the filtered results
+            titles.forEach((title) => {
+                let innerText = title.innerText;
+
+                // Show multiple results when checked multiple choices
+                let checkedScopes = document.querySelectorAll(".scopes input:checked");
+                let scopeArr = [];
+
+                checkedScopes.forEach((checkedScope) => {
+                    // Store checked values in an Array
+                    scopeArr.push(checkedScope.value.toUpperCase());
+                    
+                    // If any value of an array matches all the ckecked choices, show the results
+                    scopeArr.some(() => {
+                        // Hide all results first
+                        title.parentElement.classList.add("collapse");
+
+                        // Show multiple ressults when checking checkboxes 
+                        for (let i = 0; i < scopeArr.length; i++) {
+                            // Show the filtered results
+                            if (innerText.toUpperCase().match(scopeArr[i])) {  
+                                title.parentElement.classList.remove("collapse");
+                            };    
+                        };
+                    });
+                });
+            });
+        } else {
+            // Show all results if there is no checked checkbox
+            let checkedScopes = document.querySelectorAll(".scopes input:checked");
+    
+            if (checkedScopes.length == 0 ) {
+                let resultPanels = document.querySelectorAll(".results .filter-panels");
+            
+                resultPanels.forEach((resultPanel) => {
+                    resultPanel.classList.remove("collapse");
+                });
+            } else {
+                // Remove the results for unchecked choices
+                let titles = document.querySelectorAll(".results .filter-panels h2");
+
+                // Display the filtered results
+                titles.forEach((title) => {
+                    let innerText = title.innerText;
+                    let scopeArr = [];
+
+                    // Show multiple results when checked multiple choices
+                    checkedScopes.forEach((checkedScope) => {
+                        // Store checked values in an Array
+                        scopeArr.push(checkedScope.value.toUpperCase());
+                        
+                        // If any value of an array matches all the ckecked choices, show the results
+                        scopeArr.some(() => {
+                            // Hide all results first
+                            title.parentElement.classList.add("collapse");
+    
+                            // Show the rest of matched ressults when unchecking checkboxes 
+                            for (let i = 0; i < scopeArr.length; i++) {
+                                // Show the filtered results
+                                if (innerText.toUpperCase().match(scopeArr[i])) { 
+                                    title.parentElement.classList.remove("collapse");
+                                };    
+                            };
+                        });
+                    });
+                });
+            };
+        };
+    };   
+});
+
+// Reset Form
+let resetBtn = document.querySelector(".filter-container button:nth-child(4)");
+let filters = document.querySelector(".filter-container");
+
+resetBtn.addEventListener("click", () => {
+    filters.reset();
+});

@@ -159,6 +159,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
+                        <p class="ms-3"><small>Note: The data is only after October 31, 2022.</small></p>
                     </div>
 
                     <!-- Category and Filter Elements for Small and Medium Screen -->
@@ -190,7 +191,7 @@
                     </div>
     
                     <!-- Filter Panels -->
-                    <div class="filter-container">
+                    <form class="filter-container">
                         <h2>
                             <span class="me-2">All Filters</span>
                             <i class="fa-solid fa-sliders"></i>
@@ -201,7 +202,7 @@
                             <h3>By Time</h3>
                             <hr>
                             <!-- Filter by Year -->
-                            <div class="container"><!-- Grid Container -->
+                            <div class="container years"><!-- Grid Container -->
                                 <h4>Year</h4>
                                 <div class="row">
                                     <div class="form-check col-4">
@@ -240,55 +241,55 @@
                             </div>
     
                             <!-- Filter by Month -->
-                            <div class="container"><!-- Grid Container -->
+                            <div class="container months"><!-- Grid Container -->
                                 <h4>Month</h4>
                                 <div class="row">
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="January" id="january">
+                                        <input class="form-check-input" type="checkbox" value="1" id="january">
                                         <label class="form-check-label" for="january">Jan</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="February" id="february">
+                                        <input class="form-check-input" type="checkbox" value="2" id="february">
                                         <label class="form-check-label" for="february">Feb</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="March" id="march">
+                                        <input class="form-check-input" type="checkbox" value="3" id="march">
                                         <label class="form-check-label" for="march">Mar</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="April" id="april">
+                                        <input class="form-check-input" type="checkbox" value="4" id="april">
                                         <label class="form-check-label" for="april">Apr</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="May" id="may">
+                                        <input class="form-check-input" type="checkbox" value="5" id="may">
                                         <label class="form-check-label" for="may">May</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="June" id="june">
+                                        <input class="form-check-input" type="checkbox" value="6" id="june">
                                         <label class="form-check-label" for="june">Jun</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="July" id="july">
+                                        <input class="form-check-input" type="checkbox" value="7" id="july">
                                         <label class="form-check-label" for="july">Jul</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="August" id="august">
+                                        <input class="form-check-input" type="checkbox" value="8" id="august">
                                         <label class="form-check-label" for="august">Aug</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="September" id="september">
+                                        <input class="form-check-input" type="checkbox" value="9" id="september">
                                         <label class="form-check-label" for="september">Sep</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="October" id="october">
+                                        <input class="form-check-input" type="checkbox" value="10" id="october">
                                         <label class="form-check-label" for="october">Oct</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="November" id="november">
+                                        <input class="form-check-input" type="checkbox" value="11" id="november">
                                         <label class="form-check-label" for="november">Nov</label>
                                     </div>
                                     <div class="form-check col-4">
-                                        <input class="form-check-input" type="checkbox" value="December" id="december">
+                                        <input class="form-check-input" type="checkbox" value="12" id="december">
                                         <label class="form-check-label" for="december">Dec</label>
                                     </div>
                                 </div>
@@ -300,19 +301,19 @@
                             <h3>By Scope</h3>
                             <hr>
                             <!-- Filter by Scope -->
-                            <div class="container"><!-- Grid Container --> 
+                            <div class="container scopes"><!-- Grid Container --> 
                                 <h4>Cosmos</h4>
                                 <div class="row">
                                     <div class="form-check col-5">
-                                        <input class="form-check-input" type="checkbox" value="Stars" id="stars">
+                                        <input class="form-check-input" type="checkbox" value="Star" id="stars">
                                         <label class="form-check-label" for="stars">Stars</label>
                                     </div>
                                     <div class="form-check col-7">
-                                        <input class="form-check-input" type="checkbox" value="Galaxies" id="galaxies">
+                                        <input class="form-check-input" type="checkbox" value="Galax" id="galaxies">
                                         <label class="form-check-label" for="galaxies">Galaxies</label>
                                     </div>
                                     <div class="form-check col-5">
-                                        <input class="form-check-input" type="checkbox" value="Nebulae" id="nebulae">
+                                        <input class="form-check-input" type="checkbox" value="Nebula" id="nebulae">
                                         <label class="form-check-label" for="nebulae">Nebulae</label>
                                     </div>
                                     <div class="form-check col-7">
@@ -326,28 +327,12 @@
                         <!-- Buttons -->
                         <button type="button">Reset</button>
                         <button type="button">Show Results</button>
-                    </div>
+                    </form>
     
                     <!-- Result Panels -->
                     <div class="result-container">
                         <h2>Results</h2>
-                        <div class="results">
-                            <!-- <div class="filter-panels">
-                                <h2>Accretion Disk Binary System</h2>
-                                <p>December 19, 1999</p>
-                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                            </div>
-                            <div class="filter-panels">
-                                <h2>Accretion Disk Binary System</h2>
-                                <p>December 19, 1999</p>
-                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                            </div>
-                            <div class="filter-panels">
-                                <h2>Accretion Disk Binary System</h2>
-                                <p>December 19, 1999</p>
-                                <p>Our Sun is unusual in that it is alone - most stars occur in multiple or binary systems. In a binary system, the higher mass star will evolve faster and will eventually become a compact object - either a white dwarf star, a neutron star, or black hole. When the lower mass star later evolves into an expansion phase, it may be so close to the compact star that its outer atmosphere actually falls onto the compact star.....</p>
-                            </div> -->
-                        </div>
+                        <div class="results"></div>
                     </div>
                 </div>
             </main>
