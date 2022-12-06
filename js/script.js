@@ -27,3 +27,5 @@ collapseBtn.addEventListener("click", () => {
     // Collapse button
     btnArrow.classList.toggle("flip");
 });
+
+// Please check other files for the functions for different purposes
