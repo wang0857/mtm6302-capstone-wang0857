@@ -42,9 +42,9 @@ Astronomy Picture of the Day (APOD) is a webpage that shares beautiful Astronomy
 - [X] Develop the RWD layouts
 - [X] Verify my HTML and CSS code
 - [X] Commit and push final prototype to part-3 on GitHub
-- [ ] Create my Javascript files to code main functions and fetch NASA's API
-- [ ] Commit and push final web application to part-4 on GitHub
-- [ ] Check pages on multiple browsers
+- [X] Create my Javascript files to code interactive functions and fetch NASA's API
+- [X] Commit and push final web application to part-4 on GitHub
+- [X] Check pages on multiple browsers
 
 ## How I developed the web application
 I developed the web application with a modern framework, Bootstrap, HTML, CSS, SCSS, and Javascript. Here are the steps:
@@ -56,11 +56,12 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 5. Customized the style with the SCSS of Bootstrap Components.
 6. Created my customized SCSS file and translated it into style.css through the extension, Live Sass Compiler.
 7. Verified my code of HTML and CSS.
-8. Fetched NASA's APOD API to show daily astronomy picture with JavaScript.
-9. Coded the function to upload images by dragging file and clicking the buttons.
-10. Coded the function of search bar and filter. (TBC)
-11. Verified my code again. (TBC)
-12. Uploaded to GitHub. (TBC)
+8. Created several JavaScript files for each purpose. Linked to specific JavaScript files on each page that needed them.
+9. Fetched NASA's APOD API to show daily astronomy picture with JavaScript.
+10. Coded the function to upload images by dragging file and clicking the buttons.
+11. Coded the function of search bars and filters.
+12. Verified my code again.
+13. Uploaded to GitHub.
 
 ## Challenges Faced
 1. Customized the SCSS of Bootstrap Components.
@@ -68,7 +69,8 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 3. Use control buttons of "Previous" and "Next" to show APOD pictures from NASA's API.
 4. Got HTTP Status of 429 "Too many request".
 5. Failed to preview the image after dragging files and clicking buttons.
-6. The search function to search for pictures from NASA APOD API.
+6. The function of the search bar on top navigation would stop fetching API on the search page.
+7. Failed to show all results when selecting multiple filters.
 
 ## Overcoming Challeges
 1. Downloaded the SCSS files of Bootstrap from its website. Searched for the variables and classes that I would customized and changed the value in the SCSS.
@@ -76,6 +78,8 @@ I developed the web application with a modern framework, Bootstrap, HTML, CSS, S
 3. Declared a variable for date and retrieved the day with <code>getDate()</code>. The type of day was number, so I could set the control buttons to increase or decrease the number. After calculating the number, I re-assigned the value to the date variable and concatenated the variable to the URL of NASA's APOD API. Then, I could get the exact URL for each APOD picture by clicking control buttons.
 4. Separated the function of fetching NASA's API to deferent JS files to avoid multiply requesting NASA's APOD API.
 5. Browsed the event types of EventListner and searched for the solution on websites. Referred and customized the codes from websites and used <code>console.log</code> to check the properties of targeted elements and troubleshoot the problems.
+6. Since there wasn't any search bar on the top navigation on the search page, the top search bar function caused an error and thus stopped triggering the next function to fetch API. Therefore, I created another JavaScript file for the top search bar function to avoid triggering this function on the search page.
+7. I created an <code>Array</code> to store the selected values from the filters and used <code>for</code> loop to examine every value in the array. If any result's value matched the filter's value, showed the results. As a result, there would be multiple results in the HTML.
 
 ## Assets Used (Bibliography)
 - Images and Articles: <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>
