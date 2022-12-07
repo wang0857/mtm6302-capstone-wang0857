@@ -14,7 +14,12 @@ searchBtn.addEventListener("click", (e) => {
     localStorage.setItem("search", seachBarValue);
 
     // Go to Search page
-    window.location.href="./search.html"; 
+    if (window.location.pathname.indexOf("/categories/") > -1) {
+        window.location.href = "../search.html";
+    } else {
+        window.location.href = "./search.html";
+    }
+     
 });
 
 // Press 'Enter' to send Value
