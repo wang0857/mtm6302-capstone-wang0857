@@ -123,6 +123,12 @@
                         <span>Categories</span>
                     </a>
                 </li>
+                <li>
+                    <a href="./favorite.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Favorite Pictures</span>
+                    </a>
+                </li>
             </ul>
 
             <!-- Download Apps -->
@@ -155,6 +161,11 @@
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Today's Picture</li>
                 </ol>
+
+                <div class="d-flex gap-3 mb-3 justify-content-end">
+                    <p>Select the picture by date:</p>
+                    <input type="date" class="rounded" id="selectedDate">
+                </div>
     
                 <!-- Today's Picture -->
                 <div class="todays-pic-container">
@@ -178,6 +189,9 @@
                     <!-- Control Buttons-Next -->
                     <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></div>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal"></div>
             </main>
     
             <!-- =========================== Footer =========================== -->

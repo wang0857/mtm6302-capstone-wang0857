@@ -55,22 +55,6 @@ if (localSearchValue) {
     search.value = localSearchValue;
 };
 
-// Search for local keywords after loading the data
-// fetch("https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&start_date=2022-11-01")
-// .then(() => {
-//     let titles = document.querySelectorAll(".results .filter-panels h2");
-
-//     titles.forEach((title) => {
-//         let innerText = title.innerText;
-        
-//         if (innerText.toUpperCase().indexOf(search.value.toUpperCase()) == -1) {   
-//             title.parentElement.style.display = "none";
-//         };
-//     });
-// })
-// .catch(err => console.log("You got an error: " + err));
-
-
 // Show results after typing keywords
 search.addEventListener("keyup", (e) => {
     let text = e.target.value;
@@ -94,7 +78,7 @@ search.addEventListener("keyup", (e) => {
     };
 });
 
-// TODO: Filter Function
+// Filter Function
 // Categories filter
 let selection = document.querySelector(".category-selections form select");
 

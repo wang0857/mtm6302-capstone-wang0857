@@ -14,6 +14,7 @@
 @import "./submission";
 @import "./categories";
 @import "./sub-categories";
+@import "./favorite-pictures";
 
 // Set RWD Screens
 @mixin medium-screen() {
@@ -155,6 +156,11 @@ button {
 /* Sub Categories Page: Cosmos, Solar System, People, Space Tech, Sky */
 /* =========================================================================== */
 @include sub-categories-sm;
+
+/* =========================================================================== */
+/* Favorite Pictures */
+/* =========================================================================== */
+@include favorite-pictures-sm;
 
 /* =========================================================================== */
 /* Tablet Version */

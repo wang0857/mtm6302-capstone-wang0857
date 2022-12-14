@@ -10,7 +10,7 @@ searchBtn.addEventListener("click", (e) => {
 
     // Store value in local storage
     let seachBarValue = searchInput.value;
-    localStorage.clear();
+    localStorage.removeItem("search");
     localStorage.setItem("search", seachBarValue);
 
     // Go to Search page
