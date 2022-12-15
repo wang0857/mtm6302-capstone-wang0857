@@ -138,6 +138,12 @@ selectedDate.addEventListener("change", (e) => {
 
         date = e.target.value;
         getApi(date);
+    } else if (selectedDay == today.getDate() && selectedMonth == today.getMonth() + 1) {
+        // Disable the next button when selecting today's date
+        next.parentElement.classList.add("btn-disable");
+
+        date = e.target.value;
+        getApi(date);
     } else if (selectedDay > today.getDate() && selectedMonth == today.getMonth() + 1){
         e.preventDefault();
         alert("The chosen date is in the future. Please select again.");
