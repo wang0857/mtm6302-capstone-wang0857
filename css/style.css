@@ -385,10 +385,14 @@ main {
   margin-bottom: 2.85em;
 }
 
-/* APOD Image */
+/* APOD Image or Video */
 .apod-pic {
   width: 375px;
   cursor: pointer;
+}
+
+iframe.apod-pic {
+  height: 210.94px;
 }
 
 /* Image Credit */
@@ -788,7 +792,23 @@ footer {
 /* =========================================================================== */
 /* Favorite Pictures */
 /* =========================================================================== */
-.favorite-list {
+/* Controll Tabs */
+.nav-item {
+  cursor: pointer;
+}
+.nav-item .image-tab, .nav-item .video-tab {
+  opacity: 0.5;
+  transition: all 0.3s ease-in;
+}
+.nav-item .image-tab:hover, .nav-item .video-tab:hover {
+  opacity: 1;
+}
+.nav-item .image-tab.active, .nav-item .video-tab.active {
+  opacity: 1;
+}
+
+/* Container for favorite pictures and videos */
+.favorite-list-image, .favorite-list-video {
   overflow: auto;
   max-height: 27em;
   margin-bottom: 3.5em;
@@ -810,6 +830,7 @@ footer {
   margin-top: 0.5em;
 }
 
+/* Delete icons */
 .delete {
   color: #ffffff;
   position: absolute;
@@ -935,9 +956,12 @@ footer {
   .control-btn i.next {
     right: -1em;
   }
-  /* APOD Image */
+  /* APOD Image or Video */
   .apod-pic {
     width: 607px;
+  }
+  iframe.apod-pic {
+    height: 341.44px;
   }
   /* Image Credit */
   .img-credit {
@@ -1301,9 +1325,12 @@ footer {
   .control-btn i.next {
     right: 0%;
   }
-  /* APOD Image */
+  /* APOD Image or Video */
   .apod-pic {
     width: 762px;
+  }
+  iframe.apod-pic {
+    height: 428.625px;
   }
   /* Image Credit */
   .img-credit {

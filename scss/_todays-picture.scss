@@ -58,10 +58,14 @@
         margin-bottom: 2.85em;
     }
 
-    /* APOD Image */
+    /* APOD Image or Video */
     .apod-pic {
         width: 375px;
         cursor: pointer;
+    }
+
+    iframe.apod-pic {
+        height: 210.94px;
     }
 
     /* Image Credit */
@@ -175,9 +179,13 @@
         }
     }
 
-    /* APOD Image */
+    /* APOD Image or Video */
     .apod-pic {
         width: 607px;
+    }
+
+    iframe.apod-pic {
+        height: 341.44px;
     }
 
     /* Image Credit */
@@ -236,9 +244,13 @@
         }
     }
 
-    /* APOD Image */
+    /* APOD Image or Video */
     .apod-pic {
         width: 762px;
+    }
+
+    iframe.apod-pic {
+        height: 428.625px;
     }
 
     /* Image Credit */

@@ -7,6 +7,11 @@ let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + day;
 // Set an empty array to store the list of favorite pictures
 let dataArr = [];
 
+// Prevent the orginal data from missing when going back to this page
+if (localStorage.getItem("data")) {
+    dataArr = JSON.parse(localStorage.getItem("data"));
+};
+
 async function getApi(d) {
     const url = "https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&date=" + d;
     const response = await fetch(url);
@@ -17,26 +22,48 @@ async function getApi(d) {
     let article = document.querySelector("article");
 
     if (data.copyright == null) {
-        picture.innerHTML = `
-        <img src="${data.url}" alt="${data.title}" class="apod-pic">
-        <div class="img-credit">
-            <p>Image Credit & Copyright: NASA APOD</p>
-            <button type="button"><i class="fa-light fa-heart"></i></button>
-        </div>
-        `;
+        // Check the media type
+        if (data.media_type == "image") {
+            picture.innerHTML = `
+            <img src="${data.url}" alt="${data.title}" class="apod-pic">
+            <div class="img-credit">
+                <p>Image Credit & Copyright: NASA APOD</p>
+                <button type="button"><i class="fa-light fa-heart"></i></button>
+            </div>
+            `;
+        } else if (data.media_type == "video") {
+            picture.innerHTML = `
+            <iframe src="${data.url}" alt="${data.title}" class="apod-pic"></iframe>
+            <div class="img-credit">
+                <p>Image Credit & Copyright: NASA APOD</p>
+                <button type="button"><i class="fa-light fa-heart"></i></button>
+            </div>
+            `;
+        };
+        
     } else {
-        picture.innerHTML = `
-        <img src="${data.url}" alt="${data.title}" class="apod-pic">
-        <div class="img-credit">
-            <p>Image Credit & Copyright: ${data.copyright}</p>
-            <button type="button"><i class="fa-light fa-heart"></i></button>
-        </div>
-        `;
+        if (data.media_type == "image") {
+            picture.innerHTML = `
+            <img src="${data.url}" alt="${data.title}" class="apod-pic">
+            <div class="img-credit">
+                <p>Image Credit & Copyright: ${data.copyright}</p>
+                <button type="button"><i class="fa-light fa-heart"></i></button>
+            </div>
+            `;
+        } else if (data.media_type == "video") {
+            picture.innerHTML = `
+            <iframe src="${data.url}" alt="${data.title}" class="apod-pic"></iframe>
+            <div class="img-credit">
+                <p>Image Credit & Copyright: ${data.copyright}</p>
+                <button type="button"><i class="fa-light fa-heart"></i></button>
+            </div>
+            `;
+        };
     };
 
     article.innerHTML = `
     <h1>${data.title}</h1>
-    <p class="mb-3">Date: ${data.date}</p>
+    <p class="mb-3" data-date="${data.date}">Date: ${data.date}</p>
     <p class="pic-description">${data.explanation}</p>
     <hr>
     <p>
@@ -91,55 +118,123 @@ async function getApi(d) {
 
 getApi(date);
 
-// Show previous and next picture
-let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
-
-prev.addEventListener("click", () => {
-    day--;
-    date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + day;
-
-    getApi(date);
-
-    if (day < today.getDate()) {
-        next.parentElement.classList.remove("btn-disable");
-    }
-});
-
-next.addEventListener("click", (e) => {
-    if (day < today.getDate()) {
-        day++;
-        date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + day;
-
-        // When going back from yesterday to today, add the class of disable to next button.
-        // Otherwise, user need to click again to change the class.
-        if (day == today.getDate()){
-            next.parentElement.classList.add("btn-disable");
-        };
-    } else {
-        // Disable the next button after today's date
-        e.preventDefault();
-        alert("Tomorrow's picture is coming soon!");
-    };
-
-    getApi(date);
-});
-
 // Change image by selecting the date
 let selectedDate = document.querySelector("#selectedDate");
+
 selectedDate.addEventListener("change", (e) => {
     let selectedDay = new Date(e.target.value).getDate() + 1;
     let selectedMonth = new Date(e.target.value).getMonth() + 1;
     // console.log(selectedMonth);
 
     if (selectedMonth < today.getMonth() + 1){
+        // Activate the next button
+        next.parentElement.classList.remove("btn-disable");
+
         date = e.target.value;
         getApi(date);
     } else if (selectedDay < today.getDate() && selectedMonth == today.getMonth() + 1) {
+        // Activate the next button
+        next.parentElement.classList.remove("btn-disable");
+
         date = e.target.value;
         getApi(date);
     } else if (selectedDay > today.getDate() && selectedMonth == today.getMonth() + 1){
         e.preventDefault();
         alert("The chosen date is in the future. Please select again.");
+    };
+});
+
+// Show previous and next picture
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
+let dateForm = document.querySelector("#dateFrom");
+
+prev.addEventListener("click", () => {
+    // Controll the previous dates according to selected dates or today's date
+    let currentDay = document.querySelector("[data-date]");
+    let currentDate = new Date(currentDay.dataset.date);
+
+    if (selectedDate.value == "") {
+        let prevDay = currentDate.setDate(currentDate.getDate());
+        date = new Date(prevDay).getFullYear() + "-" + (new Date(prevDay).getMonth() + 1) + "-" + new Date(prevDay).getDate();
+
+        getApi(date);
+
+        if (currentDate.getDate() < today.getDate()) {
+            next.parentElement.classList.remove("btn-disable");
+        }
+    } else {
+        // Re-assign values to date
+        let prevDay = new Date(selectedDate.value).setDate(new Date(selectedDate.value).getDate());
+        date = new Date(prevDay).getFullYear() + "-" + (new Date(prevDay).getMonth() + 1) + "-" + new Date(prevDay).getDate();
+
+        getApi(date);
+
+        if (currentDate.getDate() < new Date(selectedDate.value).getDate()) {
+            next.parentElement.classList.remove("btn-disable");
+        }
+
+        // Reset the date form
+        dateForm.reset();
+    };
+});
+
+next.addEventListener("click", (e) => {
+    // Controll the previous dates according to selected dates or today's date
+    if (selectedDate.value == "") {
+        let currentDay = document.querySelector("[data-date]");
+        let currentDate = new Date(currentDay.dataset.date);
+
+        if (currentDate.getDate() + 1 < today.getDate()) {
+            let nextDay = currentDate.setDate(currentDate.getDate() + 2);
+            date = new Date(nextDay).getFullYear() + "-" + (new Date(nextDay).getMonth() + 1) + "-" + new Date(nextDay).getDate();
+
+            getApi(date);
+    
+            // When going back from yesterday to today, add the class of disable to next button.
+            // Otherwise, user need to click again to change the class.
+            if (currentDate.getDate() + 1 == today.getDate() && currentDate.getMonth() == today.getMonth()){
+                next.parentElement.classList.add("btn-disable");
+            };
+        } else if (currentDate.getMonth() < today.getMonth()){
+            let nextDay = currentDate.setDate(currentDate.getDate() + 2);
+            date = new Date(nextDay).getFullYear() + "-" + (new Date(nextDay).getMonth() + 1) + "-" + new Date(nextDay).getDate();
+
+            getApi(date);
+        } else if (currentDate.getDate() + 1 == today.getDate() && currentDate.getMonth() == today.getMonth()) {
+            // Disable the next button after today's date
+            e.preventDefault();
+            alert("Tomorrow's picture is coming soon!");
+        };
+    } else {
+        if (new Date(selectedDate.value).getDate() + 1 < today.getDate() && new Date(selectedDate.value).getMonth() == today.getMonth()) {
+            // Re-assign values to date
+            let nextDay = new Date(selectedDate.value).setDate(new Date(selectedDate.value).getDate() + 2);
+            date = new Date(nextDay).getFullYear() + "-" + (new Date(nextDay).getMonth() + 1) + "-" + new Date(nextDay).getDate();
+    
+            getApi(date);          
+
+            // When going back from yesterday to today, add the class of disable to next button.
+            // Otherwise, user need to click again to change the class.
+            if (new Date(selectedDate.value).getDate() == today.getDate() && new Date(selectedDate.value).getMonth() == today.getMonth()){
+                next.parentElement.classList.add("btn-disable");
+            };
+
+            // Reset the date form
+            dateForm.reset();
+        } else if (new Date(selectedDate.value).getMonth() < today.getMonth()) {
+            // Re-assign values to date
+            let nextDay = new Date(selectedDate.value).setDate(new Date(selectedDate.value).getDate() + 2);
+            date = new Date(nextDay).getFullYear() + "-" + (new Date(nextDay).getMonth() + 1) + "-" + new Date(nextDay).getDate();
+    
+            getApi(date);
+
+            // Reset the date form
+            dateForm.reset();
+        } else if (new Date(selectedDate.value).getDate() > today.getDate() && new Date(selectedDate.value).getMonth() == today.getMonth()) {
+            // Disable the next button after today's date
+            e.preventDefault();
+            alert("Tomorrow's picture is coming soon!");
+        };
     };
 });
