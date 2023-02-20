@@ -1,0 +1,60 @@
+// Mobile
+@mixin favorite-pictures-sm {
+    /* Controll Tabs */
+    .nav-item {
+        cursor: pointer;
+
+        .image-tab, .video-tab {
+            opacity: .5;
+            transition: all .3s ease-in;
+            
+            &:hover {
+                opacity: 1;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    
+    /* Container for favorite pictures and videos */
+    .favorite-list-image, .favorite-list-video {
+        overflow: auto;
+        max-height: 27em;
+        margin-bottom: 3.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .favorite-pannels {
+        position: relative;
+        width: 275px;
+
+        img {
+            width: 275px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: .5em;
+        }
+    }
+
+    /* Delete icons */
+    .delete {
+        color: #ffffff;
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        @include icon-size;
+        cursor: pointer;
+        transition: all .3s ease-in;
+
+        &:hover {
+            color: #E94560;
+        }
+    }
+}

@@ -1,0 +1,215 @@
+// TODO: Mobile
+@mixin submission-sm {
+    .submission-container {
+        padding: 0em 1.5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .9em;
+    }
+
+    /* File */
+    .file-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+            font-size: 2.5em;
+            padding: .36em .4em;
+            border-radius: 50em;
+            background-color: #ffffff;
+            color: #000000;
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 1em;
+            margin-top: 1em;
+
+            &::after{
+                content: "Click to upload";
+            }
+        }
+    }
+
+    /* Uploaded Image */
+    .uploaded-img {
+        max-width: 100%;
+    }
+
+    /* Form */
+    .form-container {
+        label {
+            font-size: .8em;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            border-radius: 10px;
+            margin-bottom: -.5em;
+        }
+
+        textarea {
+            height: 6.9em;
+
+            &:focus {
+                border-radius: 10px;
+            }
+        }
+
+        .form-check {
+            margin-top: .9em;
+
+            label {
+                line-height: 14px;
+
+                a {
+                    @include pAnchor;
+                }
+            }
+        }
+
+        button {
+            @include primary-btn;
+            padding: .75em 2em;
+            font-size: 1em;
+            margin: 0em 6.5em;
+        }
+    }
+}
+
+// Tablet
+@mixin submission-md {
+    .submission-container {
+        padding: 0em;
+        gap: 2.8em;
+        margin-bottom: .5em;
+    }
+
+    /* File */
+    .file-container {
+        i {
+            font-size: 2.75em;
+            padding: .46em .5em;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: .9em;
+        }
+    }
+
+    /* Form */
+    .form-container {
+        label {
+            font-size: 1em;
+        }
+
+        textarea {
+            height: 7.5em;
+        }
+
+        .form-check {
+            margin-top: 1.5em;
+
+            label {
+                line-height: 26px;
+            }
+        }
+
+        button {
+            padding: .8em 2.25em;
+            margin: .6em 0em;
+        }
+    }
+}
+
+// Desktop
+@mixin submission-lg {
+    .submission-container {
+        display: grid;
+        grid-template-columns: 37.6em auto;
+        gap: 4.375em;
+        margin-bottom: 5.6em;
+    }
+
+    /* File */
+    .file-container {
+        border: 3px dashed #ffffff;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+            font-size: 8.6em;
+            padding: 0em;
+            border-radius: 0em;
+            background-color: transparent;
+            color: #ffffff;
+
+            &:nth-child(1) {
+                display: block;
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 3.5em;
+
+            &::after{
+                content: "Drop a file here or click to upload.";
+            }
+        }
+    }
+
+    /* Active file container */
+    .file-container-active {
+        box-shadow: 0px 0px 20px #ffffff;
+    }
+
+    /* Uploaded Image */
+    .uploaded-img {
+        max-width: 37.6em;
+    }
+
+    /* Form */
+    .form-container {
+        input[type="text"], input[type="email"], textarea {
+            border-radius: 10px;
+        }
+
+        textarea {
+            height: 7em;
+        }
+
+        .form-check {
+            margin-top: 1.5em;
+
+            label {
+                line-height: 26px;
+
+                a {
+                    @include pAnchor;
+                }
+            }
+        }
+
+        button {
+            @include primary-btn;
+            padding: .6em 2em;
+            font-size: 1.5em;
+            margin: 0em;
+        }
+    }
+}

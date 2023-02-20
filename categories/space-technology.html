@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
     <!-- Customized CSS Style -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Bootstrap Bundle Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    <title>Astronomy Picture of the Day - APOD</title>
+    <title>Categories - Space Technology - APOD</title>
 </head>
 <body>
     <!-- =========================== Top Nav Bar =========================== -->
@@ -23,12 +23,12 @@
         <nav>
             <!-- Logo -->
             <div class="logo">
-                <a href="./index.html">
+                <a href="../index.html">
                     <picture>
-                        <source media="(min-width:1200px)" srcset="./image/logo-152x58.png">
-                        <source media="(min-width:768px)" srcset="./image/logo-101x39.png">
-                        <source media="(max-width:767px)" srcset="./image/logo-89x34.png">
-                        <img src="./image/logo-152x58.png" alt="APOD Logo">
+                        <source media="(min-width:1200px)" srcset="../image/logo-152x58.png">
+                        <source media="(min-width:768px)" srcset="../image/logo-101x39.png">
+                        <source media="(max-width:767px)" srcset="../image/logo-89x34.png">
+                        <img src="../image/logo-152x58.png" alt="APOD Logo">
                     </picture>
                 </a>
             </div>
@@ -36,10 +36,10 @@
             <div class="container-fluid d-flex justify-content-end">
                 <!-- Search Bar -->
                 <form class="search d-flex align-items-center">
-                  <input class="search-bar border border-0" type="search" placeholder="Search" aria-label="Search">
-                  <button class="search-btn border border-0" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
+                    <input class="search-bar border border-0" type="search" placeholder="Search" aria-label="Search">
+                    <button class="search-btn border border-0" type="submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </form>
 
                 <!-- Right Menu Toggle Button -->
@@ -56,7 +56,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul id="offcanvasRightLabel">
-                    <li class="active"><a href="./index.html">HOME</a></li>
+                    <li class="active"><a href="../index.html">HOME</a></li>
                     <li><a href="https://apod.nasa.gov/apod/lib/about_apod.html">ABOUT APOD</a></li>
                     <li><a href="https://apod.nasa.gov/apod/calendar/allyears.html">ALBUM</a></li>
                     <li><a href="http://asterisk.apod.com/discuss_apod.php?date=221015">DISSCUSSION BOARD</a></li>
@@ -99,32 +99,32 @@
 
             <!-- Nav Options -->
             <ul class="side-nav">
-                <li class="active">
-                    <a class="active" href="./index.html">
+                <li>
+                    <a href="../index.html">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
                 </li>
                 <li>
-                    <a href="./search.html">
+                    <a href="../search.html">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search for Pictures</span>
                     </a>
                 </li>
                 <li>
-                    <a href="./submission.html">
+                    <a href="../submission.html">
                         <i class="fa-solid fa-file-arrow-up"></i>
                         <span>Submit Your Photos</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./categories.html">
+                <li class="active">
+                    <a class="active" href="../categories.html">
                         <i class="fa-solid fa-border-all"></i>
                         <span>Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a href="./favorite.html">
+                    <a href="../favorite.html">
                         <i class="fa-solid fa-heart"></i>
                         <span>Favorite Pictures</span>
                     </a>
@@ -158,40 +158,65 @@
             <main>
                 <!-- Breadcrumb -->
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Today's Picture</li>
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../categories.html">Categories</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Space Technology</li>
                 </ol>
 
-                <form class="d-flex gap-3 mb-3 justify-content-end" id="dateFrom">
-                    <p>Select the picture by date:</p>
-                    <input type="date" class="rounded" id="selectedDate">
-                </form>
+                <!-- Heading -->
+                <h1 class="text-center">Space Technology</h1>
     
-                <!-- Today's Picture -->
-                <div class="todays-pic-container">
-                    <!-- Control Buttons-Previous -->
-                    <div class="control-btn"><i class="fa-solid fa-arrow-left prev"></i></div>
-
-                    <!-- Use Flexbox to wrap the picture and article -->
-                    <div class="d-flex flex-wrap justify-content-center align-items-center">
-                        <!-- Picture -->
-                        <div class="picture-container">
-                            <!-- Here will be the data fetched by NASA API -->
-                        </div>
-        
-                        <!-- Article -->
-                        <article>
-                            <!-- Here will be the data fetched by NASA API -->
-                            <h2>NASA APOD</h2>
-                        </article>
+                <!-- Categories-Space Tech -->
+                <div class="sub-categories">
+                    <div class="card">
+                        <a href="https://apod.nasa.gov/apod/rockets.html">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="../image/space-tech-360x212.jpg">
+                                <source media="(max-width:1199px)" srcset="../image/space-tech-284x212.jpg">
+                                <img src="../image/space-tech-360x212.jpg" alt="Rockets/Launch Vehicles">
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Rockets / Launch Vehicles</h2>
+                            </div>
+                        </a>
                     </div>
-    
-                    <!-- Control Buttons-Next -->
-                    <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></div>
+                    <div class="card">
+                        <a href="https://apod.nasa.gov/apod/orbiting_observatories.html">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="../image/orbiting-observatories-360x212.jpg">
+                                <source media="(max-width:1199px)" srcset="../image/orbiting-observatories-284x212.jpg">
+                                <img src="../image/orbiting-observatories-360x212.jpg" alt="Orbiting Observatories">
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Orbiting Observatories</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://apod.nasa.gov/apod/space_stations.html">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="../image/space-stations-360x212.jpg">
+                                <source media="(max-width:1199px)" srcset="../image/space-stations-284x212.jpg">
+                                <img src="../image/space-stations-360x212.jpg" alt="Space Stations">
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Space Stations</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://apod.nasa.gov/apod/earth_observatories.html">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="../image/earth-observatories-360x212.jpg">
+                                <source media="(max-width:1199px)" srcset="../image/earth-observatories-284x212.jpg">
+                                <img src="../image/earth-observatories-360x212.jpg" alt="Earth Observatories">
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Earth Observatories</h2>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
-                <!-- Modal -->
-                <div class="modal"></div>
             </main>
     
             <!-- =========================== Footer =========================== -->
@@ -217,10 +242,9 @@
             </footer>
         </div>
     </div>
-
+        
     <!-- My JavaScript -->
-    <script src="./js/script-sidebar.js"></script>
-    <script src="./js/script-nav-search-bar.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../js/script-sidebar.js"></script>
+    <script src="../js/script-nav-search-bar.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+// Mobile
+@mixin font-setting-sm {
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: .5em;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: .6em;
+    }
+
+    h3, h4 {
+        font-weight: 700;
+    }
+
+    p {
+        font-size: .8em;
+        line-height: 16px;
+    }
+}
+
+// Tablet and Desktop
+@mixin font-setting-md {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: .8em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 26px;
+    }
+}

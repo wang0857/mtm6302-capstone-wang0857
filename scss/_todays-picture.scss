@@ -1,0 +1,291 @@
+// Mobile
+@mixin todays-picture-sm {
+    .breadcrumb {
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .todays-pic-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* Control Buttons */
+    .control-btn {
+        cursor: pointer;
+
+        i {
+            opacity: .5;
+            border: 1px solid #ffffff;
+            background-color: #000000;
+            border-radius: 50em;
+            padding: .5rem;
+            font-size: 1.2em;
+            position: absolute;
+            top: 25%;
+            transition: .3s all ease-in;
+
+            &.prev {
+                left: .3em;
+                z-index: 1;
+            }
+
+            &.next {
+                right: .3em;
+            }
+
+            &:hover {
+                border: 1px solid #98ECFF;
+                color: #98ECFF;
+                box-shadow: 0px 0px 10px #ffffff;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                @include btn-active;
+            }
+        }
+    }
+
+    .btn-disable {
+        opacity: .5;
+    }
+
+    /* Picture Container */
+    .picture-container {
+        position: relative;
+        margin-bottom: 2.85em;
+    }
+
+    /* APOD Image or Video */
+    .apod-pic {
+        width: 375px;
+        cursor: pointer;
+    }
+
+    iframe.apod-pic {
+        height: 210.94px;
+    }
+
+    /* Image Credit */
+    .img-credit {
+        @include subtitle;
+        padding: .3em 1.5em;
+        display: grid;
+        grid-template-columns: auto 1.68em;
+        gap: .7em;
+        align-items: center;
+
+        p {
+            line-height: 26px;
+        }
+
+        a {
+            @include pAnchor;
+        }
+
+        button {
+            @include button-clear;
+            border: none;
+            cursor: pointer;
+        }
+
+        i {
+            font-size: 1em;
+        }
+    }
+
+    /* Modal Image */
+    .modal {
+        position: fixed;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 100vh;
+        
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      
+        opacity: 0;
+        visibility: hidden;
+        
+        transition: 0.5s;
+      }
+      
+      .modal.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Article */
+    article {
+        margin-top: .6em;
+        padding: 0em 1.5em;
+        width: 100%;
+
+        h1 {
+            text-align: center;
+            font-size: 1.75em;
+        }
+
+        .pic-description {
+            margin-right: 4px;
+            max-height: 11.3em;
+            overflow: auto;
+        }
+
+        hr {
+            border-top: 2px dashed #ffffff;
+            opacity: 1;
+            margin: .38em 0em;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+// Tablet
+@mixin todays-picture-md {
+    .breadcrumb {
+        margin-left: 0em;
+        margin-bottom: 1.75em;
+    }
+
+    .todays-pic-container {
+        grid-template-columns: 2em auto 2em;
+        gap: .5em;
+    }
+
+    /* Control Buttons */
+    .control-btn {
+        i {
+            opacity: 1;
+            background-color: transparent;
+            padding: .6rem;
+            top: 50%;
+
+            &.prev {
+                left: -1em;
+                z-index: 0;
+            }
+
+            &.next {
+                right: -1em;
+            }
+        }
+    }
+
+    /* APOD Image or Video */
+    .apod-pic {
+        width: 607px;
+    }
+
+    iframe.apod-pic {
+        height: 341.44px;
+    }
+
+    /* Image Credit */
+    .img-credit {
+        padding: 1.43em 2.5em;
+        gap: 2em;
+
+        i {
+            font-size: 1.68em;
+        }
+    }
+
+    /* Article */
+    article {
+        margin-top: .9em;
+        padding: 0em;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        .pic-description {
+            max-height: 8.125em;
+        }
+
+        hr {
+            margin: .95em 0em;
+        }
+    }
+}
+
+// Desktop
+@mixin todays-picture-lg {
+    .breadcrumb {
+        margin-bottom: 2.85em;
+    }
+
+    .todays-pic-container {
+        grid-template-columns: 4.18em auto 4.18em;
+        gap: 2.81em;
+    }
+
+    /* Control Buttons */
+    .control-btn {
+        i {
+            padding: 1rem;
+            font-size: 1.875em;
+            
+            &.prev {
+                left: 0%;
+            }
+
+            &.next {
+                right: 0%;
+            }
+        }
+    }
+
+    /* APOD Image or Video */
+    .apod-pic {
+        width: 762px;
+    }
+
+    iframe.apod-pic {
+        height: 428.625px;
+    }
+
+    /* Image Credit */
+    .img-credit {
+        padding: 1.43em 0em 1.43em 2.56em;
+        display: block;
+
+        button {
+            display: none;
+        }
+    }
+
+    /* Article */
+    article {
+        margin-left: 4.125em;
+        width: 29.625em;
+
+        h1 {
+            text-align: left;
+        }
+
+        .pic-description {
+            margin-top: 0em;
+            margin-right: 1.18em;
+            max-height: 18.56em;
+        }
+
+        hr {
+            border-top: 3px dashed #ffffff;
+            margin-top: 1.5em;
+        }
+
+        button {
+            display: block;
+            @include primary-btn;
+        }
+    }
+}

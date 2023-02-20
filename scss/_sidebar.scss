@@ -1,0 +1,234 @@
+// Mobile
+@mixin sidebar-sm {
+    /* Sidebar Navigation */
+    aside {
+        height: 3.75em;
+        background-color: #1D235E35;
+        padding: 0em;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+    }
+
+    .side-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        li {
+            display: flex;
+            cursor: pointer;
+            transition: .3s all ease-in;
+
+            &.active, &:hover {
+                background-color: #ffffff39;
+                border-bottom-left-radius: 35px;
+                border-bottom-right-radius: 35px;
+            }
+
+            a {
+                padding: .8em 1.5em;
+                color: #ffffff70;
+                transition: .3s all ease-in;
+                
+                span {
+                    display: none;
+                }
+
+                i {
+                    @include icon-size-lg;
+                }
+
+                &.active, &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    /* Collapse Button */
+    .collapse-btn {
+        display: none;
+    }
+
+    /* Download Apps */
+    .app-container {
+        display: none;
+    }
+}
+
+// Tablet
+@mixin sidebar-md {
+    /* Sidebar Navigation */
+    .side-nav {
+        li {
+            a {
+                padding: .8em 2.5em;
+            }
+        }
+    }
+}
+
+// Desktop
+@mixin sidebar-lg {
+    /* Sidebar Navigation */
+    aside {
+        width: 16.375em;
+        height: 100%;
+        background-color: #1D235E35;
+        padding: 0em;
+        grid-row: 1 / 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        /* Transition for expanding the sidebar */
+        transition: all .1s ease-in;
+    }
+
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 0em;
+
+        li {
+            display: flex;
+            width: 100%;
+            cursor: pointer;
+            transition: .3s all ease-in;
+
+            &:nth-child(1) {
+                padding-top: 2.3em;
+            }
+
+            &.active, &:hover {
+                background-color: #ffffff39;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            a {
+                width: 100%;
+                padding: 1em .75em 1em 2.5em;
+                color: #ffffff70;
+                transition: .3s all ease-in;
+                
+                span {
+                    display: inline;
+                    @include span-heading;
+                }
+
+                i {
+                    @include icon-size;
+                }
+
+                &.active, &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    /* Collapse Button */
+    .collapse-btn {
+        display: inline;
+        position: absolute;
+        top: 45%;
+        right: 0em;
+        padding: 1.68em .6em;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #ffffff33;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+
+        i {
+            @include icon-size;
+        }
+    }
+
+    /* Collapse sidebar */
+    .collapsed-sidebar {
+        width: 6.25em;
+        transition: all .1s ease-in;
+    }
+
+    /* Flip the arrow after collapsed*/
+    .flip {
+        transform: rotate(180deg);
+        transition: all .2s ease-in;
+    }
+
+    /* Download Apps */
+    .app-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25em;
+        margin-bottom: 3.56em;
+
+        .download-btn {
+            display: flex;
+            background-color: #000000;
+            border-radius: 50em;
+            border: 3px solid #ffffff;
+            width: 9.125em;
+            overflow: hidden;
+            transition: .3s all ease-in;
+
+            &:hover {
+                background-color: #98ECFF;
+            }
+
+            &:active {
+                @include btn-active;
+            }
+
+            a {
+                color: #ffffff;
+                width: 100%;
+                padding: 1em;
+
+                &:hover {
+                    color: #000000;
+                }
+
+                span {
+                    @include span-heading;
+                }
+
+                i {
+                    @include icon-size;
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+                    span {
+                        margin-left: 1.6em;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-header {
+        span {
+            @include span-heading;
+        }
+
+        i {
+            @include icon-size;
+        }
+    }
+}
+
+/* Change the width of download buttons after collapsed */
+.width-auto {
+    max-width: 3.25em;
+    transition: all .2s ease-in;
+}

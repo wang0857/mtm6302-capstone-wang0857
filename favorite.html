@@ -99,8 +99,8 @@
 
             <!-- Nav Options -->
             <ul class="side-nav">
-                <li class="active">
-                    <a class="active" href="./index.html">
+                <li>
+                    <a href="./index.html">
                         <i class="fa-solid fa-image"></i>
                         <span>Today's Picture</span>
                     </a>
@@ -123,8 +123,8 @@
                         <span>Categories</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./favorite.html">
+                <li class="active">
+                    <a class="active" href="./favorite.html">
                         <i class="fa-solid fa-heart"></i>
                         <span>Favorite Pictures</span>
                     </a>
@@ -159,35 +159,28 @@
                 <!-- Breadcrumb -->
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Today's Picture</li>
+                    <li class="breadcrumb-item active" aria-current="page">Favorite Pictures</li>
                 </ol>
-
-                <form class="d-flex gap-3 mb-3 justify-content-end" id="dateFrom">
-                    <p>Select the picture by date:</p>
-                    <input type="date" class="rounded" id="selectedDate">
-                </form>
     
-                <!-- Today's Picture -->
-                <div class="todays-pic-container">
-                    <!-- Control Buttons-Previous -->
-                    <div class="control-btn"><i class="fa-solid fa-arrow-left prev"></i></div>
+                <!-- The list of favorite pistures -->
+                <h1 class="text-center">My Favorite Pictures</h1>
 
-                    <!-- Use Flexbox to wrap the picture and article -->
-                    <div class="d-flex flex-wrap justify-content-center align-items-center">
-                        <!-- Picture -->
-                        <div class="picture-container">
-                            <!-- Here will be the data fetched by NASA API -->
-                        </div>
-        
-                        <!-- Article -->
-                        <article>
-                            <!-- Here will be the data fetched by NASA API -->
-                            <h2>NASA APOD</h2>
-                        </article>
-                    </div>
-    
-                    <!-- Control Buttons-Next -->
-                    <div class="control-btn btn-disable"><i class="fa-solid fa-arrow-right next"></i></div>
+                <ul class="nav nav-pills mb-3">
+                    <li class="nav-item">
+                      <span class="image-tab nav-link active">Image</span>
+                    </li>
+                    <li class="nav-item">
+                      <span class="video-tab nav-link">Video</span>
+                    </li>
+                </ul>
+                <!-- Image Categories -->
+                <div class="favorite-list-image">
+                    <!-- Here will show dynamic results -->
+                </div>
+
+                <!-- Video Categories -->
+                <div class="favorite-list-video collapse">
+                    <!-- Here will show dynamic results -->
                 </div>
 
                 <!-- Modal -->
@@ -221,6 +214,6 @@
     <!-- My JavaScript -->
     <script src="./js/script-sidebar.js"></script>
     <script src="./js/script-nav-search-bar.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script-favorite-list.js"></script>
 </body>
 </html>

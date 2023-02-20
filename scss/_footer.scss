@@ -1,0 +1,39 @@
+// Mobile aand Tablet
+@mixin footer-sm {
+    footer {
+        display: none;
+    }
+}
+
+// Desktop
+@mixin footer-lg {
+    footer {
+        padding: 2.56em 5.6em;
+        background-color: #ffffff40;
+
+        /* Create an inner grid container for the footer elements */
+        display: grid;
+        grid-template-columns: auto 14.375em;
+        gap: 1em;
+    }
+   
+    .social-media {
+        display: flex;
+        gap: .75em;
+
+        a {
+            @include pAnchor;
+            text-decoration: none;
+
+            i {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .declaration {
+        a {
+            @include pAnchor;
+        }
+    }
+}

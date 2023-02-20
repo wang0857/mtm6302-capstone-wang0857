@@ -1,0 +1,21 @@
+// Mobile and Tablet
+@mixin main-grid-container-sm {
+    .grid-container {
+        height: 100%;
+        overflow: hidden;
+
+        /* Make a grid for Sidebar and right content */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 3.75em;
+    }
+}
+
+// Desktop
+@mixin main-grid-container-lg {
+    .grid-container {
+        /* Adjust layout for desktop screens */
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+    }
+}
