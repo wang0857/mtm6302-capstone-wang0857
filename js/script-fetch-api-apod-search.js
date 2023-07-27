@@ -19,7 +19,7 @@ let results = document.querySelector(".results");
 
 // Display all results before typing keywords
 async function displayApi() {
-    const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&start_date=2022-11-01");
+    const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&start_date=2023-07-01");
     const data = await response.json();
 
     for (result of data) {
