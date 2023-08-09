@@ -165,7 +165,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
-                        <p class="ms-3"><small>Note: The data is only after July 1, 2023.</small></p>
+                        <p class="ms-3"><small>Note: The data will be retreived from the first day of every month.</small></p>
                     </div>
 
                     <!-- Category and Filter Elements for Small and Medium Screen -->
@@ -358,7 +358,7 @@
                         <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
                         Privacy Policy and Important Notices</a>
                     </p>
-                    <p>&#169; 2023 Astronomy Picture of the Day (APOD)</p>
+                    <p>&#169; <span class="fullYear"></span> Astronomy Picture of the Day (APOD)</p>
                 </div>
     
                 <!-- Social Media -->
@@ -375,6 +375,10 @@
         
     <!-- My JavaScript -->
     <script src="./js/script-sidebar.js"></script>
-    <script src="./js/script-fetch-api-apod-search.js"></script>
+    <script type="module" src="./js/script-fetch-api-apod-search.js"></script>
+    <script>
+        const fullYear = document.querySelector('.fullYear')
+        fullYear.innerHTML = new Date().getFullYear()
+    </script>
 </body>
 </html>

@@ -244,7 +244,7 @@
                         <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web
                         Privacy Policy and Important Notices</a>
                     </p>
-                    <p>&#169; 2022 Astronomy Picture of the Day (APOD)</p>
+                    <p>&#169; <span class="fullYear"></span> Astronomy Picture of the Day (APOD)</p>
                 </div>
     
                 <!-- Social Media -->
@@ -262,5 +262,9 @@
     <!-- My JavaScript -->
     <script src="../js/script-sidebar.js"></script>
     <script src="../js/script-nav-search-bar.js"></script>
+    <script>
+        const fullYear = document.querySelector('.fullYear')
+        fullYear.innerHTML = new Date().getFullYear()
+    </script>
 </body>
 </html>
