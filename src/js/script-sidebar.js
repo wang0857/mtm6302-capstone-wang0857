@@ -1,12 +1,12 @@
 
 // Collapse the sidebar
-let sidebar = document.querySelector("aside");
-let collapseBtn = document.querySelector(".collapse-btn");
-let btnArrow = document.querySelector(".collapse-btn i");
-let sidebarItems = document.querySelectorAll(".side-nav li a span");
-let appHeader = document.querySelector(".app-header");
-let appBtns = document.querySelectorAll(".download-btn");
-let appItems = document.querySelectorAll(".download-btn span");
+const sidebar = document.querySelector("aside");
+const collapseBtn = document.querySelector(".collapse-btn");
+const btnArrow = document.querySelector(".collapse-btn i");
+const sidebarItems = document.querySelectorAll(".side-nav li a span");
+const appHeader = document.querySelector(".app-header");
+const appBtns = document.querySelectorAll(".download-btn");
+const appItems = document.querySelectorAll(".download-btn span");
 
 collapseBtn.addEventListener("click", () => {
     // Sidebar width

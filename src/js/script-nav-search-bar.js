@@ -1,10 +1,10 @@
 
 // Search bar send value to search page
-let searchBtn = document.querySelector("nav .search .search-btn");
-let searchInput = document.querySelector("nav .search .search-bar");
+const searchBtn = document.querySelector("nav .search .search-btn");
+const searchInput = document.querySelector("nav .search .search-bar");
 
 // Click button to send value
-searchBtn.addEventListener("click", (e) => {
+searchBtn.addEventListener("click", e => {
     // Prevent page from refreshing;
     e.preventDefault();
 

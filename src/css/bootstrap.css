@@ -4406,11 +4406,11 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #000;
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("../image/plus-solid.png");
+  --bs-accordion-btn-icon: url("../images/plus-solid.png");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(180deg);
   --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out;
-  --bs-accordion-btn-active-icon: url("../image/minus-solid.png");
+  --bs-accordion-btn-active-icon: url("../images/minus-solid.png");
   --bs-accordion-btn-focus-border-color: none;
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-body-padding-x: 1.25rem;
