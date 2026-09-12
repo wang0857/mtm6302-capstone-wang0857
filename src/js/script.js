@@ -43,8 +43,8 @@ async function getApi(d) {
         `
     }
 
-    // Validate if the data is found
-    if (data.code === 404) {
+    // Validate if the data is found (NASA returns a "code" field only on error)
+    if (data.code) {
         picture.textContent = data.msg
     } else {
         showContent()
