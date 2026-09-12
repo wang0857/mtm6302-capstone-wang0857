@@ -1,4 +1,6 @@
 
+import { NASA_API_KEY } from "./config.js";
+
 // Remind user of the processing time of fetching the API of NASA APOD
 window.onload = () => alert("Please allow few seconds to load the API results.");
 
@@ -21,7 +23,7 @@ let results = document.querySelector(".results");
 let current = new Date()
 
 async function displayApi() {
-    const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&start_date=${current.getFullYear()}-${current.getMonth() + 1}-01`);
+    const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&start_date=${current.getFullYear()}-${current.getMonth() + 1}-01`);
     const data = await response.json();
 
     for (let result of data) {

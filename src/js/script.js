@@ -1,4 +1,6 @@
 
+import { NASA_API_KEY } from "./config.js";
+
 // Fetch NASA's APOD API for Today's Picture
 const today = new Date();
 const month = today.getMonth() + 1 > 9 ? today.getMonth() + 1 : '0' + (today.getMonth() + 1)
@@ -13,7 +15,7 @@ if (localStorage.getItem("data")) {
 };
 
 async function getApi(d) {
-    const url = "https://api.nasa.gov/planetary/apod?api_key=rhXTaNLNRvwde9HnT7xhhXBDzkVa4liNifR57gtk&date=" + d;
+    const url = "https://api.nasa.gov/planetary/apod?api_key=" + NASA_API_KEY + "&date=" + d;
     const response = await fetch(url);
     const data = await response.json();
 
