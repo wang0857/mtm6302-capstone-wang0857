@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "test": "vitest run"
+  },
   "dependencies": {
     "sass": "^1.104.1"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.0"
   }
 }

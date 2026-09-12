@@ -1,8 +1,13 @@
 
 import { NASA_API_KEY } from "./config.js";
+import { getNasaYear, NASA_APOD_START_YEAR } from "./helpers/nasa-date.js";
+import { getYearRange } from "./helpers/year-range.js";
 
-// Remind user of the processing time of fetching the API of NASA APOD
-window.onload = () => alert("Please allow few seconds to load the API results.");
+const LOADING_SPINNER_HTML = `
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+`;
 
 // Prevent page from refreshing
 let searchBtn = document.querySelector(".searching-for form button");
@@ -23,8 +28,15 @@ let results = document.querySelector(".results");
 let current = new Date()
 
 async function displayApi() {
+    results.innerHTML = LOADING_SPINNER_HTML;
+
     const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&start_date=${current.getFullYear()}-${current.getMonth() + 1}-01`);
     const data = await response.json();
+
+    // NASA returns results oldest-first; show newest-first instead
+    data.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    results.innerHTML = "";
 
     for (let result of data) {
         let date = new Date(result.date);
@@ -109,6 +121,16 @@ selection.addEventListener("change", (e) => {
 
 // Years filter
 let years = document.querySelector(".years");
+
+// Render one checkbox per year NASA has published an APOD for, newest first
+years.querySelector(".row").innerHTML = getYearRange(NASA_APOD_START_YEAR, getNasaYear())
+    .map((year) => `
+        <div class="form-check col-4">
+            <input class="form-check-input" type="checkbox" value="${year}" id="${year}">
+            <label class="form-check-label" for="${year}">${year}</label>
+        </div>
+    `)
+    .join("");
 
 years.addEventListener("click", (e) => {
     // Ensure the filter function only triggered when user click checkbox

@@ -1,10 +1,12 @@
 
 import { NASA_API_KEY } from "./config.js";
+import { getNasaDateString } from "./helpers/nasa-date.js";
 
 // Fetch NASA's APOD API for Today's Picture
-const today = new Date();
-const month = today.getMonth() + 1 > 9 ? today.getMonth() + 1 : '0' + (today.getMonth() + 1)
-const date = today.getFullYear() + "-" + month + "-" + today.getDate();
+// "Today" follows NASA's own timezone (US Eastern), not the viewer's local
+// date, since that's the date range NASA's API actually accepts.
+const date = getNasaDateString();
+const today = new Date(date + "T00:00:00");
 
 // Set an empty array to store the list of favorite pictures
 let dataArr = [];
@@ -15,13 +17,20 @@ if (localStorage.getItem("data")) {
 };
 
 async function getApi(d) {
-    const url = "https://api.nasa.gov/planetary/apod?api_key=" + NASA_API_KEY + "&date=" + d;
-    const response = await fetch(url);
-    const data = await response.json();
-
     // Show the APOD Picture and articles on HTML
     const picture = document.querySelector(".picture-container");
     const article = document.querySelector("article");
+
+    // Show a loading spinner while the picture is being fetched
+    picture.innerHTML = `
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    `;
+
+    const url = "https://api.nasa.gov/planetary/apod?api_key=" + NASA_API_KEY + "&date=" + d;
+    const response = await fetch(url);
+    const data = await response.json();
 
     const imageHTML = copyright => {
         picture.innerHTML = `
@@ -44,7 +53,10 @@ async function getApi(d) {
     }
 
     // Validate if the data is found (NASA returns a "code" field only on error)
-    if (data.code) {
+    if (data.code === 400) {
+        // NASA hasn't published this date's picture yet
+        picture.textContent = "Picture is preparing... Please wait for a moment."
+    } else if (data.code) {
         picture.textContent = data.msg
     } else {
         showContent()

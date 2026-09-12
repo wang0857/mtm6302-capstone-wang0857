@@ -24,6 +24,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Remove dev dependencies
+        run: rm -rf node_modules
+
       - name: Inject NASA API key
         env:
           NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
